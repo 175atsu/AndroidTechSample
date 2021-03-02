@@ -1,4 +1,4 @@
-package com.example.biometricsample
+package com.example.androidtechsample
 
 import org.junit.Test
 
