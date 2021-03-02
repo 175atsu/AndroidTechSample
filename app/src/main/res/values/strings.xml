@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BiometricSample</string>
+    <string name="playground_biometric">Biometric</string>
 </resources>

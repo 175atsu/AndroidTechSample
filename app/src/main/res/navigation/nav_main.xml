@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragment_playground">
+
+    <fragment
+        android:id="@+id/fragment_playground"
+        android:name="com.example.androidtechsample.PlaygroundFragment"
+        tools:layout="@layout/fragment_playground" >
+        <action
+            android:id="@+id/to_fragment_biometric"
+            app:destination="@id/fragment_biometric" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_biometric"
+        android:name="com.example.androidtechsample.BiometricFragment"
+        tools:layout="@layout/fragment_biometric" />
+
+</navigation>
