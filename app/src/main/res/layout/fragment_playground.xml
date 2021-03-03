@@ -12,10 +12,16 @@
             android:padding="16dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_playground_to_design_mock"
+                android:id="@+id/button_playground_to_biometric"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/playground_biometric" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_playground_to_compose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/playground_compose" />
         </LinearLayout>
     </ScrollView>
 </layout>

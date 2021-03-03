@@ -8,15 +8,22 @@
     <fragment
         android:id="@+id/fragment_playground"
         android:name="com.example.androidtechsample.PlaygroundFragment"
-        tools:layout="@layout/fragment_playground" >
+        tools:layout="@layout/fragment_playground">
         <action
             android:id="@+id/to_fragment_biometric"
             app:destination="@id/fragment_biometric" />
+        <action
+            android:id="@+id/to_fragment_compose"
+            app:destination="@id/fragment_compose" />
     </fragment>
 
     <fragment
         android:id="@+id/fragment_biometric"
         android:name="com.example.androidtechsample.BiometricFragment"
         tools:layout="@layout/fragment_biometric" />
+
+    <fragment
+        android:id="@+id/fragment_compose"
+        android:name="com.example.androidtechsample.ComposeFragment" />
 
 </navigation>
