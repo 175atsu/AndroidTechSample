@@ -30,5 +30,8 @@ class PlaygroundFragment : Fragment() {
         binding.buttonPlaygroundToCompose.setOnClickListener {
             findNavController().navigate(R.id.to_fragment_compose)
         }
+        binding.buttonPlaygroundToComposeList.setOnClickListener {
+            findNavController().navigate(R.id.to_fragment_compose_list)
+        }
     }
 }

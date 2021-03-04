@@ -11,9 +11,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -23,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -101,6 +104,7 @@ class ComposeFragment : Fragment() {
                     )
                 }
                 NameList(names, Modifier.weight(1f))
+                PhotographerCard()
             }
         }
     }
@@ -134,25 +138,46 @@ class ComposeFragment : Fragment() {
     }
 
     @Composable
-    fun MyScreenContent(names: List<String> = listOf("Android", "there")) {
-        Column {
-            for (name in names) {
-                Greeting(name = name)
-                Divider(color = Color.Black)
+    fun PhotographerCard(modifier: Modifier = Modifier) {
+        Row(
+            modifier
+                .padding(8.dp)
+                .clip(RoundedCornerShape(4.dp))
+                .background(MaterialTheme.colors.surface)
+                .clickable(onClick = {})
+                .padding(16.dp)
+        ) {
+            Surface(
+                modifier = Modifier.size(50.dp),
+                shape = CircleShape,
+                color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
+            ) {
+
+            }
+            Column(
+                modifier = Modifier
+                    .padding(start = 8.dp)
+                    .align(Alignment.CenterVertically)
+            ) {
+                Text("Alfred Sisley", fontWeight = FontWeight.Bold)
+                CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
+                    Text("3 minutes ago", style = MaterialTheme.typography.body2)
+                }
             }
         }
     }
 
     @Composable
     fun Greeting(name: String) {
-        var isSelected = remember { mutableStateOf(false) }
-        val backgroundColor = animateColorAsState(if (isSelected.value) Color.Red else Color.Transparent)
+        val isSelected = remember { mutableStateOf(false) }
+        val backgroundColor =
+            animateColorAsState(if (isSelected.value) Color.Red else Color.Transparent)
         Text(
             text = "Hello $name!",
             modifier = Modifier
                 .padding(24.dp)
                 .background(color = backgroundColor.value)
-                .clickable(onClick = {isSelected.value = !isSelected.value})
+                .clickable(onClick = { isSelected.value = !isSelected.value })
         )
     }
 

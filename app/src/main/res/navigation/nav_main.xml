@@ -15,6 +15,9 @@
         <action
             android:id="@+id/to_fragment_compose"
             app:destination="@id/fragment_compose" />
+        <action
+            android:id="@+id/to_fragment_compose_list"
+            app:destination="@id/fragment_compose_list" />
     </fragment>
 
     <fragment
@@ -25,5 +28,9 @@
     <fragment
         android:id="@+id/fragment_compose"
         android:name="com.example.androidtechsample.ComposeFragment" />
+
+    <fragment
+        android:id="@+id/fragment_compose_list"
+        android:name="com.example.androidtechsample.ComposeListFragment" />
 
 </navigation>
