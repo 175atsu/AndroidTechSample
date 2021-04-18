@@ -1,2 +1,2 @@
+rootProject.name = "AndroidTechSample"
 include(":app")
-rootProject.name = "BiometricSample"
