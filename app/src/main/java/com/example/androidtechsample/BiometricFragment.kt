@@ -11,8 +11,10 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.databinding.FragmentBiometricBinding
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.Executor
 
+@AndroidEntryPoint
 class BiometricFragment : Fragment() {
 
     private lateinit var binding: FragmentBiometricBinding

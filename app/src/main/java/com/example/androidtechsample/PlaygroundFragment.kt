@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.androidtechsample.databinding.FragmentPlaygroundBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PlaygroundFragment : Fragment() {
 
     private lateinit var binding: FragmentPlaygroundBinding
