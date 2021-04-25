@@ -39,6 +39,10 @@ object Dep {
         }
     }
 
+    object Ktlint {
+        const val plugin = "com.pinterest:ktlint:0.40.0"
+    }
+
     const val material = "com.google.android.material:material:1.3.0"
 
     object DI {
