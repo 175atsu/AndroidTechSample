@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">AndroidTechSample</string>
-    <string name="playground_biometric">Biometric</string>
+  <string name="app_name">AndroidTechSample</string>
+  <string name="playground_biometric">Biometric</string>
 </resources>

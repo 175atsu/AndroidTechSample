@@ -19,16 +19,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -42,7 +32,6 @@ android {
 }
 
 dependencies {
-    implementation(Dep.Kotlin.jdk)
     implementation(Dep.AndroidX.appCompat)
     implementation(Dep.AndroidX.core)
     implementation(Dep.AndroidX.constraintLayout)
