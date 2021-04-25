@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -12,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.androidtechsample"
-        minSdk = 29
+        minSdk = 23
         targetSdk = 30
         versionCode = 1
         versionName = "1.0"
@@ -40,6 +41,8 @@ dependencies {
     implementation(Dep.AndroidX.navRuntime)
     implementation(Dep.AndroidX.biometric)
     implementation(Dep.material)
+    implementation(Dep.DI.hilt)
+    kapt(Dep.DI.hiltKapt)
 
     androidTestImplementation(Dep.AndroidX.Test.ext)
     androidTestImplementation(Dep.AndroidX.Test.espresso)

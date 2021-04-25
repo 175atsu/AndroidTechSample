@@ -3,6 +3,7 @@ package com.example.buildsrc
 object Versions {
     const val kotlin = "1.4.32"
     const val navigation = "2.3.5"
+    const val hilt = "2.34.1-beta"
 }
 
 object Dep {
@@ -43,6 +44,11 @@ object Dep {
     }
 
     const val material = "com.google.android.material:material:1.3.0"
+
+    object DI {
+        const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+        const val hiltKapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    }
 
     object Test {
         const val junit4 = "junit:junit:4.13.2"
