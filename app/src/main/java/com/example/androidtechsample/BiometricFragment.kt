@@ -36,7 +36,7 @@ class BiometricFragment : Fragment() {
         showId()
     }
 
-    //端末が生体認証に対応しているか確認
+    // 端末が生体認証に対応しているか確認
     private fun checkBiometric(): Boolean {
         val biometricManager = BiometricManager.from(requireContext())
         when (biometricManager.canAuthenticate()) {
