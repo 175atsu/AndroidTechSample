@@ -12,11 +12,19 @@
     <action
       android:id="@+id/to_fragment_biometric"
       app:destination="@id/fragment_biometric" />
+    <action
+      android:id="@+id/to_fragment_motion_layout"
+      app:destination="@id/fragment_motion_layout" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_biometric"
     android:name="com.example.androidtechsample.BiometricFragment"
     tools:layout="@layout/fragment_biometric" />
+
+  <fragment
+    android:id="@+id/fragment_motion_layout"
+    android:name="com.example.androidtechsample.MotionLayoutFragment"
+    tools:layout="@layout/fragment_motion_layout" />
 
 </navigation>

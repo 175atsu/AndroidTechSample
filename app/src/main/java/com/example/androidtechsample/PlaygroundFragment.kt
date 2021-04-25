@@ -25,9 +25,13 @@ class PlaygroundFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-
-    binding.buttonPlaygroundToDesignMock.setOnClickListener {
-      findNavController().navigate(R.id.to_fragment_biometric)
+    with(binding) {
+      buttonPlaygroundToDesignMock.setOnClickListener {
+        findNavController().navigate(R.id.to_fragment_biometric)
+      }
+      toMotionLayout.setOnClickListener {
+        findNavController().navigate(R.id.to_fragment_motion_layout)
+      }
     }
   }
 }
