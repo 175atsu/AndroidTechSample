@@ -32,7 +32,6 @@ android {
 }
 
 dependencies {
-    implementation(Dep.Kotlin.jdk)
     implementation(Dep.AndroidX.appCompat)
     implementation(Dep.AndroidX.core)
     implementation(Dep.AndroidX.constraintLayout)
