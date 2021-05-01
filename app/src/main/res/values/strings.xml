@@ -3,4 +3,6 @@
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
 
+  <string name="motion_label">Name</string>
+
 </resources>
