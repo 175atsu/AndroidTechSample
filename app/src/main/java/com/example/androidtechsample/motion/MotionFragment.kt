@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentMotionBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,6 +26,10 @@ class MotionFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-
+    with(binding) {
+      toTopSwipe.setOnClickListener {
+        findNavController().navigate(R.id.fragment_motion_top_swipe)
+      }
+    }
   }
 }
