@@ -30,7 +30,7 @@ class PlaygroundFragment : Fragment() {
         findNavController().navigate(R.id.to_fragment_biometric)
       }
       toMotionLayout.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_motion_layout)
+        findNavController().navigate(R.id.to_fragment_motion)
       }
     }
   }

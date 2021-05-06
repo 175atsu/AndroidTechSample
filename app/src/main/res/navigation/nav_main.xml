@@ -13,8 +13,8 @@
       android:id="@+id/to_fragment_biometric"
       app:destination="@id/fragment_biometric" />
     <action
-      android:id="@+id/to_fragment_motion_layout"
-      app:destination="@id/fragment_motion_layout" />
+      android:id="@+id/to_fragment_motion"
+      app:destination="@id/fragment_motion" />
   </fragment>
 
   <fragment
@@ -23,8 +23,17 @@
     tools:layout="@layout/fragment_biometric" />
 
   <fragment
+    android:id="@+id/fragment_motion"
+    android:name="com.example.androidtechsample.motion.MotionFragment"
+    tools:layout="@layout/fragment_motion" >
+    <action
+      android:id="@+id/to_fragment_motion_layout"
+      app:destination="@id/fragment_motion_layout" />
+  </fragment>
+
+  <fragment
     android:id="@+id/fragment_motion_layout"
-    android:name="com.example.androidtechsample.MotionLayoutFragment"
-    tools:layout="@layout/fragment_motion_layout" />
+    android:name="com.example.androidtechsample.motion.MotionTopSwipeFragment"
+    tools:layout="@layout/fragment_motion_top_swipe" />
 
 </navigation>
