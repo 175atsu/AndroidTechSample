@@ -32,6 +32,9 @@
     <action
       android:id="@+id/to_fragment_motion_side_swipe"
       app:destination="@id/fragment_motion_side_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_custom"
+      app:destination="@id/fragment_motion_custom" />
   </fragment>
 
   <fragment
@@ -43,5 +46,10 @@
     android:id="@+id/fragment_motion_side_swipe"
     android:name="com.example.androidtechsample.motion.MotionSideSwipeFragment"
     tools:layout="@layout/fragment_motion_side_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_custom"
+    android:name="com.example.androidtechsample.motion.MotionCustomFragment"
+    tools:layout="@layout/fragment_motion_custom" />
 
 </navigation>

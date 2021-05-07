@@ -33,6 +33,9 @@ class MotionFragment : Fragment() {
       toSideSwipe.setOnClickListener {
         findNavController().navigate(R.id.to_fragment_motion_side_swipe)
       }
+      toCustomSwipe.setOnClickListener {
+        findNavController().navigate(R.id.to_fragment_motion_custom)
+      }
     }
   }
 }
