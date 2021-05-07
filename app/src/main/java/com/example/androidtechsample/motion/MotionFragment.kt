@@ -30,6 +30,9 @@ class MotionFragment : Fragment() {
       toTopSwipe.setOnClickListener {
         findNavController().navigate(R.id.fragment_motion_top_swipe)
       }
+      toSideSwipe.setOnClickListener {
+        findNavController().navigate(R.id.to_fragment_motion_side_swipe)
+      }
     }
   }
 }

@@ -10,14 +10,17 @@
       android:id="@+id/to_top_swipe"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:text="@string/motion_top_swipe"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+      android:id="@+id/to_side_swipe"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:text="@string/motion_side_swipe"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/to_top_swipe" />

@@ -3,6 +3,9 @@
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
 
+  <!-- MotionFragment -->
   <string name="motion_label">Name</string>
+  <string name="motion_top_swipe">TopSwipe</string>
+  <string name="motion_side_swipe">SideSwipe</string>
 
 </resources>

@@ -29,11 +29,19 @@
     <action
       android:id="@+id/to_fragment_motion_layout"
       app:destination="@id/fragment_motion_top_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_side_swipe"
+      app:destination="@id/fragment_motion_side_swipe" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_motion_top_swipe"
     android:name="com.example.androidtechsample.motion.MotionTopSwipeFragment"
     tools:layout="@layout/fragment_motion_top_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_side_swipe"
+    android:name="com.example.androidtechsample.motion.MotionSideSwipeFragment"
+    tools:layout="@layout/fragment_motion_side_swipe" />
 
 </navigation>
