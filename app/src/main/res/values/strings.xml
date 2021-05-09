@@ -11,5 +11,6 @@
   <string name="motion_top_swipe">TopSwipe</string>
   <string name="motion_side_swipe">SideSwipe</string>
   <string name="motion_custom_view">CustomView</string>
+  <string name="motion_key_position">KeyPosition</string>
 
 </resources>

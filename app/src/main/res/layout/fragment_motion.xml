@@ -29,9 +29,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/motion_custom_view" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_key_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/motion_key_position" />
+
     </LinearLayout>
-
   </ScrollView>
-
 </layout>
 
