@@ -13,11 +13,38 @@
       motion:touchAnchorSide="right" />
 
     <KeyFrameSet>
-      <KeyPosition
+      <KeyAttribute
+        android:rotation="-45"
+        android:scaleX="2"
+        android:scaleY="2"
         motion:framePosition="50"
-        motion:keyPositionType="pathRelative"
+        motion:motionTarget="@id/button" />
+      <!--      <KeyPosition-->
+      <!--        motion:framePosition="50"-->
+      <!--        motion:keyPositionType="pathRelative"-->
+      <!--        motion:motionTarget="@id/button"-->
+      <!--        motion:percentY="-0.25" />-->
+      <KeyCycle
+        android:translationY="50dp"
+        motion:framePosition="100"
         motion:motionTarget="@id/button"
-        motion:percentY="-0.25" />
+        motion:waveOffset="0"
+        motion:wavePeriod="0"
+        motion:waveShape="sin" />
+      <KeyCycle
+        android:translationY="50dp"
+        motion:framePosition="50"
+        motion:motionTarget="@id/button"
+        motion:waveOffset="0"
+        motion:wavePeriod="1"
+        motion:waveShape="sin" />
+      <KeyCycle
+        android:translationY="50dp"
+        motion:framePosition="0"
+        motion:motionTarget="@id/button"
+        motion:waveOffset="0"
+        motion:wavePeriod="0"
+        motion:waveShape="sin" />
     </KeyFrameSet>
   </Transition>
 
