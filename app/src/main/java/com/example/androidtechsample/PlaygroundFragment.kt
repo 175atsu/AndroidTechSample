@@ -32,6 +32,9 @@ class PlaygroundFragment : Fragment() {
       toMotionLayout.setOnClickListener {
         findNavController().navigate(R.id.to_fragment_motion)
       }
+      toGroupieView.setOnClickListener {
+        findNavController().navigate(R.id.to_fragent_groupie)
+      }
     }
   }
 }
