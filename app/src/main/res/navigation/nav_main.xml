@@ -65,7 +65,7 @@
 
   <fragment
     android:id="@+id/fragment_groupie"
-    android:name="com.example.androidtechsample.GroupieFragment"
+    android:name="com.example.androidtechsample.ui.GroupieFragment"
     tools:layout="@layout/fragment_groupie"/>
 
 </navigation>
