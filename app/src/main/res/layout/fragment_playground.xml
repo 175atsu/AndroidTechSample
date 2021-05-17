@@ -16,6 +16,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/playground_biometric" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_motion_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/playground_motion_layout" />
+
     </LinearLayout>
   </ScrollView>
 </layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <Transition
+    app:constraintSetEnd="@id/end"
+    app:constraintSetStart="@id/start">
+    <OnSwipe
+      app:dragDirection="dragUp"
+      app:touchAnchorSide="top"
+      app:touchRegionId="@id/scroll_body" />
+  </Transition>
+  <ConstraintSet android:id="@+id/start">
+    <Constraint
+      android:id="@id/image_header"
+      android:layout_width="0dp"
+      android:layout_height="200dp"
+      android:alpha="1.0"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+    <Constraint
+      android:id="@id/image_avatar"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/image_header" />
+    <Constraint
+      android:id="@id/text_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      app:layout_constraintEnd_toEndOf="@id/image_avatar"
+      app:layout_constraintStart_toStartOf="@id/image_avatar"
+      app:layout_constraintTop_toBottomOf="@id/image_avatar" />
+    <Constraint
+      android:id="@id/scroll_body"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_name" />
+  </ConstraintSet>
+  <ConstraintSet android:id="@+id/end">
+    <Constraint
+      android:id="@id/image_header"
+      android:layout_width="0dp"
+      android:layout_height="200dp"
+      android:alpha="0.4"
+      app:layout_constraintBottom_toBottomOf="@id/toolbar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+    <Constraint
+      android:id="@id/image_avatar"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:layout_marginStart="16dp"
+      app:layout_constraintBottom_toBottomOf="@id/toolbar"
+      app:layout_constraintStart_toStartOf="@id/toolbar"
+      app:layout_constraintTop_toTopOf="@id/toolbar" />
+    <Constraint
+      android:id="@id/text_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      app:layout_constraintBottom_toBottomOf="@id/toolbar"
+      app:layout_constraintStart_toEndOf="@id/image_avatar"
+      app:layout_constraintTop_toTopOf="@id/toolbar" />
+    <Constraint
+      android:id="@id/scroll_body"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+  </ConstraintSet>
+</MotionScene>

@@ -12,11 +12,52 @@
     <action
       android:id="@+id/to_fragment_biometric"
       app:destination="@id/fragment_biometric" />
+    <action
+      android:id="@+id/to_fragment_motion"
+      app:destination="@id/fragment_motion" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_biometric"
     android:name="com.example.androidtechsample.BiometricFragment"
     tools:layout="@layout/fragment_biometric" />
+
+  <fragment
+    android:id="@+id/fragment_motion"
+    android:name="com.example.androidtechsample.motion.MotionFragment"
+    tools:layout="@layout/fragment_motion" >
+    <action
+      android:id="@+id/to_fragment_motion_layout"
+      app:destination="@id/fragment_motion_top_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_side_swipe"
+      app:destination="@id/fragment_motion_side_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_custom"
+      app:destination="@id/fragment_motion_custom" />
+    <action
+      android:id="@+id/to_fragment_motion_key_position"
+      app:destination="@id/fragment_motion_key_position" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_motion_top_swipe"
+    android:name="com.example.androidtechsample.motion.MotionTopSwipeFragment"
+    tools:layout="@layout/fragment_motion_top_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_side_swipe"
+    android:name="com.example.androidtechsample.motion.MotionSideSwipeFragment"
+    tools:layout="@layout/fragment_motion_side_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_custom"
+    android:name="com.example.androidtechsample.motion.MotionCustomFragment"
+    tools:layout="@layout/fragment_motion_custom" />
+
+  <fragment
+    android:id="@+id/fragment_motion_key_position"
+    android:name="com.example.androidtechsample.motion.MotionKeyPositionFragment"
+    tools:layout="@layout/fragment_motion_key_position" />
 
 </navigation>
