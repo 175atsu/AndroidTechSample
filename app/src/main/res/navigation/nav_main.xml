@@ -7,7 +7,7 @@
 
   <fragment
     android:id="@+id/fragment_playground"
-    android:name="com.example.androidtechsample.PlaygroundFragment"
+    android:name="com.example.androidtechsample.ui.PlaygroundFragment"
     tools:layout="@layout/fragment_playground">
     <action
       android:id="@+id/to_fragment_biometric"
@@ -22,12 +22,12 @@
 
   <fragment
     android:id="@+id/fragment_biometric"
-    android:name="com.example.androidtechsample.BiometricFragment"
+    android:name="com.example.androidtechsample.ui.BiometricFragment"
     tools:layout="@layout/fragment_biometric" />
 
   <fragment
     android:id="@+id/fragment_motion"
-    android:name="com.example.androidtechsample.motion.MotionFragment"
+    android:name="com.example.androidtechsample.ui.motion.MotionFragment"
     tools:layout="@layout/fragment_motion" >
     <action
       android:id="@+id/to_fragment_motion_layout"
@@ -45,22 +45,22 @@
 
   <fragment
     android:id="@+id/fragment_motion_top_swipe"
-    android:name="com.example.androidtechsample.motion.MotionTopSwipeFragment"
+    android:name="com.example.androidtechsample.ui.motion.MotionTopSwipeFragment"
     tools:layout="@layout/fragment_motion_top_swipe" />
 
   <fragment
     android:id="@+id/fragment_motion_side_swipe"
-    android:name="com.example.androidtechsample.motion.MotionSideSwipeFragment"
+    android:name="com.example.androidtechsample.ui.motion.MotionSideSwipeFragment"
     tools:layout="@layout/fragment_motion_side_swipe" />
 
   <fragment
     android:id="@+id/fragment_motion_custom"
-    android:name="com.example.androidtechsample.motion.MotionCustomFragment"
+    android:name="com.example.androidtechsample.ui.motion.MotionCustomFragment"
     tools:layout="@layout/fragment_motion_custom" />
 
   <fragment
     android:id="@+id/fragment_motion_key_position"
-    android:name="com.example.androidtechsample.motion.MotionKeyPositionFragment"
+    android:name="com.example.androidtechsample.ui.motion.MotionKeyPositionFragment"
     tools:layout="@layout/fragment_motion_key_position" />
 
   <fragment

@@ -1,12 +1,13 @@
-package com.example.androidtechsample
+package com.example.androidtechsample.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentPlaygroundBinding
+import com.example.androidtechsample.util.navigator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,10 +28,10 @@ class PlaygroundFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
     with(binding) {
       buttonPlaygroundToDesignMock.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_biometric)
+        navigator(R.id.to_fragment_biometric)
       }
       toMotionLayout.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_motion)
+        navigator(R.id.to_fragment_motion)
       }
       toGroupieView.setOnClickListener {
         findNavController().navigate(R.id.to_fragent_groupie)
