@@ -1,7 +1,8 @@
-package com.example.androidtechsample
+package com.example.androidtechsample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.androidtechsample.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
