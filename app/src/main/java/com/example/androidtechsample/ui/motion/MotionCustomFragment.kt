@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.databinding.FragmentMotionCustomBinding
 
-class MotionCustomFragment: Fragment() {
+class MotionCustomFragment : Fragment() {
 
   private lateinit var binding: FragmentMotionCustomBinding
 

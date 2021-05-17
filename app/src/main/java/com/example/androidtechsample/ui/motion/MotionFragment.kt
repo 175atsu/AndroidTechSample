@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentMotionBinding
+import com.example.androidtechsample.util.navigator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,16 +28,16 @@ class MotionFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
     with(binding) {
       toTopSwipe.setOnClickListener {
-        findNavController().navigate(R.id.fragment_motion_top_swipe)
+        navigator(R.id.fragment_motion_top_swipe)
       }
       toSideSwipe.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_motion_side_swipe)
+        navigator(R.id.to_fragment_motion_side_swipe)
       }
       toCustomSwipe.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_motion_custom)
+        navigator(R.id.to_fragment_motion_custom)
       }
       toKeyPosition.setOnClickListener {
-        findNavController().navigate(R.id.to_fragment_motion_key_position)
+        navigator(R.id.to_fragment_motion_key_position)
       }
     }
   }
