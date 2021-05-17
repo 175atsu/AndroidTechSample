@@ -1,4 +1,4 @@
-package com.example.androidtechsample.motion
+package com.example.androidtechsample.ui.motion
 
 import android.os.Bundle
 import android.view.LayoutInflater

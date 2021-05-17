@@ -1,4 +1,4 @@
-package com.example.androidtechsample
+package com.example.androidtechsample.ui
 
 import android.os.Bundle
 import android.util.Log
