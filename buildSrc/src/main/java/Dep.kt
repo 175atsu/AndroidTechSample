@@ -42,8 +42,8 @@ object Dep {
   }
 
   object Groupie {
-    const val core = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
-    const val viewBinding = "om.github.lisawray.groupie:groupie-viewbinding:${Versions.groupie}"
+    const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
+    const val viewBinding = "com.github.lisawray.groupie:groupie-viewbinding:${Versions.groupie}"
   }
 
   object Ktlint {

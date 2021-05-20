@@ -44,7 +44,7 @@ dependencies {
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
 
-  implementation(Dep.Groupie.core)
+  implementation(Dep.Groupie.groupie)
   implementation(Dep.Groupie.viewBinding)
 
   androidTestImplementation(Dep.AndroidX.Test.ext)
