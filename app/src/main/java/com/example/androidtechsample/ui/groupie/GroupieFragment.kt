@@ -30,9 +30,19 @@ class GroupieFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
     val adapter = GroupieAdapter()
     with(binding) {
+      lifecycleOwner = viewLifecycleOwner
       recyclerView.adapter = adapter
       recyclerView.layoutManager = LinearLayoutManager(context)
     }
-    binding.recyclerView.adapter = adapter
+    viewModel.itemList.observe(viewLifecycleOwner) {
+      for (item in it) {
+        adapter.add(FirstItem(item))
+      }
+    }
+  }
+
+  override fun onStart() {
+    super.onStart()
+    viewModel.fetchData()
   }
 }
