@@ -6,13 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentGroupieBinding
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class GroupieFragment : Fragment() {
+class GroupieFragment : Fragment(), GroupieItem.Listener {
 
   private lateinit var binding: FragmentGroupieBinding
   private val viewModel: GroupieViewModel by viewModels()
@@ -34,5 +36,9 @@ class GroupieFragment : Fragment() {
       recyclerView.adapter = adapter
       recyclerView.layoutManager = LinearLayoutManager(context)
     }
+  }
+
+  override fun onItemClick() {
+    findNavController().navigate(R.id.to_fragment_groupie_basic)
   }
 }
