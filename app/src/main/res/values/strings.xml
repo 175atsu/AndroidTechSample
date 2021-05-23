@@ -2,6 +2,7 @@
   <string name="app_name">AndroidTechSample</string>
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
+  <string name="playground_groupie_view">GroupieView</string>
 
   <!-- BiometricFragment -->
   <string name="biometric_fingerprint_authentication">指紋認証</string>

@@ -33,6 +33,9 @@ class PlaygroundFragment : Fragment() {
       toMotionLayout.setOnClickListener {
         navigator(R.id.to_fragment_motion)
       }
+      toGroupieView.setOnClickListener {
+        navigator(R.id.to_fragment_groupie)
+      }
     }
   }
 }
