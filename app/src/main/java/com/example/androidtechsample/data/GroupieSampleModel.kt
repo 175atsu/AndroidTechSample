@@ -9,7 +9,12 @@ class GroupieSampleModel @Inject constructor() {
     GroupiePlaygroundModel("BasicView", R.id.to_fragment_groupie_basic)
   )
 
-  val sampleBasicList = listOf(
+  val basicHeaderItem = listOf(
+    "フルーツ",
+    "動物"
+  )
+
+  val basicFruitsItems = listOf(
     "りんご",
     "みかん",
     "ばなな",
@@ -17,5 +22,12 @@ class GroupieSampleModel @Inject constructor() {
     "スイカ",
     "ぶどう",
     "マスカット",
+  )
+
+  val basicAnimalItems = listOf(
+    "ぞう",
+    "キリン",
+    "ペンギン",
+    "ライオン"
   )
 }
