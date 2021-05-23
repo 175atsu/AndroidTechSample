@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie
+package com.example.androidtechsample.ui.groupie.basic
 
 import android.view.View
 import com.example.androidtechsample.R

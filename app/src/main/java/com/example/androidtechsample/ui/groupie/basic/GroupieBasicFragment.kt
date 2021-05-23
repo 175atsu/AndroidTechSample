@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie
+package com.example.androidtechsample.ui.groupie.basic
 
 import android.os.Bundle
 import android.view.LayoutInflater
