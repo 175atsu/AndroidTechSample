@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androidtechsample.data.GroupieSample1
 
-class GroupieViewModel : ViewModel() {
+class GroupieBasicViewModel : ViewModel() {
 
   private val _itemList = MutableLiveData<List<String>>()
   val itemList: LiveData<List<String>> = _itemList
