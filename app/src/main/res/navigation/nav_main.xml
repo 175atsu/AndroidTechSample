@@ -16,7 +16,7 @@
       android:id="@+id/to_fragment_motion"
       app:destination="@id/fragment_motion" />
     <action
-      android:id="@+id/to_fragent_groupie"
+      android:id="@+id/to_fragment_groupie"
       app:destination="@id/fragment_groupie" />
   </fragment>
 
@@ -65,6 +65,11 @@
 
   <fragment
     android:id="@+id/fragment_groupie"
+    android:name="com.example.androidtechsample.ui.groupie.GroupieFragment"
+    tools:layout="@layout/fragment_groupie"/>
+
+  <fragment
+    android:id="@+id/fragment_groupie_basic"
     android:name="com.example.androidtechsample.ui.groupie.GroupieBasicFragment"
     tools:layout="@layout/fragment_groupie_basic"/>
 
