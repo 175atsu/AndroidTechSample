@@ -1,10 +1,9 @@
 package com.example.androidtechsample.ui.groupie
 
-import android.view.View
 import com.example.androidtechsample.R
 import com.example.androidtechsample.data.GroupiePlaygroundModel
 import com.example.androidtechsample.databinding.ModelGroupieItemBinding
-import com.xwray.groupie.viewbinding.BindableItem
+import com.xwray.groupie.databinding.BindableItem
 
 class GroupieItem(
   private val playgroundModel: GroupiePlaygroundModel,
@@ -23,8 +22,4 @@ class GroupieItem(
   }
 
   override fun getLayout(): Int = R.layout.model_groupie_item
-
-  override fun initializeViewBinding(view: View): ModelGroupieItemBinding {
-    return ModelGroupieItemBinding.bind(view)
-  }
 }

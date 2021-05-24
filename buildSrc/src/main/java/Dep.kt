@@ -43,7 +43,7 @@ object Dep {
 
   object Groupie {
     const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
-    const val viewBinding = "com.github.lisawray.groupie:groupie-viewbinding:${Versions.groupie}"
+    const val databinding = "com.github.lisawray.groupie:groupie-databinding:${Versions.groupie}"
   }
 
   object Ktlint {
