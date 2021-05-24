@@ -13,12 +13,12 @@ import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class GroupieCarouselFragment : Fragment() {
+class GroupieCarouselFragment : Fragment(), GroupieCarouselItem.Listener {
 
   private lateinit var binding: FragmentGroupieCarouselBinding
   private val viewModel: GroupieCarouselViewModel by viewModels()
   private val rainbow200: IntArray by lazy { resources.getIntArray(R.array.rainbow_200) }
-
+  private lateinit var adapter: GroupieAdapter
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -31,7 +31,7 @@ class GroupieCarouselFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    val adapter = GroupieAdapter()
+    adapter = GroupieAdapter()
     binding.apply {
       recyclerView.adapter = adapter
       recyclerView.layoutManager =
@@ -45,6 +45,10 @@ class GroupieCarouselFragment : Fragment() {
 
   override fun onStart() {
     super.onStart()
-    viewModel.fetchData(rainbow200)
+    viewModel.fetchData(rainbow200, this)
+  }
+
+  override fun onItemClose(position: Int) {
+    adapter.removeGroupAtAdapterPosition(position)
   }
 }

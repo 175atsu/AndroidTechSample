@@ -70,11 +70,19 @@
     <action
       android:id="@+id/to_fragment_groupie_basic"
       app:destination="@id/fragment_groupie_basic" />
+    <action
+      android:id="@+id/to_fragment_groupie_carousel"
+      app:destination="@id/fragment_groupie_carousel" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_groupie_basic"
     android:name="com.example.androidtechsample.ui.groupie.basic.GroupieBasicFragment"
     tools:layout="@layout/fragment_groupie_basic"/>
+
+  <fragment
+    android:id="@+id/fragment_groupie_carousel"
+    android:name="com.example.androidtechsample.ui.groupie.carousel.GroupieCarouselFragment"
+    tools:layout="@layout/fragment_groupie_carousel"/>
 
 </navigation>

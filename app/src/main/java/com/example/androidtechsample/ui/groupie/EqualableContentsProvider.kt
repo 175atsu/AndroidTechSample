@@ -9,13 +9,13 @@ interface EqualableContentsProvider {
   override fun hashCode(): Int
 
   fun isSameContents(other: Any?): Boolean {
-    //nullチェック
+    // nullチェック
     other ?: return false
-    //これは？
+    // これは？
     if (other !is EqualableContentsProvider) return false
-    //クラスの参照が一緒かどうか？→インスタンスが一緒かってことかな？
+    // クラスの参照が一緒かどうか？→インスタンスが一緒かってことかな？
     if (other::class != this::class) return false
-    //providerEqualableContentsが一緒かどうか最後にチェック
+    // providerEqualableContentsが一緒かどうか最後にチェック
     return other.providerEqualableContents().contentDeepEquals(this.providerEqualableContents())
   }
 

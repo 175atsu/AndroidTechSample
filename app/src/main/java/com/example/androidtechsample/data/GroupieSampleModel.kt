@@ -6,7 +6,8 @@ import javax.inject.Inject
 class GroupieSampleModel @Inject constructor() {
 
   val playgroundModel = listOf(
-    GroupiePlaygroundModel("BasicView", R.id.to_fragment_groupie_basic)
+    GroupiePlaygroundModel("BasicView", R.id.to_fragment_groupie_basic),
+    GroupiePlaygroundModel("CarouselView", R.id.to_fragment_groupie_carousel)
   )
 
   val basicHeaderItem = listOf(

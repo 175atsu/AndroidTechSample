@@ -10,10 +10,10 @@ class GroupieCarouselViewModel : ViewModel() {
   private val _itemList = MutableLiveData<List<Group>>()
   val itemList: LiveData<List<Group>> = _itemList
 
-  fun fetchData(colors: IntArray) {
+  fun fetchData(colors: IntArray, listener: GroupieCarouselItem.Listener) {
     val list = mutableListOf<Group>()
     for (i in 0..9) {
-      list += GroupieCarouselItem(colors[i])
+      list += GroupieCarouselItem(colors[i], listener)
     }
     _itemList.value = list
   }
