@@ -47,6 +47,8 @@ dependencies {
   implementation(Dep.Groupie.groupie)
   implementation(Dep.Groupie.databinding)
 
+  implementation(Dep.Timber.plugin)
+
   androidTestImplementation(Dep.AndroidX.Test.ext)
   androidTestImplementation(Dep.AndroidX.Test.espresso)
 

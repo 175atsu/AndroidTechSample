@@ -50,6 +50,10 @@ object Dep {
     const val plugin = "com.pinterest:ktlint:0.40.0"
   }
 
+  object Timber {
+    const val plugin = "com.jakewharton.timber:timber:4.7.1"
+  }
+
   const val material = "com.google.android.material:material:1.3.0"
 
   object DI {
