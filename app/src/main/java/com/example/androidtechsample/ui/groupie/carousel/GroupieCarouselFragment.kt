@@ -11,9 +11,10 @@ import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentGroupieCarouselBinding
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
-class GroupieCarouselFragment : Fragment(), GroupieCarouselItem.Listener {
+class GroupieCarouselFragment : Fragment(){
 
   private lateinit var binding: FragmentGroupieCarouselBinding
   private val viewModel: GroupieCarouselViewModel by viewModels()
@@ -45,10 +46,10 @@ class GroupieCarouselFragment : Fragment(), GroupieCarouselItem.Listener {
 
   override fun onStart() {
     super.onStart()
-    viewModel.fetchData(rainbow200, this)
+    viewModel.fetchData(rainbow200, adapter)
   }
 
-  override fun onItemClose(position: Int) {
-    viewModel.itemList.value?.get(position)?.let { adapter.remove(it) }
-  }
+//  override fun onItemClose(position: Int) {
+//    viewModel.delete(position)
+//  }
 }
