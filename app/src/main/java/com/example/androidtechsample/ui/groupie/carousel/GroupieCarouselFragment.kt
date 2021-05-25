@@ -49,6 +49,6 @@ class GroupieCarouselFragment : Fragment(), GroupieCarouselItem.Listener {
   }
 
   override fun onItemClose(position: Int) {
-    adapter.removeGroupAtAdapterPosition(position)
+    viewModel.itemList.value?.get(position)?.let { adapter.remove(it) }
   }
 }
