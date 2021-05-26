@@ -11,10 +11,9 @@ import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentGroupieCarouselBinding
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 
 @AndroidEntryPoint
-class GroupieCarouselFragment : Fragment(){
+class GroupieCarouselFragment : Fragment() {
 
   private lateinit var binding: FragmentGroupieCarouselBinding
   private val viewModel: GroupieCarouselViewModel by viewModels()

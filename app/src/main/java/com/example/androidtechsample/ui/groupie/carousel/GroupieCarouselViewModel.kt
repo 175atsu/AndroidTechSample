@@ -5,8 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.xwray.groupie.Group
 import com.xwray.groupie.GroupieAdapter
-import dagger.hilt.android.lifecycle.HiltViewModel
-import timber.log.Timber
 
 class GroupieCarouselViewModel : ViewModel() {
 
