@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidtechsample.databinding.FragmentGroupieBinding
+import com.example.androidtechsample.util.navigator
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,6 +48,6 @@ class GroupieFragment : Fragment(), GroupieItem.Listener {
   }
 
   override fun onItemClick(id: Int) {
-    findNavController().navigate(id)
+    navigator(id)
   }
 }

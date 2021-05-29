@@ -43,11 +43,15 @@ object Dep {
 
   object Groupie {
     const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
-    const val viewBinding = "com.github.lisawray.groupie:groupie-viewbinding:${Versions.groupie}"
+    const val databinding = "com.github.lisawray.groupie:groupie-databinding:${Versions.groupie}"
   }
 
   object Ktlint {
     const val plugin = "com.pinterest:ktlint:0.40.0"
+  }
+
+  object Timber {
+    const val plugin = "com.jakewharton.timber:timber:4.7.1"
   }
 
   const val material = "com.google.android.material:material:1.3.0"

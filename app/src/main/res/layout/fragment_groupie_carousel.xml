@@ -2,25 +2,19 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <data>
-
-    <variable
-      name="itemLabel"
-      type="String" />
-  </data>
-
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="8dp">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.button.MaterialButton
-      android:id="@+id/to_groupie_view"
-      android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:text="@{itemLabel}"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+

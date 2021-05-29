@@ -35,9 +35,7 @@ class GroupieBasicFragment : Fragment() {
       recyclerView.layoutManager = LinearLayoutManager(context)
     }
     viewModel.itemList.observe(viewLifecycleOwner) {
-      for (item in it) {
-        adapter.add(GroupieBasicItem(item))
-      }
+      adapter.update(it)
     }
   }
 

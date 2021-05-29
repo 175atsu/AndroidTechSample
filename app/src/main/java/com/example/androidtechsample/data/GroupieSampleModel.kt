@@ -6,10 +6,17 @@ import javax.inject.Inject
 class GroupieSampleModel @Inject constructor() {
 
   val playgroundModel = listOf(
-    GroupiePlaygroundModel("BasicView", R.id.to_fragment_groupie_basic)
+    GroupiePlaygroundModel("BasicView", R.id.to_fragment_groupie_basic),
+    GroupiePlaygroundModel("CarouselView", R.id.to_fragment_groupie_carousel),
+    GroupiePlaygroundModel("SwipeView", R.id.to_fragment_groupie_swipe)
   )
 
-  val sampleBasicList = listOf(
+  val basicHeaderItem = listOf(
+    "フルーツ",
+    "動物"
+  )
+
+  val basicFruitsItems = listOf(
     "りんご",
     "みかん",
     "ばなな",
@@ -17,5 +24,12 @@ class GroupieSampleModel @Inject constructor() {
     "スイカ",
     "ぶどう",
     "マスカット",
+  )
+
+  val basicAnimalItems = listOf(
+    "ぞう",
+    "キリン",
+    "ペンギン",
+    "ライオン"
   )
 }
