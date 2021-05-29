@@ -6,11 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentGroupieSwipeBinding
 import com.xwray.groupie.GroupieAdapter
+import com.xwray.groupie.TouchCallback
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class GroupieSwipeFragment : Fragment() {
@@ -35,6 +39,7 @@ class GroupieSwipeFragment : Fragment() {
     with(binding) {
       recyclerView.adapter = adapter
       recyclerView.layoutManager = LinearLayoutManager(context)
+      ItemTouchHelper(itemTouchHelper).attachToRecyclerView(recyclerView)
     }
     viewModel.itemList.observe(viewLifecycleOwner) {
       adapter.update(it)
@@ -44,5 +49,28 @@ class GroupieSwipeFragment : Fragment() {
   override fun onStart() {
     super.onStart()
     viewModel.fetchData(rainbow200, adapter)
+  }
+
+  private val itemTouchHelper: TouchCallback by lazy {
+    object : TouchCallback() {
+      override fun onMove(
+        recyclerView: RecyclerView,
+        viewHolder: RecyclerView.ViewHolder,
+        target: RecyclerView.ViewHolder
+      ): Boolean  {
+        val fromPosition = viewHolder.adapterPosition
+        val toPosition = target.adapterPosition
+        binding.recyclerView.adapter?.notifyItemMoved(fromPosition, toPosition)
+        return false
+      }
+
+      override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+        Timber.d(viewHolder.adapterPosition.toString())
+        Timber.d(direction.toString())
+
+        val item = adapter.getItem(viewHolder.adapterPosition)
+        adapter.remove(item)
+      }
+    }
   }
 }
