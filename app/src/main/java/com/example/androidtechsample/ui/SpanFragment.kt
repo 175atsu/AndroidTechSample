@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
+import android.text.TextPaint
 import android.text.style.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentSpanBinding
@@ -38,6 +40,7 @@ class SpanFragment : Fragment() {
       textSize.text = spanSize()
       textBackground.text = spanBackgroundColor()
       textParagraph.text = spanParagraph()
+      textClick.text = spanClick()
     }
   }
 
@@ -107,6 +110,21 @@ class SpanFragment : Fragment() {
       setSpan(
         QuoteSpan(),
         0, // start
+        this.length, // end
+        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+      )
+    }
+  }
+
+  private fun spanClick(): SpannableStringBuilder {
+    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+      setSpan(
+        object : ClickableSpan() {
+          override fun onClick(widget: View) {
+            // TODO クリック処理
+          }
+        },
+        7, // start
         this.length, // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
