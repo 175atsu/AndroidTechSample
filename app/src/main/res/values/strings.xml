@@ -16,4 +16,8 @@
   <string name="motion_custom_view">CustomView</string>
   <string name="motion_key_position">KeyPosition</string>
 
+  <!-- SpanFragment -->
+  <string name="span_sample_text">Sample Text</string>
+  <string name="span_sample_text_paragraph">Sample \nText</string>
+
 </resources>

@@ -57,7 +57,7 @@ class GroupieSwipeFragment : Fragment() {
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder,
         target: RecyclerView.ViewHolder
-      ): Boolean  {
+      ): Boolean {
         val fromPosition = viewHolder.adapterPosition
         val toPosition = target.adapterPosition
         binding.recyclerView.adapter?.notifyItemMoved(fromPosition, toPosition)
