@@ -10,6 +10,7 @@
       android:id="@+id/text_color"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -17,6 +18,7 @@
       android:id="@+id/text_multiple"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_color" />
 
@@ -24,6 +26,7 @@
       android:id="@+id/text_underline"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_multiple" />
 
@@ -31,6 +34,7 @@
       android:id="@+id/text_size"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_underline" />
 
@@ -38,6 +42,7 @@
       android:id="@+id/text_background"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_size" />
 
@@ -45,6 +50,7 @@
       android:id="@+id/text_paragraph"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_background" />
 
@@ -52,6 +58,7 @@
       android:id="@+id/text_click"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/text_paragraph" />
 
