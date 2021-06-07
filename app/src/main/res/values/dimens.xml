@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Font Size / Line Height -->
+  <dimen name="font_size_head_1">40sp</dimen>
+  <dimen name="font_size_head_2">32sp</dimen>
+  <dimen name="font_size_head_3">24sp</dimen>
+  <dimen name="font_size_head_4">22sp</dimen>
+  <dimen name="font_size_head_5">18sp</dimen>
+  <dimen name="font_size_head_6">14sp</dimen>
+
+  <dimen name="font_size_body1">16sp</dimen>
+  <dimen name="font_size_body2">14sp</dimen>
+  <dimen name="font_size_body3">12sp</dimen>
+
+  <dimen name="line_height_head_1">46sp</dimen>
+  <dimen name="line_height_head_2">38sp</dimen>
+  <dimen name="line_height_head_3">30sp</dimen>
+  <dimen name="line_height_head_4">28sp</dimen>
+  <dimen name="line_height_head_5">24sp</dimen>
+  <dimen name="line_height_head_6">20sp</dimen>
+
+  <dimen name="line_height_body1">21sp</dimen>
+  <dimen name="line_height_body2">18sp</dimen>
+  <dimen name="line_height_body3">16sp</dimen>
+
+</resources>

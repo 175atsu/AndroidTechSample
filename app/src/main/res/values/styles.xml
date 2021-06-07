@@ -1,0 +1,68 @@
+<resources>
+
+  <style name="Text" />
+
+  <style name="Text.PrimaryColor">
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <!-- Header -->
+  <style name="Text.PrimaryColor.Head1">
+    <item name="android:textSize">@dimen/font_size_head_1</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Head2">
+    <item name="android:textSize">@dimen/font_size_head_2</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Head3">
+    <item name="android:textSize">@dimen/font_size_head_3</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Head4">
+    <item name="android:textSize">@dimen/font_size_head_4</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Head5">
+    <item name="android:textSize">@dimen/font_size_head_5</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Head6">
+    <item name="android:textSize">@dimen/font_size_head_6</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <!-- Primary Text -->
+  <style name="Text.PrimaryColor.Body1">
+    <item name="android:textSize">@dimen/font_size_body1</item>
+    <item name="lineHeight">@dimen/line_height_body1</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Body2">
+    <item name="android:textSize">@dimen/font_size_body2</item>
+    <item name="lineHeight">@dimen/line_height_body2</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Body3">
+    <item name="android:textSize">@dimen/font_size_body3</item>
+    <item name="lineHeight">@dimen/line_height_body3</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Body1.Bold">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Body2.Bold">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Text.PrimaryColor.Body3.Bold">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+</resources>
