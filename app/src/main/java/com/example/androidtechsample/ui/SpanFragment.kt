@@ -3,15 +3,13 @@ package com.example.androidtechsample.ui
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.SpannableStringBuilder
-import android.text.TextPaint
+import android.text.*
 import android.text.style.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
+import androidx.core.text.buildSpannedString
+import androidx.core.text.color
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentSpanBinding
@@ -41,6 +39,7 @@ class SpanFragment : Fragment() {
       textBackground.text = spanBackgroundColor()
       textParagraph.text = spanParagraph()
       textClick.text = spanClick()
+      textKtx.text = spanColorKtx()
     }
   }
 
@@ -128,6 +127,14 @@ class SpanFragment : Fragment() {
         this.length, // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
+    }
+  }
+
+  private fun spanColorKtx(): SpannedString {
+    return buildSpannedString {
+      color(Color.RED) {
+        append(getString(R.string.span_sample_text))
+      }
     }
   }
 }
