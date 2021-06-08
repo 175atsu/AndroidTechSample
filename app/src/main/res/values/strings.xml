@@ -3,6 +3,8 @@
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
   <string name="playground_groupie_view">GroupieView</string>
+  <string name="playground_span_view">SpanView</string>
+
 
   <!-- BiometricFragment -->
   <string name="biometric_fingerprint_authentication">指紋認証</string>
@@ -13,5 +15,9 @@
   <string name="motion_side_swipe">SideSwipe</string>
   <string name="motion_custom_view">CustomView</string>
   <string name="motion_key_position">KeyPosition</string>
+
+  <!-- SpanFragment -->
+  <string name="span_sample_text">Sample Text</string>
+  <string name="span_sample_text_paragraph">Sample \nText</string>
 
 </resources>

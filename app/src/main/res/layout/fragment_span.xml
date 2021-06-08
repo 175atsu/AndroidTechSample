@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="8dp">
+
+    <TextView
+      android:id="@+id/text_color"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/text_multiple"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_color" />
+
+    <TextView
+      android:id="@+id/text_underline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_multiple" />
+
+    <TextView
+      android:id="@+id/text_size"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_underline" />
+
+    <TextView
+      android:id="@+id/text_background"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_size" />
+
+    <TextView
+      android:id="@+id/text_paragraph"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_background" />
+
+    <TextView
+      android:id="@+id/text_click"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_paragraph" />
+
+    <TextView
+      android:id="@+id/text_ktx"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/font_size_head_2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_click" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

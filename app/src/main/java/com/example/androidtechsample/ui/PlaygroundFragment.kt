@@ -36,6 +36,9 @@ class PlaygroundFragment : Fragment() {
       toGroupieView.setOnClickListener {
         navigator(R.id.to_fragment_groupie)
       }
+      toSpanView.setOnClickListener {
+        navigator(R.id.to_fragment_span)
+      }
     }
   }
 }

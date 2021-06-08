@@ -18,6 +18,9 @@
     <action
       android:id="@+id/to_fragment_groupie"
       app:destination="@id/fragment_groupie" />
+    <action
+      android:id="@+id/to_fragment_span"
+      app:destination="@id/fragment_span" />
   </fragment>
 
   <fragment
@@ -92,5 +95,10 @@
     android:id="@+id/fragment_groupie_swipe"
     android:name="com.example.androidtechsample.ui.groupie.swipe.GroupieSwipeFragment"
     tools:layout="@layout/fragment_groupie_swipe"/>
+
+  <fragment
+    android:id="@+id/fragment_span"
+    android:name="com.example.androidtechsample.ui.SpanFragment"
+    tools:layout="@layout/fragment_span"/>
 
 </navigation>
