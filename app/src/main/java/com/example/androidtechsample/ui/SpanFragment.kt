@@ -3,9 +3,18 @@ package com.example.androidtechsample.ui
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
-import android.text.*
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.SpannedString
 import android.text.method.LinkMovementMethod
-import android.text.style.*
+import android.text.style.BackgroundColorSpan
+import android.text.style.ClickableSpan
+import android.text.style.ForegroundColorSpan
+import android.text.style.QuoteSpan
+import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +23,7 @@ import androidx.core.text.color
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentSpanBinding
+import com.example.androidtechsample.util.rangeOfIndex
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -48,68 +58,91 @@ class SpanFragment : Fragment() {
   }
 
   private fun spanColor(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val colorRange = sampleLabel.rangeOfIndex("Text")
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         ForegroundColorSpan(Color.RED),
-        7, // start
-        this.length, // end
+        colorRange.first, // start
+        colorRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
     }
   }
 
+  private fun spanColorKtx(): SpannedString {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val colorRange = sampleLabel.rangeOfIndex("Text")
+    return buildSpannedString {
+      append(sampleLabel.subSequence(0, colorRange.first))
+      color(Color.RED) {
+        append(sampleLabel.subSequence(colorRange))
+      }
+    }
+  }
+
   private fun spanMultiple(): SpannableString {
-    return SpannableString(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val boldRange = sampleLabel.rangeOfIndex("Text")
+    val colorRange = sampleLabel.rangeOfIndex("Te")
+    return SpannableString(sampleLabel).apply {
       setSpan(
         ForegroundColorSpan(Color.RED),
-        7, // start
-        9, // end
+        colorRange.first, // start
+        colorRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
       setSpan(
         StyleSpan(Typeface.BOLD),
-        7,
-        this.length,
+        boldRange.first,
+        boldRange.last.inc(),
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
     }
   }
 
   private fun spanUnderline(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val underlineRange = sampleLabel.rangeOfIndex("Text")
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         UnderlineSpan(),
-        7, // start
-        this.length, // end
+        underlineRange.first, // start
+        underlineRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
     }
   }
 
   private fun spanSize(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val sizeRange = sampleLabel.rangeOfIndex("Text")
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         RelativeSizeSpan(1.5f),
-        7, // start
-        this.length, // end
+        sizeRange.first, // start
+        sizeRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
     }
   }
 
   private fun spanBackgroundColor(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val sizeRange = sampleLabel.rangeOfIndex("Text")
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         BackgroundColorSpan(Color.RED),
-        7, // start
-        this.length, // end
+        sizeRange.first, // start
+        sizeRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
     }
   }
 
   private fun spanParagraph(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text_paragraph)).apply {
+    val sampleLabel = getString(R.string.span_sample_text_paragraph)
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         QuoteSpan(),
         0, // start
@@ -120,25 +153,19 @@ class SpanFragment : Fragment() {
   }
 
   private fun spanClick(): SpannableStringBuilder {
-    return SpannableStringBuilder(getString(R.string.span_sample_text)).apply {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val sizeRange = sampleLabel.rangeOfIndex("Text")
+    return SpannableStringBuilder(sampleLabel).apply {
       setSpan(
         object : ClickableSpan() {
           override fun onClick(widget: View) {
             // TODO クリック処理
           }
         },
-        7, // start
-        this.length, // end
+        sizeRange.first, // start
+        sizeRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
-    }
-  }
-
-  private fun spanColorKtx(): SpannedString {
-    return buildSpannedString {
-      color(Color.RED) {
-        append(getString(R.string.span_sample_text))
-      }
     }
   }
 }
