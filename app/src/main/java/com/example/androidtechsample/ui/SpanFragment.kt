@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.*
+import android.text.method.LinkMovementMethod
 import android.text.style.*
 import android.view.LayoutInflater
 import android.view.View
@@ -38,7 +39,10 @@ class SpanFragment : Fragment() {
       textSize.text = spanSize()
       textBackground.text = spanBackgroundColor()
       textParagraph.text = spanParagraph()
-      textClick.text = spanClick()
+      textClick.apply {
+        text = spanClick()
+        movementMethod = LinkMovementMethod.getInstance()
+      }
       textKtx.text = spanColorKtx()
     }
   }
