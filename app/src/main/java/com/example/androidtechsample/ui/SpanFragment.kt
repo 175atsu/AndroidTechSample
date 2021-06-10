@@ -18,8 +18,12 @@ import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.backgroundColor
 import androidx.core.text.buildSpannedString
 import androidx.core.text.color
+import androidx.core.text.inSpans
+import androidx.core.text.scale
+import androidx.core.text.underline
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentSpanBinding
@@ -114,6 +118,17 @@ class SpanFragment : Fragment() {
     }
   }
 
+  private fun spanUnderlineKtx(): SpannedString {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val underlineRange = sampleLabel.rangeOfIndex("Text")
+    return buildSpannedString {
+      append(sampleLabel.subSequence(0, underlineRange.first))
+      underline {
+        append(sampleLabel.subSequence(underlineRange))
+      }
+    }
+  }
+
   private fun spanSize(): SpannableStringBuilder {
     val sampleLabel = getString(R.string.span_sample_text)
     val sizeRange = sampleLabel.rangeOfIndex("Text")
@@ -127,6 +142,17 @@ class SpanFragment : Fragment() {
     }
   }
 
+  private fun spanSizeKtx(): SpannedString {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val underlineRange = sampleLabel.rangeOfIndex("Text")
+    return buildSpannedString {
+      append(sampleLabel.subSequence(0, underlineRange.first))
+      scale(1.5f) {
+        append(sampleLabel.subSequence(underlineRange))
+      }
+    }
+  }
+
   private fun spanBackgroundColor(): SpannableStringBuilder {
     val sampleLabel = getString(R.string.span_sample_text)
     val sizeRange = sampleLabel.rangeOfIndex("Text")
@@ -137,6 +163,17 @@ class SpanFragment : Fragment() {
         sizeRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
+    }
+  }
+
+  private fun spanBackgroundKtx(): SpannedString {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val underlineRange = sampleLabel.rangeOfIndex("Text")
+    return buildSpannedString {
+      append(sampleLabel.subSequence(0, underlineRange.first))
+      backgroundColor(Color.RED) {
+        append(sampleLabel.subSequence(underlineRange))
+      }
     }
   }
 
@@ -166,6 +203,23 @@ class SpanFragment : Fragment() {
         sizeRange.last.inc(), // end
         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
       )
+    }
+  }
+
+  private fun spanClickKtx(): SpannedString {
+    val sampleLabel = getString(R.string.span_sample_text)
+    val sizeRange = sampleLabel.rangeOfIndex("Text")
+    return buildSpannedString {
+      append(sampleLabel.subSequence(0, sizeRange.first))
+      inSpans(
+        object : ClickableSpan() {
+          override fun onClick(widget: View) {
+            // TODO クリック処理
+          }
+        },
+      ) {
+        append(sampleLabel.subSequence(sizeRange))
+      }
     }
   }
 }
