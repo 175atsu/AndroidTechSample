@@ -55,6 +55,7 @@ object Dep {
   }
 
   const val material = "com.google.android.material:material:1.3.0"
+  const val compat = "com.android.support:support-compat:28.0.0"
 
   object DI {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"

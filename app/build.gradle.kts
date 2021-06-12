@@ -41,6 +41,7 @@ dependencies {
   implementation(Dep.AndroidX.navRuntime)
   implementation(Dep.AndroidX.biometric)
   implementation(Dep.material)
+  implementation(Dep.compat)
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
 
