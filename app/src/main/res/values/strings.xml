@@ -21,7 +21,14 @@
   <string name="span_sample_text_paragraph">Sample \nText</string>
 
   <!-- NotificationFragment -->
+  <string name="notice_basic">Basic</string>
+  <string name="notice_basic_label">BasicNotification</string>
+  <string name="notice_basic_description">BasicDescription</string>
   <string name="notice_action">Action</string>
+  <string name="notice_action_label">ActionNotification</string>
+  <string name="notice_action_description">ActionDescription</string>
   <string name="notice_direct">Direct</string>
+  <string name="notice_direct_label">DirectNotification</string>
+  <string name="notice_direct_description">DirectDescription</string>
 
 </resources>

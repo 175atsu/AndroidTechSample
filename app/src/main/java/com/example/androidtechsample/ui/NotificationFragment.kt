@@ -1,6 +1,5 @@
 package com.example.androidtechsample.ui
 
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -25,8 +24,6 @@ class NotificationFragment : Fragment() {
 
   companion object {
     const val CHANNEL_ID = "channel_id"
-    const val channel_name = "channel_name"
-    const val channel_description = "channel_description "
     const val KEY_TEXT_REPLY = "key_text_reply"
   }
 
@@ -56,14 +53,18 @@ class NotificationFragment : Fragment() {
         val builder = actionBuilder(requireContext())
         runNotice(builder)
       }
+      directNotice.setOnClickListener {
+        val builder = directBuilder(requireContext())
+        runNotice(builder)
+      }
     }
   }
 
   private fun createChannel() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-      val name = channel_name
+      val channelName = "channel_name"
       val importance = NotificationManager.IMPORTANCE_HIGH
-      val channel = NotificationChannel(CHANNEL_ID, name, importance)
+      val channel = NotificationChannel(CHANNEL_ID, channelName, importance)
       // チャネルを登録
       val notificationManager: NotificationManager =
         requireContext().getSystemService(NOTIFICATION_SERVICE) as NotificationManager
@@ -85,24 +86,22 @@ class NotificationFragment : Fragment() {
     val pendingIntent: PendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
     return NotificationCompat.Builder(context, CHANNEL_ID)
       .setSmallIcon(R.drawable.avatar)
-      .setContentTitle(channel_name)
-      .setContentText(channel_description)
+      .setContentTitle(getString(R.string.notice_basic_label))
+      .setContentText(getString(R.string.notice_basic_description))
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
       .setContentIntent(pendingIntent)
       .setAutoCancel(true)
   }
 
   private fun actionBuilder(context: Context): NotificationCompat.Builder {
-    val intent = Intent(context, NotificationBroadcastReceiver::class.java).apply {
-      action = "ACTION"
-    }
+    val intent = Intent(context, NotificationBroadcastReceiver::class.java)
     val pendingIntent: PendingIntent =
       PendingIntent.getBroadcast(context, 0, intent, 0)
 
     return NotificationCompat.Builder(context, CHANNEL_ID)
       .setSmallIcon(R.drawable.avatar)
-      .setContentTitle(channel_name)
-      .setContentText(channel_description)
+      .setContentTitle(getString(R.string.notice_action_label))
+      .setContentText(getString(R.string.notice_action_description))
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
       .addAction(
         R.drawable.ic_launcher_background, getString(R.string.notice_action),
@@ -110,40 +109,34 @@ class NotificationFragment : Fragment() {
       )
   }
 
-//  private fun directBuilder(context: Context): NotificationCompat.Builder {
-//    // Key for the string that's delivered in the action's intent.
-//    var replyLabel: String = resources.getString(R.string.notice_action)
-//    var remoteInput: RemoteInput = RemoteInput.Builder(KEY_TEXT_REPLY).run {
-//      setLabel(replyLabel)
-//      build()
-//    }
-//
-//    // Build a PendingIntent for the reply action to trigger.
-////    var replyPendingIntent: PendingIntent =
-////      PendingIntent.getBroadcast(
-////        context,
-////        1,
-////        getMessageReplyIntent(conversation.getConversationId()),
-////        PendingIntent.FLAG_UPDATE_CURRENT
-////      )
-//
-//
-//
-//    // Create the reply action and add the remote input.
-//    var action: NotificationCompat.Action =
-//      NotificationCompat.Action.Builder(
-//        R.drawable.ic_launcher_background,
-//        getString(R.string.notice_direct),
-//        replyActionPendingIntent
-//      )
-//        .addRemoteInput(remoteInput)
-//        .build()
-//
-//
-//    return NotificationCompat.Builder(context, CHANNEL_ID)
-//      .setSmallIcon(R.drawable.avatar)
-//      .setContentTitle(channel_name)
-//      .setContentText(channel_description)
-//      .addAction(action)
-//  }
+  private fun directBuilder(context: Context): NotificationCompat.Builder {
+    val replyLabel: String = resources.getString(R.string.notice_action)
+    val remoteInput: RemoteInput = RemoteInput.Builder(KEY_TEXT_REPLY).run {
+      setLabel(replyLabel)
+      build()
+    }
+
+    val replyPendingIntent: PendingIntent =
+      PendingIntent.getBroadcast(
+        context,
+        1,
+        Intent(),
+        PendingIntent.FLAG_UPDATE_CURRENT
+      )
+
+    val action: NotificationCompat.Action =
+      NotificationCompat.Action.Builder(
+        R.drawable.ic_launcher_background,
+        getString(R.string.notice_direct),
+        replyPendingIntent
+      )
+        .addRemoteInput(remoteInput)
+        .build()
+
+    return NotificationCompat.Builder(context, CHANNEL_ID)
+      .setSmallIcon(R.drawable.avatar)
+      .setContentTitle(getString(R.string.notice_direct_label))
+      .setContentText(getString(R.string.notice_direct_description))
+      .addAction(action)
+  }
 }

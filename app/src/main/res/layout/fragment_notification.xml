@@ -10,6 +10,7 @@
       android:id="@+id/basic_notice"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:text="@string/notice_basic"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +20,19 @@
       android:id="@+id/action_notice"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:text="@string/notice_action"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/basic_notice" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/direct_notice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/notice_direct"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/action_notice" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
