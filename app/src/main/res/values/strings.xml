@@ -22,5 +22,6 @@
 
   <!-- NotificationFragment -->
   <string name="notice_action">Action</string>
+  <string name="notice_direct">Direct</string>
 
 </resources>
