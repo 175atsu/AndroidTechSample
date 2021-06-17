@@ -30,5 +30,7 @@
   <string name="notice_direct">Direct</string>
   <string name="notice_direct_label">DirectNotification</string>
   <string name="notice_direct_description">DirectDescription</string>
-
+  <string name="notice_progress">Progress</string>
+  <string name="notice_progress_label">ProgressNotification</string>
+  <string name="notice_progress_description">ProgressDescription</string>
 </resources>

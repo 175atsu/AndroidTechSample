@@ -1,8 +1,9 @@
-package com.example.androidtechsample.ui
+package com.example.androidtechsample.ui.notification
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_UPDATE_CURRENT
 import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
@@ -15,8 +16,11 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.RemoteInput
 import androidx.fragment.app.Fragment
+import androidx.work.OneTimeWorkRequest
+import androidx.work.WorkManager
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentNotificationBinding
+import com.example.androidtechsample.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,7 +33,7 @@ class NotificationFragment : Fragment() {
 
   private lateinit var binding: FragmentNotificationBinding
 
-  var notificationId = 0
+  private var notificationId = 0
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -56,6 +60,10 @@ class NotificationFragment : Fragment() {
       directNotice.setOnClickListener {
         val builder = directBuilder(requireContext())
         runNotice(builder)
+      }
+      buttonNoticeProgress.setOnClickListener {
+        val progressService = OneTimeWorkRequest.from(NotificationService::class.java)
+        WorkManager.getInstance(requireContext()).enqueue(progressService)
       }
     }
   }
@@ -96,7 +104,7 @@ class NotificationFragment : Fragment() {
   private fun actionBuilder(context: Context): NotificationCompat.Builder {
     val intent = Intent(context, NotificationBroadcastReceiver::class.java)
     val pendingIntent: PendingIntent =
-      PendingIntent.getBroadcast(context, 0, intent, 0)
+      PendingIntent.getBroadcast(context, 1, intent, FLAG_UPDATE_CURRENT)
 
     return NotificationCompat.Builder(context, CHANNEL_ID)
       .setSmallIcon(R.drawable.avatar)
@@ -119,9 +127,11 @@ class NotificationFragment : Fragment() {
     val replyPendingIntent: PendingIntent =
       PendingIntent.getBroadcast(
         context,
-        1,
-        Intent(),
-        PendingIntent.FLAG_UPDATE_CURRENT
+        notificationId,
+        Intent(context, NotificationBroadcastReceiver::class.java).apply {
+          flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        },
+        FLAG_UPDATE_CURRENT
       )
 
     val action: NotificationCompat.Action =
