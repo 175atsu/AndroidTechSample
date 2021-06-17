@@ -29,8 +29,6 @@
       </intent-filter>
     </receiver>
 
-    <service android:name=".ui.notification.NotificationService" />
-
   </application>
 
 </manifest>

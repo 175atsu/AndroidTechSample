@@ -72,7 +72,11 @@ class NotificationFragment : Fragment() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
       val channelName = "channel_name"
       val importance = NotificationManager.IMPORTANCE_HIGH
-      val channel = NotificationChannel(CHANNEL_ID, channelName, importance)
+      val channel = NotificationChannel(CHANNEL_ID, channelName, importance).apply {
+        description = "ho"
+        setShowBadge(true)
+        enableVibration(true)
+      }
       // チャネルを登録
       val notificationManager: NotificationManager =
         requireContext().getSystemService(NOTIFICATION_SERVICE) as NotificationManager
