@@ -1,31 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+      android:id="@+id/view_header"
+      android:layout_width="0dp"
+      android:layout_height="64dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+      android:id="@+id/image_header_change_front_back"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_marginEnd="24dp"
+      android:contentDescription="@null"
+      android:src="@drawable/ic_autorenew_black_24dp"
+      app:layout_constraintBottom_toBottomOf="@id/view_header"
+      app:layout_constraintEnd_toEndOf="@id/view_header"
+      app:layout_constraintTop_toTopOf="@id/view_header" />
+
     <androidx.camera.view.PreviewView
-      android:id="@+id/viewFinder"
+      android:id="@+id/camera_preview"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintDimensionRatio="w,4:3"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/view_header"
+      tools:src="@tools:sample/backgrounds/scenic" />
+
+    <View
+      android:id="@+id/camera_footer"
       android:layout_width="0dp"
       android:layout_height="0dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@id/camera_preview" />
 
     <Button
       android:id="@+id/camera_capture_button"
-      android:layout_width="100dp"
-      android:layout_height="100dp"
-      android:layout_marginBottom="40dp"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:background="@drawable/ic_circle_black_24dp"
       android:elevation="2dp"
-      android:scaleType="fitCenter"
-      android:text="Take Photo"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent" />
+      app:layout_constraintBottom_toBottomOf="@id/camera_footer"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/camera_footer" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
