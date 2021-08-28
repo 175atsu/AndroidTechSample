@@ -36,6 +36,14 @@ object Dep {
     const val work = "androidx.work:work-runtime-ktx:2.5.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
 
+    object CameraX {
+      const val core = "androidx.camera:camera-core:1.0.1"
+      const val camera2 = "androidx.camera:camera-camera2:1.0.1"
+      const val lifecycle = "androidx.camera:camera-lifecycle:1.0.1"
+      const val view = "androidx.camera:camera-view:1.0.0-alpha27"
+      const val extensions = "androidx.camera:camera-extensions:1.0.0-alpha27"
+    }
+
     object Test {
       const val ext = "androidx.test.ext:junit:1.1.2"
       const val espresso = "androidx.test.espresso:espresso-core:3.3.0"
