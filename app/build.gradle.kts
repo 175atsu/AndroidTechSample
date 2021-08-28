@@ -39,8 +39,11 @@ dependencies {
   implementation(Dep.AndroidX.navFragmentKtx)
   implementation(Dep.AndroidX.navUi)
   implementation(Dep.AndroidX.navRuntime)
+  implementation(Dep.AndroidX.work)
   implementation(Dep.AndroidX.biometric)
+  implementation(Dep.coroutine)
   implementation(Dep.material)
+  implementation(Dep.compat)
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
 

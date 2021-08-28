@@ -33,6 +33,7 @@ object Dep {
       "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val plugin =
       "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+    const val work = "androidx.work:work-runtime-ktx:2.5.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
 
     object Test {
@@ -40,6 +41,8 @@ object Dep {
       const val espresso = "androidx.test.espresso:espresso-core:3.3.0"
     }
   }
+
+  const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
 
   object Groupie {
     const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
@@ -55,6 +58,7 @@ object Dep {
   }
 
   const val material = "com.google.android.material:material:1.3.0"
+  const val compat = "com.android.support:support-compat:28.0.0"
 
   object DI {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"

@@ -21,6 +21,9 @@
     <action
       android:id="@+id/to_fragment_span"
       app:destination="@id/fragment_span" />
+    <action
+      android:id="@+id/to_fragment_notification"
+      app:destination="@id/fragment_notification" />
   </fragment>
 
   <fragment
@@ -31,7 +34,7 @@
   <fragment
     android:id="@+id/fragment_motion"
     android:name="com.example.androidtechsample.ui.motion.MotionFragment"
-    tools:layout="@layout/fragment_motion" >
+    tools:layout="@layout/fragment_motion">
     <action
       android:id="@+id/to_fragment_motion_layout"
       app:destination="@id/fragment_motion_top_swipe" />
@@ -84,21 +87,26 @@
   <fragment
     android:id="@+id/fragment_groupie_basic"
     android:name="com.example.androidtechsample.ui.groupie.basic.GroupieBasicFragment"
-    tools:layout="@layout/fragment_groupie_basic"/>
+    tools:layout="@layout/fragment_groupie_basic" />
 
   <fragment
     android:id="@+id/fragment_groupie_carousel"
     android:name="com.example.androidtechsample.ui.groupie.carousel.GroupieCarouselFragment"
-    tools:layout="@layout/fragment_groupie_carousel"/>
+    tools:layout="@layout/fragment_groupie_carousel" />
 
   <fragment
     android:id="@+id/fragment_groupie_swipe"
     android:name="com.example.androidtechsample.ui.groupie.swipe.GroupieSwipeFragment"
-    tools:layout="@layout/fragment_groupie_swipe"/>
+    tools:layout="@layout/fragment_groupie_swipe" />
 
   <fragment
     android:id="@+id/fragment_span"
     android:name="com.example.androidtechsample.ui.SpanFragment"
-    tools:layout="@layout/fragment_span"/>
+    tools:layout="@layout/fragment_span" />
+
+  <fragment
+    android:id="@+id/fragment_notification"
+    android:name="com.example.androidtechsample.ui.notification.NotificationFragment"
+    tools:layout="@layout/fragment_notification" />
 
 </navigation>
