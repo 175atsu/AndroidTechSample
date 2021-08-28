@@ -24,6 +24,9 @@
     <action
       android:id="@+id/to_fragment_notification"
       app:destination="@id/fragment_notification" />
+    <action
+      android:id="@+id/to_fragment_camera"
+      app:destination="@id/fragment_camera" />
   </fragment>
 
   <fragment
@@ -108,5 +111,9 @@
     android:id="@+id/fragment_notification"
     android:name="com.example.androidtechsample.ui.notification.NotificationFragment"
     tools:layout="@layout/fragment_notification" />
+
+  <fragment
+    android:id="@+id/fragment_camera"
+    android:name="com.example.androidtechsample.ui.camera.CameraFragment" />
 
 </navigation>

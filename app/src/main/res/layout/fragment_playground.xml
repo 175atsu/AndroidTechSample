@@ -41,6 +41,12 @@
         android:layout_height="wrap_content"
         android:text="@string/playground_notification_view" />
 
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_camera_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/playground_camera_view" />
+
     </LinearLayout>
   </ScrollView>
 </layout>

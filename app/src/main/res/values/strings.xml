@@ -1,10 +1,14 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
+
+  <!-- PlaygroundFragment -->
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
   <string name="playground_groupie_view">GroupieView</string>
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
+  <string name="playground_camera_view">CameraView</string>
+  <string name="playground_permission_camera">カメラの許可をしてください</string>
 
   <!-- BiometricFragment -->
   <string name="biometric_fingerprint_authentication">指紋認証</string>
