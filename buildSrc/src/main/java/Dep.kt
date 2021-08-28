@@ -1,7 +1,7 @@
 package com.example.buildsrc
 
 object Versions {
-  const val kotlin = "1.4.32"
+  const val kotlin = "1.5.30"
   const val navigation = "2.3.5"
   const val hilt = "2.34.1-beta"
   const val groupie = "2.9.0"
