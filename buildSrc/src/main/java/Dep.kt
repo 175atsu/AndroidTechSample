@@ -27,14 +27,17 @@ object Dep {
     const val appCompat = "androidx.appcompat:appcompat:1.2.0"
     const val core = "androidx.core:core-ktx:1.5.0-beta01"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
-    const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
-    const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
-    const val navFragmentKtx =
-      "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
-    const val plugin =
-      "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
     const val work = "androidx.work:work-runtime-ktx:2.5.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
+
+    object Navigation {
+      const val ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+      const val runtime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
+      const val fragmentKtx =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+      const val safeArgs =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+    }
 
     object CameraX {
       const val core = "androidx.camera:camera-core:1.0.1"

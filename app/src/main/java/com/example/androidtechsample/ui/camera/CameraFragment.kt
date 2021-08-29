@@ -10,12 +10,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.camera.core.CameraSelector.DEFAULT_BACK_CAMERA
 import androidx.camera.core.CameraSelector.DEFAULT_FRONT_CAMERA
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.ImageCaptureException
+import androidx.camera.view.CameraController
 import androidx.camera.view.LifecycleCameraController
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentCameraBinding
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
+import java.io.File
 
 @AndroidEntryPoint
 class CameraFragment : Fragment() {
@@ -52,6 +59,9 @@ class CameraFragment : Fragment() {
       }
       imageFooterLight.setOnClickListener {
         viewMode.changeCameraLight()
+      }
+      buttonFooterCapture.setOnClickListener {
+        takePhoto(cameraController)
       }
     }
 
@@ -112,5 +122,29 @@ class CameraFragment : Fragment() {
 
   private fun switchLight() {
 //    manager.setTorchMode(cameraId, !cameraSw)
+  }
+
+  private fun takePhoto(cameraController: CameraController) {
+    val outputFileOptions = ImageCapture.OutputFileOptions
+      .Builder(File("..."))
+      .build()
+
+    cameraController.takePicture(
+      outputFileOptions,
+      ContextCompat.getMainExecutor(context),
+      object : ImageCapture.OnImageSavedCallback {
+        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+          Timber.d("成功")
+          outputFileResults.savedUri
+          val action =
+            CameraFragmentDirections.toFragmentCameraPreview(outputFileResults.savedUri.toString())
+          findNavController().navigate(action)
+        }
+
+        override fun onError(exception: ImageCaptureException) {
+          Timber.d(exception)
+        }
+      }
+    )
   }
 }

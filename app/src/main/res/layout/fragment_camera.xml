@@ -58,7 +58,7 @@
       tools:src="@tools:sample/backgrounds/scenic" />
 
     <View
-      android:id="@+id/camera_footer"
+      android:id="@+id/view_footer"
       android:layout_width="0dp"
       android:layout_height="0dp"
       app:layout_constraintBottom_toBottomOf="parent"
@@ -67,15 +67,15 @@
       app:layout_constraintTop_toBottomOf="@id/view_preview_frame" />
 
     <Button
-      android:id="@+id/camera_capture_button"
+      android:id="@+id/button_footer_capture"
       android:layout_width="80dp"
       android:layout_height="80dp"
       android:background="@drawable/ic_circle_black_24dp"
       android:elevation="2dp"
-      app:layout_constraintBottom_toBottomOf="@id/camera_footer"
+      app:layout_constraintBottom_toBottomOf="@id/view_footer"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="@id/camera_footer" />
+      app:layout_constraintTop_toTopOf="@id/view_footer" />
 
     <ImageView
       android:id="@+id/image_footer_light"
@@ -84,9 +84,9 @@
       android:layout_marginEnd="48dp"
       android:contentDescription="@null"
       android:src="@drawable/ic_flashlight_on_black_24dp"
-      app:layout_constraintBottom_toBottomOf="@id/camera_footer"
-      app:layout_constraintEnd_toEndOf="@id/camera_footer"
-      app:layout_constraintTop_toTopOf="@id/camera_footer" />
+      app:layout_constraintBottom_toBottomOf="@id/view_footer"
+      app:layout_constraintEnd_toEndOf="@id/view_footer"
+      app:layout_constraintTop_toTopOf="@id/view_footer" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
