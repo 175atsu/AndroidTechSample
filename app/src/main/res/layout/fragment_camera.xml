@@ -77,5 +77,16 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@id/camera_footer" />
 
+    <ImageView
+      android:id="@+id/image_footer_light"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="48dp"
+      android:contentDescription="@null"
+      android:src="@drawable/ic_flashlight_on_black_24dp"
+      app:layout_constraintBottom_toBottomOf="@id/camera_footer"
+      app:layout_constraintEnd_toEndOf="@id/camera_footer"
+      app:layout_constraintTop_toTopOf="@id/camera_footer" />
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

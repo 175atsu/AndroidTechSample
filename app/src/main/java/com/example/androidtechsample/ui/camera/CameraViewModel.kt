@@ -16,6 +16,9 @@ class CameraViewModel @Inject constructor() : ViewModel() {
   private val _hasPreviewSizeState = MutableLiveData(CameraSizeType.BASIC)
   val hasPreviewSizeState = _hasPreviewSizeState
 
+  private val _hasLightState = MutableLiveData(CameraLightType.OFF)
+  val hasLightState = _hasLightState
+
   fun changeCameraSelector() {
     when (hasSelectorState.value) {
       CameraSelectorType.FRONT -> _hasSelectorState.value = CameraSelectorType.BACK
@@ -33,5 +36,12 @@ class CameraViewModel @Inject constructor() : ViewModel() {
   fun getDisplayWidth(context: Context): Int {
     val displaySize = Display.getDisplaySize(context)
     return displaySize.width
+  }
+
+  fun changeCameraLight() {
+    when (hasLightState.value) {
+      CameraLightType.ON -> _hasLightState.value = CameraLightType.OFF
+      CameraLightType.OFF -> _hasLightState.value = CameraLightType.ON
+    }
   }
 }
