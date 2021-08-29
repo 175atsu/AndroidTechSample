@@ -1,5 +1,5 @@
 package com.example.androidtechsample.ui.camera
 
-enum class CameraSelector {
+enum class CameraSelectorType {
   FRONT, BACK
 }

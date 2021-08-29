@@ -32,9 +32,11 @@ class CameraFragment : Fragment() {
 
     val cameraController = LifecycleCameraController(requireContext())
     cameraController.bindToLifecycle(viewLifecycleOwner)
-    binding.cameraPreview.controller = cameraController
     with(binding) {
       cameraPreview.controller = cameraController
+      imageHeaderAspect.setOnClickListener {
+        viewMode.changeCameraSize()
+      }
       imageHeaderChangeFrontBack.setOnClickListener {
         viewMode.changeCameraSelector()
       }
@@ -43,9 +45,17 @@ class CameraFragment : Fragment() {
     with(viewMode) {
       hasSelectorState.observe(viewLifecycleOwner) {
         when (it) {
-          CameraSelector.FRONT -> cameraController.cameraSelector = DEFAULT_FRONT_CAMERA
-          CameraSelector.BACK -> cameraController.cameraSelector = DEFAULT_BACK_CAMERA
+          CameraSelectorType.FRONT -> cameraController.cameraSelector = DEFAULT_FRONT_CAMERA
+          CameraSelectorType.BACK -> cameraController.cameraSelector = DEFAULT_BACK_CAMERA
         }
+      }
+      hasPreviewSizeState.observe(viewLifecycleOwner) {
+        val displayWidth = viewMode.getDisplayWidth(requireContext())
+        when (it) {
+          CameraSizeType.BASIC -> binding.cameraPreview.layoutParams.height = displayWidth / 3 * 4
+          CameraSizeType.SQUARE -> binding.cameraPreview.layoutParams.height = displayWidth
+        }
+        binding.cameraPreview.requestLayout()
       }
     }
   }

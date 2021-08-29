@@ -16,6 +16,17 @@
       app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+      android:id="@+id/image_header_aspect"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:contentDescription="@null"
+      android:src="@drawable/ic_autorenew_black_24dp"
+      app:layout_constraintBottom_toBottomOf="@id/view_header"
+      app:layout_constraintEnd_toEndOf="@id/view_header"
+      app:layout_constraintStart_toStartOf="@id/view_header"
+      app:layout_constraintTop_toTopOf="@id/view_header" />
+
+    <ImageView
       android:id="@+id/image_header_change_front_back"
       android:layout_width="32dp"
       android:layout_height="32dp"
@@ -26,14 +37,24 @@
       app:layout_constraintEnd_toEndOf="@id/view_header"
       app:layout_constraintTop_toTopOf="@id/view_header" />
 
-    <androidx.camera.view.PreviewView
-      android:id="@+id/camera_preview"
+    <View
+      android:id="@+id/view_preview_frame"
       android:layout_width="0dp"
       android:layout_height="0dp"
       app:layout_constraintDimensionRatio="w,4:3"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/view_header"
+      tools:src="@tools:sample/backgrounds/scenic" />
+
+    <androidx.camera.view.PreviewView
+      android:id="@+id/camera_preview"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="@id/view_preview_frame"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/view_preview_frame"
       tools:src="@tools:sample/backgrounds/scenic" />
 
     <View
@@ -43,7 +64,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/camera_preview" />
+      app:layout_constraintTop_toBottomOf="@id/view_preview_frame" />
 
     <Button
       android:id="@+id/camera_capture_button"
