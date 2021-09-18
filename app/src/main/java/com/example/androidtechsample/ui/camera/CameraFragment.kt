@@ -2,6 +2,7 @@ package com.example.androidtechsample.ui.camera
 
 import android.content.Context
 import android.hardware.camera2.CameraManager
+import android.media.MediaActionSound
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import androidx.camera.view.LifecycleCameraController
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentCameraBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -135,6 +135,7 @@ class CameraFragment : Fragment() {
 
   private fun takePhoto(cameraController: CameraController) {
     val outputFile = viewMode.getOutputFileOptions(requireContext())
+    val sound = viewMode.createShutterSound()
 
     cameraController.takePicture(
       outputFile,
@@ -143,6 +144,7 @@ class CameraFragment : Fragment() {
         override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
           Timber.d("成功")
           outputFileResults.savedUri
+          sound.play(MediaActionSound.SHUTTER_CLICK)
         }
 
         override fun onError(exception: ImageCaptureException) {

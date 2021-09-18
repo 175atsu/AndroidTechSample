@@ -1,6 +1,7 @@
 package com.example.androidtechsample.ui.camera
 
 import android.content.Context
+import android.media.MediaActionSound
 import androidx.camera.core.ImageCapture
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -50,5 +51,11 @@ class CameraViewModel @Inject constructor(
 
   fun getOutputFileOptions(context: Context): ImageCapture.OutputFileOptions {
     return mediaController.getOutputFileOptions(context)
+  }
+
+  fun createShutterSound():MediaActionSound {
+    val sound = MediaActionSound()
+    sound.load(MediaActionSound.SHUTTER_CLICK)
+    return sound
   }
 }
