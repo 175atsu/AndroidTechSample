@@ -22,13 +22,16 @@ import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentCameraBinding
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
-import java.io.File
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 @AndroidEntryPoint
 class CameraFragment : Fragment() {
 
   private lateinit var binding: FragmentCameraBinding
   private val viewMode: CameraViewModel by viewModels()
+
+  private lateinit var cameraExecutor: ExecutorService
 
   lateinit var btSwitch: Button
   lateinit var manager: CameraManager
@@ -46,6 +49,7 @@ class CameraFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+    cameraExecutor = Executors.newSingleThreadExecutor()
 
     val cameraController = LifecycleCameraController(requireContext())
     cameraController.bindToLifecycle(viewLifecycleOwner)
@@ -89,6 +93,11 @@ class CameraFragment : Fragment() {
     }
   }
 
+  override fun onDestroy() {
+    super.onDestroy()
+    cameraExecutor.shutdown()
+  }
+
   // TODO 謎
   private fun setLight() {
     var firstTime = true
@@ -125,20 +134,15 @@ class CameraFragment : Fragment() {
   }
 
   private fun takePhoto(cameraController: CameraController) {
-    val outputFileOptions = ImageCapture.OutputFileOptions
-      .Builder(File("..."))
-      .build()
+    val outputFile = viewMode.getOutputFileOptions(requireContext())
 
     cameraController.takePicture(
-      outputFileOptions,
+      outputFile,
       ContextCompat.getMainExecutor(context),
       object : ImageCapture.OnImageSavedCallback {
         override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
           Timber.d("成功")
           outputFileResults.savedUri
-          val action =
-            CameraFragmentDirections.toFragmentCameraPreview(outputFileResults.savedUri.toString())
-          findNavController().navigate(action)
         }
 
         override fun onError(exception: ImageCaptureException) {

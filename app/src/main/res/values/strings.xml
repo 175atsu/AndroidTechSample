@@ -37,4 +37,8 @@
   <string name="notice_progress">Progress</string>
   <string name="notice_progress_label">ProgressNotification</string>
   <string name="notice_progress_description">ProgressDescription</string>
+
+  <!-- CameraFragment -->
+  <string name="camera_folder_name">AndroidTechSample</string>
+
 </resources>

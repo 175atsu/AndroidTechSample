@@ -1,6 +1,7 @@
 package com.example.androidtechsample.ui.camera
 
 import android.content.Context
+import androidx.camera.core.ImageCapture
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androidtechsample.util.Display
@@ -8,7 +9,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CameraViewModel @Inject constructor() : ViewModel() {
+class CameraViewModel @Inject constructor(
+  private val mediaController: MediaController
+) : ViewModel() {
 
   private val _hasSelectorState = MutableLiveData(CameraSelectorType.BACK)
   val hasSelectorState = _hasSelectorState
@@ -43,5 +46,9 @@ class CameraViewModel @Inject constructor() : ViewModel() {
       CameraLightType.ON -> _hasLightState.value = CameraLightType.OFF
       CameraLightType.OFF -> _hasLightState.value = CameraLightType.ON
     }
+  }
+
+  fun getOutputFileOptions(context: Context): ImageCapture.OutputFileOptions {
+    return mediaController.getOutputFileOptions(context)
   }
 }
