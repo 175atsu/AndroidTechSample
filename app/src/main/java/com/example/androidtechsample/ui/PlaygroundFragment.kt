@@ -18,7 +18,7 @@ class PlaygroundFragment : Fragment() {
 
   companion object {
     val REQUIRED_PERMISSIONS =
-      arrayOf(Manifest.permission.CAMERA)
+      arrayOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
   }
 
   private lateinit var binding: FragmentPlaygroundBinding
