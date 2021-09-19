@@ -53,7 +53,7 @@ class CameraViewModel @Inject constructor(
     return mediaController.getOutputFileOptions(context)
   }
 
-  fun createShutterSound():MediaActionSound {
+  fun createShutterSound(): MediaActionSound {
     val sound = MediaActionSound()
     sound.load(MediaActionSound.SHUTTER_CLICK)
     return sound

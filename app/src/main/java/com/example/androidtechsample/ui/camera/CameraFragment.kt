@@ -1,10 +1,14 @@
 package com.example.androidtechsample.ui.camera
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.hardware.camera2.CameraManager
 import android.media.MediaActionSound
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore
+import android.util.Size
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +28,10 @@ import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import android.content.ContentUris
+import android.net.Uri
+import androidx.navigation.fragment.findNavController
+import com.example.androidtechsample.util.navigator
 
 @AndroidEntryPoint
 class CameraFragment : Fragment() {
@@ -66,6 +74,9 @@ class CameraFragment : Fragment() {
       }
       buttonFooterCapture.setOnClickListener {
         takePhoto(cameraController)
+      }
+      binding.imageFooterGallery.setOnClickListener {
+        navigator(R.id.to_fragment_camera_gallery)
       }
     }
 
