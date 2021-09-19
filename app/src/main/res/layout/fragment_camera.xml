@@ -66,6 +66,17 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/view_preview_frame" />
 
+    <ImageView
+      android:id="@+id/image_footer_gallery"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="48dp"
+      android:contentDescription="@null"
+      android:src="@drawable/ic_image_black_24dp"
+      app:layout_constraintBottom_toBottomOf="@id/view_footer"
+      app:layout_constraintStart_toStartOf="@id/view_footer"
+      app:layout_constraintTop_toTopOf="@id/view_footer" />
+
     <Button
       android:id="@+id/button_footer_capture"
       android:layout_width="80dp"
