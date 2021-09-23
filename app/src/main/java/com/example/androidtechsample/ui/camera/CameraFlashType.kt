@@ -1,5 +1,5 @@
 package com.example.androidtechsample.ui.camera
 
-enum class CameraLightType {
-  ON, OFF
+enum class CameraFlashType {
+  ON, OFF, AUTO
 }

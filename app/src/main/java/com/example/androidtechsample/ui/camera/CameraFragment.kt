@@ -84,10 +84,20 @@ class CameraFragment : Fragment() {
         }
         binding.cameraPreview.requestLayout()
       }
-      hasLightState.observe(viewLifecycleOwner) {
+      hasFlashState.observe(viewLifecycleOwner) {
         when (it) {
-          CameraLightType.ON -> binding.imageFooterLight.setImageResource(R.drawable.ic_flashlight_on_black_24dp)
-          CameraLightType.OFF -> binding.imageFooterLight.setImageResource(R.drawable.ic_flashlight_off_black_24dp)
+          CameraFlashType.ON -> {
+            binding.imageFooterLight.setImageResource(R.drawable.ic_flash_on_black_24dp)
+            cameraController.imageCaptureFlashMode = ImageCapture.FLASH_MODE_ON
+          }
+          CameraFlashType.OFF -> {
+            binding.imageFooterLight.setImageResource(R.drawable.ic_flash_off_black_24dp)
+            cameraController.imageCaptureFlashMode = ImageCapture.FLASH_MODE_OFF
+          }
+          else -> {
+            binding.imageFooterLight.setImageResource(R.drawable.ic_flash_auto_black_24dp)
+            cameraController.imageCaptureFlashMode = ImageCapture.FLASH_MODE_AUTO
+          }
         }
       }
     }

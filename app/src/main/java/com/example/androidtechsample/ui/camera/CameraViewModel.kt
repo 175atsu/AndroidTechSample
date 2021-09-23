@@ -20,8 +20,8 @@ class CameraViewModel @Inject constructor(
   private val _hasPreviewSizeState = MutableLiveData(CameraSizeType.BASIC)
   val hasPreviewSizeState = _hasPreviewSizeState
 
-  private val _hasLightState = MutableLiveData(CameraLightType.OFF)
-  val hasLightState = _hasLightState
+  private val _hasFlashState = MutableLiveData(CameraFlashType.AUTO)
+  val hasFlashState = _hasFlashState
 
   fun changeCameraSelector() {
     when (hasSelectorState.value) {
@@ -43,9 +43,10 @@ class CameraViewModel @Inject constructor(
   }
 
   fun changeCameraLight() {
-    when (hasLightState.value) {
-      CameraLightType.ON -> _hasLightState.value = CameraLightType.OFF
-      CameraLightType.OFF -> _hasLightState.value = CameraLightType.ON
+    when (hasFlashState.value) {
+      CameraFlashType.ON -> _hasFlashState.value = CameraFlashType.OFF
+      CameraFlashType.OFF -> _hasFlashState.value = CameraFlashType.AUTO
+      else -> _hasFlashState.value = CameraFlashType.ON
     }
   }
 
@@ -53,7 +54,7 @@ class CameraViewModel @Inject constructor(
     return mediaController.getOutputFileOptions(context)
   }
 
-  fun createShutterSound():MediaActionSound {
+  fun createShutterSound(): MediaActionSound {
     val sound = MediaActionSound()
     sound.load(MediaActionSound.SHUTTER_CLICK)
     return sound
