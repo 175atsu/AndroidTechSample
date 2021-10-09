@@ -9,7 +9,8 @@ import com.example.androidtechsample.databinding.FragmentListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ListFragment : Fragment() {
+class ListFragment : Fragment(),
+  CarouselAnimationAdapter.Listener {
 
   private lateinit var binding: FragmentListBinding
 
@@ -24,7 +25,7 @@ class ListFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    val adapter = CarouselAnimationAdapter(setFollowUser())
+    val adapter = CarouselAnimationAdapter(setFollowUser(), this)
     with(binding) {
       recyclerView.adapter = adapter
     }
@@ -36,5 +37,9 @@ class ListFragment : Fragment() {
       followUserList.add(FollowUser.SAMPLE)
     }
     return followUserList
+  }
+
+  override fun itemClick(position: Int) {
+    binding.textLabel.text = position.toString()
   }
 }

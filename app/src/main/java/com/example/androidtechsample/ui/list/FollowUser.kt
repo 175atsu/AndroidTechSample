@@ -7,7 +7,7 @@ data class FollowUser(
   companion object {
     val SAMPLE = FollowUser(
       name = "テスト",
-      icon = "hoge"
+      icon = "https://pbs.twimg.com/profile_images/1261703567934513152/ql-g9xKD_400x400.jpg"
     )
   }
 }

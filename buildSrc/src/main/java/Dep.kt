@@ -44,6 +44,11 @@ object Dep {
 
   const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
 
+  object Glide {
+    const val core = "com.github.bumptech.glide:glide:4.11.0"
+    const val compiler = "com.github.bumptech.glide:compiler:4.11.0"
+  }
+
   object Groupie {
     const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
     const val databinding = "com.github.lisawray.groupie:groupie-databinding:${Versions.groupie}"

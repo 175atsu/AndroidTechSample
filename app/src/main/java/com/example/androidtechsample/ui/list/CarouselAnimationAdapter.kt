@@ -6,8 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidtechsample.databinding.ModelUserIconBinding
 
 class CarouselAnimationAdapter(
-  private val followUser: List<FollowUser>
+  private val followUserList: List<FollowUser>,
+  private val listener: Listener
 ) : RecyclerView.Adapter<CarouselAnimationViewHolder>() {
+
+  interface Listener {
+    fun itemClick(position: Int)
+  }
+
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselAnimationViewHolder {
     val inflater = LayoutInflater.from(parent.context)
     val binding = ModelUserIconBinding.inflate(inflater, parent, false)
@@ -15,19 +21,20 @@ class CarouselAnimationAdapter(
   }
 
   override fun onBindViewHolder(holder: CarouselAnimationViewHolder, position: Int) {
-    holder.name.text = followUser[position].name
-
+    holder.bind(followUserList[position])
     holder.itemView.setOnClickListener {
-
+      listener.itemClick(position)
     }
   }
 
-  override fun getItemCount(): Int = followUser.size
+  override fun getItemCount(): Int = followUserList.size
 
 }
 
-class CarouselAnimationViewHolder(binding: ModelUserIconBinding) : RecyclerView.ViewHolder(binding.root) {
-  val name = binding.textUserName
-  val icon = binding.imageUserIcon
+class CarouselAnimationViewHolder(private val binding: ModelUserIconBinding) :
+  RecyclerView.ViewHolder(binding.root) {
+  fun bind(item: FollowUser) {
+    binding.textUserName.text = item.name
+    binding.image = item.icon
+  }
 }
-
