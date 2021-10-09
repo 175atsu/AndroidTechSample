@@ -42,6 +42,9 @@ class PlaygroundFragment : Fragment() {
       toNotificationView.setOnClickListener {
         navigator(R.id.to_fragment_notification)
       }
+      toListView.setOnClickListener {
+        navigator(R.id.to_fragment_list)
+      }
     }
   }
 }

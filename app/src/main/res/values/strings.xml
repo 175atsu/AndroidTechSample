@@ -5,6 +5,7 @@
   <string name="playground_groupie_view">GroupieView</string>
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
+  <string name="playground_list_view">ListView</string>
 
   <!-- BiometricFragment -->
   <string name="biometric_fingerprint_authentication">指紋認証</string>
