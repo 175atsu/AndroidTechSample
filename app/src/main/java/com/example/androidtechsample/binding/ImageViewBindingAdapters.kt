@@ -1,9 +1,8 @@
 package com.example.androidtechsample.binding
 
-import android.net.Uri
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
+import com.example.androidtechsample.GlideApp
 
 object ImageViewBindingAdapters {
 
@@ -11,13 +10,10 @@ object ImageViewBindingAdapters {
   @JvmStatic
   fun ImageView.loadCircleImageUri(imageUri: String?) {
     imageUri.let {
-      Glide.with(this)
+      GlideApp.with(this)
         .load(it)
+        .circleCrop()
         .into(this)
-//      GlideApp.with(this)
-//        .load(it)
-//        .circleCrop()
-//        .into(this)
     }
   }
 }
