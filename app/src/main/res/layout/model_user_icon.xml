@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:bind="http://schemas.android.com/apk/res-auto">
+  xmlns:bind="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
 
   <data>
 
@@ -19,8 +20,8 @@
 
     <ImageView
       android:id="@+id/image_user_icon"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
       android:layout_marginTop="16dp"
       android:contentDescription="@null"
       app:layout_constraintEnd_toEndOf="parent"
@@ -32,13 +33,15 @@
       android:id="@+id/text_user_name"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
+      android:layout_marginTop="8dp"
       android:ellipsize="end"
       android:gravity="center"
       android:maxLines="1"
+      android:textSize="11sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/image_user_icon" />
+      app:layout_constraintTop_toBottomOf="@id/image_user_icon"
+      tools:text="ユーザー名" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

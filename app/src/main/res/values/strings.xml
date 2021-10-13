@@ -34,4 +34,7 @@
   <string name="notice_progress">Progress</string>
   <string name="notice_progress_label">ProgressNotification</string>
   <string name="notice_progress_description">ProgressDescription</string>
+
+  <!-- ListFragment -->
+  <string name="list_all">すべて</string>
 </resources>
