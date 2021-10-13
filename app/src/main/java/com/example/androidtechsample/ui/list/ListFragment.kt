@@ -5,14 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.example.androidtechsample.R
+import com.example.androidtechsample.data.followUserMock
 import com.example.androidtechsample.databinding.FragmentListBinding
+import com.example.androidtechsample.util.displayWidth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ListFragment : Fragment(),
   CarouselAnimationAdapter.Listener {
 
+  companion object {
+    const val NO_SELECT = -1
+  }
+
   private lateinit var binding: FragmentListBinding
+  private val viewModel: ListViewModel by viewModels()
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -25,21 +34,23 @@ class ListFragment : Fragment(),
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    val adapter = CarouselAnimationAdapter(setFollowUser(), this)
+    val adapter = CarouselAnimationAdapter(followUserMock, this)
     with(binding) {
       recyclerView.adapter = adapter
     }
-  }
 
-  private fun setFollowUser(): List<FollowUser> {
-    val followUserList = mutableListOf<FollowUser>()
-    for (i in 1..20) {
-      followUserList.add(FollowUser.SAMPLE)
+    viewModel.followUserState.observe(viewLifecycleOwner) {
+      if (it.selectPosition != NO_SELECT) {
+        binding.textLabel.text = followUserMock[it.selectPosition].name
+      } else {
+        binding.textLabel.text = resources.getText(R.string.list_all)
+      }
     }
-    return followUserList
   }
 
-  override fun itemClick(position: Int) {
-    binding.textLabel.text = position.toString()
+  override fun itemClick(position: Int, centerPosition: Int) {
+    viewModel.setPosition(position)
+    val halfWidth = requireContext().displayWidth / 2
+    binding.recyclerView.smoothScrollBy(centerPosition - halfWidth, 0)
   }
 }
