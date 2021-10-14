@@ -5,7 +5,7 @@ import android.media.MediaActionSound
 import androidx.camera.core.ImageCapture
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.androidtechsample.util.Display
+import com.example.androidtechsample.util.displayMetrics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -38,8 +38,8 @@ class CameraViewModel @Inject constructor(
   }
 
   fun getDisplayWidth(context: Context): Int {
-    val displaySize = Display.getDisplaySize(context)
-    return displaySize.width
+    val displaySize = context.displayMetrics
+    return displaySize.widthPixels
   }
 
   fun changeCameraLight() {

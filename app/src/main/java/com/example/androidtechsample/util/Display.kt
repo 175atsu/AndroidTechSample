@@ -2,6 +2,7 @@ package com.example.androidtechsample.util
 
 import android.content.Context
 import android.graphics.Point
+import android.util.DisplayMetrics
 import android.util.Size
 import android.view.WindowManager
 
@@ -15,3 +16,14 @@ class Display {
     }
   }
 }
+
+val Context.displayWidth: Int
+  get() = this.displayMetrics.widthPixels
+
+val Context.displayMetrics: DisplayMetrics
+  get() {
+    val metrics = DisplayMetrics()
+    val wm = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+    wm.defaultDisplay.getMetrics(metrics)
+    return metrics
+  }
