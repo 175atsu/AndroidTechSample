@@ -7,6 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+      style="@style/Text.PrimaryColor.Head1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/biometric_label"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
     <Button
       android:id="@+id/button_hand"
       android:layout_width="wrap_content"
