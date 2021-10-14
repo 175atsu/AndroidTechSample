@@ -23,6 +23,9 @@
   <color name="orange_200">#FFCC80</color>
   <color name="deep_orange_200">#FFAB91</color>
 
+  <!-- list -->
+  <color name="list_follow_select">#def1ff</color>
+
   <array name="rainbow_200">
     <item>@color/black</item>
     <item>@color/pink_200</item>

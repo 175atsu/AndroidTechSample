@@ -15,7 +15,7 @@ class CarouselAnimationAdapter(
     const val NO_SELECT = -1
   }
 
-  var selectPosition = NO_SELECT
+  private var selectPosition = NO_SELECT
 
   interface Listener {
     fun itemClick(position: Int, centerPosition: Int)
@@ -30,7 +30,7 @@ class CarouselAnimationAdapter(
   override fun onBindViewHolder(holder: CarouselAnimationViewHolder, position: Int) {
     holder.bind(followUserList[position])
     if (selectPosition == position) {
-      holder.itemView.setBackgroundResource(R.color.cyan_200)
+      holder.itemView.setBackgroundResource(R.color.list_follow_select)
     } else {
       holder.itemView.setBackgroundResource(0)
     }
