@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
 
   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="8dp">
+    android:padding="16dp">
+
+    <TextView
+      android:id="@+id/text_title"
+      style="@style/Text.PrimaryColor.Head1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/groupie_label"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
       android:id="@+id/text_color"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@id/text_title"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_multiple"
@@ -20,7 +32,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_color" />
+      app:layout_constraintTop_toBottomOf="@id/text_color"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_underline"
@@ -28,7 +41,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_multiple" />
+      app:layout_constraintTop_toBottomOf="@id/text_multiple"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_size"
@@ -36,7 +50,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_underline" />
+      app:layout_constraintTop_toBottomOf="@id/text_underline"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_background"
@@ -44,7 +59,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_size" />
+      app:layout_constraintTop_toBottomOf="@id/text_size"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_paragraph"
@@ -52,7 +68,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_background" />
+      app:layout_constraintTop_toBottomOf="@id/text_background"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_click"
@@ -60,7 +77,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_paragraph" />
+      app:layout_constraintTop_toBottomOf="@id/text_paragraph"
+      tools:text="Text" />
 
     <TextView
       android:id="@+id/text_ktx"
@@ -68,8 +86,8 @@
       android:layout_height="wrap_content"
       android:textSize="@dimen/font_size_head_2"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_click" />
+      app:layout_constraintTop_toBottomOf="@id/text_click"
+      tools:text="Text" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
-
