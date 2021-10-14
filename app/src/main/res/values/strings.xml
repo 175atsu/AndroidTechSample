@@ -1,5 +1,11 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
+
+  <!-- PlaygroundFragment -->
+  <string name="playground_label">Playground</string>
+  <string name="playground_label_layout">Layout</string>
+  <string name="playground_label_list">List</string>
+  <string name="playground_label_other">Other</string>
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
   <string name="playground_groupie_view">GroupieView</string>
