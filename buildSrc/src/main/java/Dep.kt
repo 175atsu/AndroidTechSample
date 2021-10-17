@@ -49,6 +49,11 @@ object Dep {
     }
   }
 
+  object Glide {
+    const val core = "com.github.bumptech.glide:glide:4.12.0"
+    const val compiler = "com.github.bumptech.glide:compiler:4.12.0"
+  }
+
   object Groupie {
     const val groupie = "com.github.lisawray.groupie:groupie:${Versions.groupie}"
     const val databinding = "com.github.lisawray.groupie:groupie-databinding:${Versions.groupie}"

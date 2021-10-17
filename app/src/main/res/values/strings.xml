@@ -1,16 +1,25 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
+
+  <!-- PlaygroundFragment -->
+  <string name="playground_label">Playground</string>
+  <string name="playground_label_layout">Layout</string>
+  <string name="playground_label_list">List</string>
+  <string name="playground_label_other">Other</string>
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
   <string name="playground_groupie_view">GroupieView</string>
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
+  <string name="playground_list_view">ListView</string>
 
   <!-- BiometricFragment -->
+  <string name="biometric_label">@string/playground_biometric</string>
   <string name="biometric_fingerprint_authentication">指紋認証</string>
 
   <!-- MotionFragment -->
-  <string name="motion_label">Name</string>
+  <string name="motion_label">@string/playground_motion_layout</string>
+  <string name="motion_top_swipe_name">Name</string>
   <string name="motion_top_swipe">TopSwipe</string>
   <string name="motion_side_swipe">SideSwipe</string>
   <string name="motion_custom_view">CustomView</string>
@@ -33,4 +42,10 @@
   <string name="notice_progress">Progress</string>
   <string name="notice_progress_label">ProgressNotification</string>
   <string name="notice_progress_description">ProgressDescription</string>
+
+  <!-- ListFragment -->
+  <string name="list_all">すべて</string>
+
+  <!-- GroupieFragment -->
+  <string name="groupie_label">@string/playground_groupie_view</string>
 </resources>

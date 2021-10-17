@@ -24,6 +24,9 @@
     <action
       android:id="@+id/to_fragment_notification"
       app:destination="@id/fragment_notification" />
+    <action
+      android:id="@+id/to_fragment_list"
+      app:destination="@id/fragment_list" />
   </fragment>
 
   <fragment
@@ -108,5 +111,10 @@
     android:id="@+id/fragment_notification"
     android:name="com.example.androidtechsample.ui.notification.NotificationFragment"
     tools:layout="@layout/fragment_notification" />
+
+  <fragment
+    android:id="@+id/fragment_list"
+    android:name="com.example.androidtechsample.ui.list.ListFragment"
+    tools:layout="@layout/fragment_list" />
 
 </navigation>

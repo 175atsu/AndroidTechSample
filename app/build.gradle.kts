@@ -48,6 +48,9 @@ dependencies {
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
 
+  implementation(Dep.Glide.core)
+  kapt(Dep.Glide.compiler)
+
   implementation(Dep.Groupie.groupie)
   implementation(Dep.Groupie.databinding)
 
