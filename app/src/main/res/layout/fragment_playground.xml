@@ -87,6 +87,14 @@
         android:layout_marginVertical="4dp"
         android:text="@string/playground_notification_view" />
 
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_camera_view"
+        style="@style/ButtonRectangleFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:text="@string/playground_camera_view" />
+
     </LinearLayout>
   </ScrollView>
 </layout>

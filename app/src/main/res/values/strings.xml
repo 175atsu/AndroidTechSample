@@ -11,6 +11,8 @@
   <string name="playground_groupie_view">GroupieView</string>
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
+  <string name="playground_camera_view">CameraView</string>
+  <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>
 
   <!-- BiometricFragment -->
@@ -48,4 +50,8 @@
 
   <!-- GroupieFragment -->
   <string name="groupie_label">@string/playground_groupie_view</string>
+
+  <!-- CameraFragment -->
+  <string name="camera_folder_name">AndroidTechSample</string>
+
 </resources>
