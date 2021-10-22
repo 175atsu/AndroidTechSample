@@ -2,9 +2,14 @@ package com.example.buildsrc
 
 object Versions {
   const val kotlin = "1.5.30"
+  const val gradle = "7.0.2"
   const val navigation = "2.3.5"
-  const val hilt = "2.34.1-beta"
+  const val hilt = "2.37"
   const val groupie = "2.9.0"
+
+  object Androidx {
+    const val compose = "1.0.3"
+  }
 }
 
 object Dep {
@@ -45,6 +50,10 @@ object Dep {
       const val lifecycle = "androidx.camera:camera-lifecycle:1.0.1"
       const val view = "androidx.camera:camera-view:1.0.0-alpha27"
       const val extensions = "androidx.camera:camera-extensions:1.0.0-alpha27"
+    }
+
+    object Compose {
+      const val runtime = "androidx.compose.runtime:runtime:${Versions.Androidx.compose}"
     }
 
     object Test {

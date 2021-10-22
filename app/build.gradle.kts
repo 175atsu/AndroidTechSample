@@ -1,4 +1,5 @@
 import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
 
 plugins {
   id("com.android.application")
@@ -10,7 +11,7 @@ plugins {
 
 android {
   compileSdk = 30
-  buildToolsVersion = "29.0.3"
+  buildToolsVersion = "30.0.3"
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
@@ -30,6 +31,10 @@ android {
   }
   buildFeatures {
     dataBinding = true
+    compose = true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion = Versions.Androidx.compose
   }
 }
 
@@ -47,6 +52,7 @@ dependencies {
   implementation(Dep.AndroidX.CameraX.lifecycle)
   implementation(Dep.AndroidX.CameraX.view)
   implementation(Dep.AndroidX.CameraX.extensions)
+  implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.coroutine)
   implementation(Dep.material)
   implementation(Dep.compat)
