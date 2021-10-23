@@ -12,13 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.androidtechsample.R
 import com.example.androidtechsample.component.TextBlackHead1
 import com.example.androidtechsample.component.TextBlackHead2
 import com.example.androidtechsample.component.TextWhiteBody1
 
 @Composable
-fun PlaygroundScreen() {
+fun PlaygroundScreen(navController: NavController) {
   MaterialTheme {
     Column(
       modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
@@ -31,7 +32,10 @@ fun PlaygroundScreen() {
       TextBlackHead2(
         text = stringResource(id = R.string.compose_test)
       )
-      ToPageButton(toPage = { /*TODO*/ }, textResource = R.string.compose_new_page)
+      ToPageButton(
+        toPage = { navController.navigate(NavRouter.NEW_ROUTE) },
+        textResource = R.string.compose_new_page
+      )
     }
   }
 }
@@ -52,5 +56,5 @@ fun ToPageButton(
 @Preview
 @Composable
 fun Preview() {
-  PlaygroundScreen()
+//  PlaygroundScreen()
 }
