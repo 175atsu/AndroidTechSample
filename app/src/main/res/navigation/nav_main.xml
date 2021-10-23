@@ -143,6 +143,5 @@
 
   <fragment
     android:id="@+id/fragment_compose"
-    android:name="com.example.androidtechsample.ui.compose.ComposeFragment"
-    tools:layout="@layout/fragment_camera_preview" />
+    android:name="com.example.androidtechsample.ui.compose.ComposeFragment" />
 </navigation>

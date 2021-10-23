@@ -52,7 +52,7 @@ fun CreateView() {
       TextBlackHead2(
         text = stringResource(id = R.string.compose_test)
       )
-      ToPageButton(toPage = { /*TODO*/ }, textResource = R.string.compose_playground)
+      ToPageButton(toPage = { /*TODO*/ }, textResource = R.string.compose_new_page)
     }
   }
 }
