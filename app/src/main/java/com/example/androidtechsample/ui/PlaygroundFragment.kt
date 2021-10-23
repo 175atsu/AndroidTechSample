@@ -65,6 +65,9 @@ class PlaygroundFragment : Fragment() {
       toCameraView.setOnClickListener {
         cameraPermissionRequestLauncher.launch(REQUIRED_PERMISSIONS)
       }
+      toComposeView.setOnClickListener {
+        navigator(R.id.to_fragment_compose)
+      }
     }
   }
 }
