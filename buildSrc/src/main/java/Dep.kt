@@ -22,14 +22,13 @@ object Dep {
   }
 
   object Jetpack {
-    const val appcompat = "androidx.appcompat:appcompat:1.3.0-beta01"
     const val startup = "androidx.startup:startup-runtime:1.0.0"
     const val browser = "androidx.browser:browser:1.3.0"
     const val dataStore = "androidx.datastore:datastore-preferences:1.0.0-alpha06"
   }
 
   object AndroidX {
-    const val appCompat = "androidx.appcompat:appcompat:1.2.0"
+    const val appCompat = "androidx.appcompat:appcompat:1.3.0"
     const val core = "androidx.core:core-ktx:1.5.0-beta01"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
     const val work = "androidx.work:work-runtime-ktx:2.5.0"
@@ -53,7 +52,19 @@ object Dep {
     }
 
     object Compose {
+      const val ui = "androidx.compose.ui:ui:${Versions.Androidx.compose}"
+      const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.Androidx.compose}"
+      const val foundation = "androidx.compose.foundation:foundation:${Versions.Androidx.compose}"
+      const val foundationLayout = "androidx.compose.foundation:foundation-layout:${Versions.Androidx.compose}"
+      const val material = "androidx.compose.material:material:${Versions.Androidx.compose}"
+      const val materialIconsCore = "androidx.compose.material:material-icons-core:${Versions.Androidx.compose}"
+      const val materialIconExtended = "androidx.compose.material:material-icons-extended:${Versions.Androidx.compose}"
+      const val animation = "androidx.compose.animation:animation:${Versions.Androidx.compose}"
+      const val layout = "androidx.compose.foundation:foundation-layout:${Versions.Androidx.compose}"
       const val runtime = "androidx.compose.runtime:runtime:${Versions.Androidx.compose}"
+      const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:${Versions.Androidx.compose}"
+      const val uiUtil = "androidx.compose.ui:ui-util:${Versions.Androidx.compose}"
+      const val uiTest = "androidx.compose.ui:ui-test-junit4:${Versions.Androidx.compose}"
     }
 
     object Test {
