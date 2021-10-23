@@ -74,8 +74,8 @@ object Dep {
     }
 
     object Test {
-      const val ext = "androidx.test.ext:junit:1.1.2"
-      const val espresso = "androidx.test.espresso:espresso-core:3.3.0"
+      const val ext = "androidx.test.ext:junit:1.1.3"
+      const val espresso = "androidx.test.espresso:espresso-core:3.4.0"
     }
   }
 
