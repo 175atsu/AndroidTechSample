@@ -56,4 +56,8 @@
   <!-- CameraFragment -->
   <string name="camera_folder_name">AndroidTechSample</string>
 
+  <!-- ComposeFragment -->
+  <string name="compose_playground">Playground</string>
+  <string name="compose_test">Test</string>
+
 </resources>
