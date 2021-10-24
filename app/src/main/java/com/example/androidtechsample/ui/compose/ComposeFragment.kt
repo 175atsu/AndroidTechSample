@@ -10,8 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androidtechsample.ui.compose.NavRouter.NEW_ROUTE
+import com.example.androidtechsample.ui.compose.NavRouter.AMEBA_FOLLOW_FEED_ROUTE
 import com.example.androidtechsample.ui.compose.NavRouter.PLAYGROUND_ROUTE
+import com.example.androidtechsample.ui.compose.ameba.FollowFeedScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,6 +34,6 @@ fun CreateNav(startDestination: String = PLAYGROUND_ROUTE) {
   val navController = rememberNavController()
   NavHost(navController = navController, startDestination = startDestination) {
     composable(PLAYGROUND_ROUTE) { PlaygroundScreen(navController) }
-    composable(NEW_ROUTE) { NewScreen() }
+    composable(AMEBA_FOLLOW_FEED_ROUTE) { FollowFeedScreen() }
   }
 }

@@ -22,19 +22,19 @@ import com.example.androidtechsample.component.TextWhiteBody1
 fun PlaygroundScreen(navController: NavController) {
   MaterialTheme {
     Column(
-      modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+      modifier = Modifier.padding(16.dp)
     ) {
       TextBlackHead1(
-        text = stringResource(id = R.string.compose_playground),
-        modifier = Modifier.padding(vertical = 8.dp)
+        text = stringResource(id = R.string.compose_playground)
+      )
+      Spacer(Modifier.height(24.dp))
+      TextBlackHead2(
+        text = stringResource(id = R.string.compose_ameba)
       )
       Spacer(Modifier.height(16.dp))
-      TextBlackHead2(
-        text = stringResource(id = R.string.compose_test)
-      )
       ToPageButton(
-        toPage = { navController.navigate(NavRouter.NEW_ROUTE) },
-        textResource = R.string.compose_new_page
+        toPage = { navController.navigate(NavRouter.AMEBA_FOLLOW_FEED_ROUTE) },
+        textResource = R.string.compose_ameba_follow_feed
       )
     }
   }

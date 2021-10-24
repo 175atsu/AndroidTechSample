@@ -58,7 +58,7 @@
 
   <!-- ComposeFragment -->
   <string name="compose_playground">Playground</string>
-  <string name="compose_test">Test</string>
-  <string name="compose_new_page">NewPage</string>
+  <string name="compose_ameba">Ameba</string>
+  <string name="compose_ameba_follow_feed">FollowFeed</string>
 
 </resources>
