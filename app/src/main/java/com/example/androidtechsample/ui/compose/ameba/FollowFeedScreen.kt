@@ -1,21 +1,32 @@
 package com.example.androidtechsample.ui.compose.ameba
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Divider
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import com.example.androidtechsample.component.*
+import com.example.androidtechsample.component.SpacerHeight
+import com.example.androidtechsample.component.SpacerWidth
+import com.example.androidtechsample.component.TextBlackBody2
+import com.example.androidtechsample.component.TextBlackBody3
+import com.example.androidtechsample.resource.textStyleBlackHead5
 
 @Composable
 fun FollowFeedScreen() {
@@ -36,9 +47,10 @@ fun BlogItem(modifier: Modifier = Modifier) {
       .fillMaxSize()
       .padding(horizontal = 16.dp)
   ) {
-    SpacerHeight(8.dp)
     Row(
-      verticalAlignment = Alignment.CenterVertically
+      verticalAlignment = Alignment.CenterVertically,
+      modifier = modifier
+        .padding(top = 12.dp, bottom = 8.dp)
     ) {
       Image(
         painter = rememberImagePainter("https://cdn08.net/dqwalk/data/img0/img698_1.jpg?53d"),
@@ -52,12 +64,21 @@ fun BlogItem(modifier: Modifier = Modifier) {
     }
     Row(
       horizontalArrangement = Arrangement.SpaceBetween,
+      verticalAlignment = Alignment.CenterVertically,
       modifier = modifier
         .fillMaxSize()
     ) {
-      Column {
-        SpacerHeight(16.dp)
-        TextBlackHead5(text = "記事タイトル記事タイトル")
+      Column(
+        verticalArrangement = Arrangement.Center,
+        modifier = modifier
+          .weight(1f)
+      ) {
+        Text(
+          text = "記事タイトル",
+          style = textStyleBlackHead5(),
+          maxLines = 2,
+          overflow = TextOverflow.Ellipsis,
+        )
         SpacerHeight(8.dp)
         TextBlackBody3(text = "12時間前")
       }
@@ -75,7 +96,6 @@ fun BlogItem(modifier: Modifier = Modifier) {
     Divider(color = Color.Gray)
   }
 }
-
 
 @Preview
 @Composable

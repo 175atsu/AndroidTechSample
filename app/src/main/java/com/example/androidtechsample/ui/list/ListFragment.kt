@@ -13,7 +13,8 @@ import com.example.androidtechsample.util.displayWidth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ListFragment : Fragment(),
+class ListFragment :
+  Fragment(),
   CarouselAnimationAdapter.Listener {
 
   companion object {
