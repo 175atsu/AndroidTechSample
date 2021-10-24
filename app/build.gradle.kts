@@ -61,6 +61,7 @@ dependencies {
   implementation(Dep.material)
   implementation(Dep.compat)
   implementation(Dep.DI.hilt)
+  implementation(Dep.coil)
   kapt(Dep.DI.hiltKapt)
 
   implementation(Dep.Glide.core)

@@ -107,6 +107,8 @@ object Dep {
     const val hiltKapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
   }
 
+  const val coil = "io.coil-kt:coil-compose:1.4.0"
+
   object Test {
     const val junit4 = "junit:junit:4.13.2"
   }

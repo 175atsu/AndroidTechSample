@@ -26,6 +26,36 @@ fun textStyleBlackHead2() = textStyleBlack().copy(
 )
 
 @Composable
+fun textStyleBlackHead4() = textStyleBlack().copy(
+  fontWeight = FontWeight.Bold,
+  fontSize = dimensionResource(id = R.dimen.font_size_head_4).value.sp
+)
+
+@Composable
+fun textStyleBlackHead5() = textStyleBlack().copy(
+  fontWeight = FontWeight.Bold,
+  fontSize = dimensionResource(id = R.dimen.font_size_head_5).value.sp
+)
+
+@Composable
+fun textStyleBlackBody1() = textStyleBlack().copy(
+  fontWeight = FontWeight.Bold,
+  fontSize = dimensionResource(id = R.dimen.font_size_body1).value.sp
+)
+
+@Composable
+fun textStyleBlackBody2() = textStyleBlack().copy(
+  fontWeight = FontWeight.Bold,
+  fontSize = dimensionResource(id = R.dimen.font_size_body2).value.sp
+)
+
+@Composable
+fun textStyleBlackBody3() = textStyleBlack().copy(
+  fontWeight = FontWeight.Bold,
+  fontSize = dimensionResource(id = R.dimen.font_size_body3).value.sp
+)
+
+@Composable
 fun textStyleWhite() = TextStyle(
   color = colorResource(id = R.color.white)
 )
