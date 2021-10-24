@@ -10,13 +10,13 @@ plugins {
 }
 
 android {
-  compileSdk = 30
+  compileSdk = 31
   buildToolsVersion = "30.0.3"
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
     minSdk = 23
-    targetSdk = 30
+    targetSdk = 31
     versionCode = 1
     versionName = "1.0"
 
@@ -53,6 +53,7 @@ dependencies {
   implementation(Dep.AndroidX.CameraX.view)
   implementation(Dep.AndroidX.CameraX.extensions)
   implementation(Dep.AndroidX.Compose.ui)
+  implementation(Dep.AndroidX.Compose.navigation)
   implementation(Dep.AndroidX.Compose.material)
   implementation(Dep.AndroidX.Compose.uiTooling)
   implementation(Dep.AndroidX.Compose.runtime)
