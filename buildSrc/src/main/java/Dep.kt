@@ -73,6 +73,11 @@ object Dep {
       const val uiTest = "androidx.compose.ui:ui-test-junit4:${Versions.Androidx.compose}"
     }
 
+    object Hilt {
+      const val lifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01"
+      const val compiler = "androidx.hilt:hilt-compiler:1.0.0-alpha01"
+    }
+
     object Test {
       const val ext = "androidx.test.ext:junit:1.1.3"
       const val espresso = "androidx.test.espresso:espresso-core:3.4.0"

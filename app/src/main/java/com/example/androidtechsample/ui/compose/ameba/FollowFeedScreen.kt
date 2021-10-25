@@ -13,6 +13,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,6 +23,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
 import com.example.androidtechsample.component.SpacerHeight
 import com.example.androidtechsample.component.SpacerWidth
@@ -29,19 +32,23 @@ import com.example.androidtechsample.component.TextBlackBody3
 import com.example.androidtechsample.resource.textStyleBlackHead5
 
 @Composable
-fun FollowFeedScreen() {
+fun FollowFeedScreen(
+  viewModel: FollowFeedViewModel = viewModel()
+) {
   val blogList = listOf("a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a")
+  viewModel.subscribe()
+  val state by viewModel.blogList.observeAsState(emptyList())
   LazyColumn(
     modifier = Modifier.fillMaxSize()
   ) {
-    items(blogList.size) {
-      BlogItem()
+    items(state) {
+      BlogItem(it)
     }
   }
 }
 
 @Composable
-fun BlogItem(modifier: Modifier = Modifier) {
+fun BlogItem(modifier: Modifier = Modifier, blogItem: FollowFeedBlogData) {
   Column(
     modifier = modifier
       .fillMaxSize()
@@ -53,14 +60,14 @@ fun BlogItem(modifier: Modifier = Modifier) {
         .padding(top = 12.dp, bottom = 8.dp)
     ) {
       Image(
-        painter = rememberImagePainter("https://cdn08.net/dqwalk/data/img0/img698_1.jpg?53d"),
+        painter = rememberImagePainter(blogItem.blogIcon),
         contentDescription = null,
         modifier = Modifier
           .size(24.dp)
           .clip(CircleShape)
       )
       SpacerWidth(8.dp)
-      TextBlackBody2(text = "ブログタイトル")
+      TextBlackBody2(text = blogItem.blogTitle)
     }
     Row(
       horizontalArrangement = Arrangement.SpaceBetween,
@@ -74,17 +81,17 @@ fun BlogItem(modifier: Modifier = Modifier) {
           .weight(1f)
       ) {
         Text(
-          text = "記事タイトル",
+          text = blogItem.articleTitle,
           style = textStyleBlackHead5(),
           maxLines = 2,
           overflow = TextOverflow.Ellipsis,
         )
         SpacerHeight(8.dp)
-        TextBlackBody3(text = "12時間前")
+        TextBlackBody3(text = blogItem.postTime)
       }
       SpacerWidth(8.dp)
       Image(
-        painter = rememberImagePainter("https://img.gamewith.jp/article/thumbnail/rectangle/234714.png"),
+        painter = rememberImagePainter(blogItem.articleThumbnail),
         contentDescription = "thumbnail",
         contentScale = ContentScale.Crop,
         modifier = modifier
