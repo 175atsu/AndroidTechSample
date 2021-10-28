@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+  implementation(project(":feature:resources"))
   implementation(project(":feature:biometric"))
 
   implementation(Dep.AndroidX.appCompat)

@@ -8,19 +8,21 @@
     android:layout_height="match_parent">
 
     <TextView
+      style="@style/Text.PrimaryColor.Head1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
-      android:text="テスト"
+      android:text="@string/biometric_label"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
     <Button
       android:id="@+id/button_hand"
+      style="@style/ButtonRectangleFill"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="テスト"
+      android:text="@string/biometric_fingerprint_authentication"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"

@@ -1,3 +1,4 @@
+import com.example.buildsrc.Dep
 plugins {
   id("com.android.library")
 }
@@ -15,5 +16,6 @@ android {
 }
 
 dependencies {
-
+  implementation(Dep.AndroidX.appCompat)
+  implementation(Dep.material)
 }
