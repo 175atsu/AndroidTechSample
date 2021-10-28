@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+  implementation(project(":feature:biometric"))
+
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)
   implementation(Dep.AndroidX.constraintLayout)
