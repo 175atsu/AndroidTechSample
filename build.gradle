@@ -1,5 +1,5 @@
-import com.example.buildsrc.Versions
 import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
 
 buildscript {
     repositories {
@@ -10,10 +10,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.3"
+        classpath "com.android.tools.build:gradle:${Versions.gradle}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
         classpath "org.jlleitschuh.gradle:ktlint-gradle:10.0.0"
         classpath "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+        classpath Dep.AndroidX.Navigation.safeArgs
     }
 }
 

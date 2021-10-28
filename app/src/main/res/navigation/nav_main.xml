@@ -27,6 +27,12 @@
     <action
       android:id="@+id/to_fragment_list"
       app:destination="@id/fragment_list" />
+    <action
+      android:id="@+id/to_fragment_camera"
+      app:destination="@id/fragment_camera" />
+    <action
+      android:id="@+id/to_fragment_compose"
+      app:destination="@id/fragment_compose" />
   </fragment>
 
   <fragment
@@ -117,4 +123,25 @@
     android:name="com.example.androidtechsample.ui.list.ListFragment"
     tools:layout="@layout/fragment_list" />
 
+  <fragment
+    android:id="@+id/fragment_camera"
+    android:name="com.example.androidtechsample.ui.camera.CameraFragment"
+    tools:layout="@layout/fragment_camera">
+    <action
+      android:id="@+id/to_fragment_camera_preview"
+      app:destination="@id/fragment_camera_preview" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_camera_preview"
+    android:name="com.example.androidtechsample.ui.camera.CameraPreviewFragment"
+    tools:layout="@layout/fragment_camera_preview">
+    <argument
+      android:name="photoUri"
+      app:argType="string" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_compose"
+    android:name="com.example.androidtechsample.ui.compose.ComposeFragment" />
 </navigation>

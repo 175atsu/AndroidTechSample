@@ -6,11 +6,15 @@
   <string name="playground_label_layout">Layout</string>
   <string name="playground_label_list">List</string>
   <string name="playground_label_other">Other</string>
+  <string name="playground_label_compose">Jetpack Compose</string>
   <string name="playground_biometric">Biometric</string>
   <string name="playground_motion_layout">MotionLayout</string>
   <string name="playground_groupie_view">GroupieView</string>
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
+  <string name="playground_camera_view">CameraView</string>
+  <string name="playground_hello_view">HelloView</string>
+  <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>
 
   <!-- BiometricFragment -->
@@ -48,4 +52,13 @@
 
   <!-- GroupieFragment -->
   <string name="groupie_label">@string/playground_groupie_view</string>
+
+  <!-- CameraFragment -->
+  <string name="camera_folder_name">AndroidTechSample</string>
+
+  <!-- ComposeFragment -->
+  <string name="compose_playground">Playground</string>
+  <string name="compose_test">Test</string>
+  <string name="compose_new_page">NewPage</string>
+
 </resources>

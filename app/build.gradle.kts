@@ -1,20 +1,22 @@
 import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
 
 plugins {
   id("com.android.application")
   id("kotlin-android")
   id("kotlin-kapt")
+  id("androidx.navigation.safeargs.kotlin")
   id("dagger.hilt.android.plugin")
 }
 
 android {
-  compileSdk = 30
-  buildToolsVersion = "29.0.3"
+  compileSdk = 31
+  buildToolsVersion = "30.0.3"
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
     minSdk = 23
-    targetSdk = 30
+    targetSdk = 31
     versionCode = 1
     versionName = "1.0"
 
@@ -29,6 +31,10 @@ android {
   }
   buildFeatures {
     dataBinding = true
+    compose = true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion = Versions.Androidx.compose
   }
 }
 
@@ -36,11 +42,22 @@ dependencies {
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)
   implementation(Dep.AndroidX.constraintLayout)
-  implementation(Dep.AndroidX.navFragmentKtx)
-  implementation(Dep.AndroidX.navUi)
-  implementation(Dep.AndroidX.navRuntime)
   implementation(Dep.AndroidX.work)
   implementation(Dep.AndroidX.biometric)
+  implementation(Dep.AndroidX.Navigation.fragmentKtx)
+  implementation(Dep.AndroidX.Navigation.ui)
+  implementation(Dep.AndroidX.Navigation.runtime)
+  implementation(Dep.AndroidX.CameraX.core)
+  implementation(Dep.AndroidX.CameraX.camera2)
+  implementation(Dep.AndroidX.CameraX.lifecycle)
+  implementation(Dep.AndroidX.CameraX.view)
+  implementation(Dep.AndroidX.CameraX.extensions)
+  implementation(Dep.AndroidX.Compose.ui)
+  implementation(Dep.AndroidX.Compose.navigation)
+  implementation(Dep.AndroidX.Compose.material)
+  implementation(Dep.AndroidX.Compose.uiTooling)
+  implementation(Dep.AndroidX.Compose.runtime)
+  implementation(Dep.coroutine)
   implementation(Dep.KotlinX.Coroutine.core)
   implementation(Dep.KotlinX.Coroutine.android)
   implementation(Dep.material)
