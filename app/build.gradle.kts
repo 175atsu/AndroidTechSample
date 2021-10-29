@@ -41,6 +41,7 @@ android {
 dependencies {
   implementation(project(":feature:resources"))
   implementation(project(":feature:biometric"))
+  implementation(project(":feature:groupie"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)
