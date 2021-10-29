@@ -25,13 +25,13 @@ class MediaController @Inject constructor() {
     val folderName = context.getString(R.string.camera_folder_name)
 
     val outputOptions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-      val outputDirectory = "${Environment.DIRECTORY_DCIM}/${folderName}/"
+      val outputDirectory = "${Environment.DIRECTORY_DCIM}/$folderName/"
       val contentValues = getContentValue(outputDirectory)
       val contentUri = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
       ImageCapture.OutputFileOptions.Builder(contentResolver, contentUri, contentValues)
     } else {
       val outputDirectory =
-        "${context.getExternalFilesDir(Environment.DIRECTORY_DCIM)}/${folderName}/"
+        "${context.getExternalFilesDir(Environment.DIRECTORY_DCIM)}/$folderName/"
       File(outputDirectory).mkdirs()
       val file = File(outputDirectory, "${System.currentTimeMillis()}.jpg")
 
