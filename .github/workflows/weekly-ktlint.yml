@@ -18,7 +18,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Auto-modify files by weekly ktlint
           title: Changes from weekly ktlint
           body: This is an auto-generated PR with changes from weekly ktlint
