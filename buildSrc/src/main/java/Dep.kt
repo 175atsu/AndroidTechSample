@@ -79,7 +79,12 @@ object Dep {
     }
   }
 
-  const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+  object KotlinX {
+    object Coroutine {
+      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+      const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+    }
+  }
 
   object Glide {
     const val core = "com.github.bumptech.glide:glide:4.12.0"
