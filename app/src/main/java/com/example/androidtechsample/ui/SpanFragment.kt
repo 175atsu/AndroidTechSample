@@ -27,7 +27,7 @@ import androidx.core.text.underline
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentSpanBinding
-import com.example.androidtechsample.util.rangeOfIndex
+import com.example.core.util.rangeOfIndex
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

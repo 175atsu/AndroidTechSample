@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentMotionBinding
-import com.example.androidtechsample.util.navigator
+import com.example.core.util.navigator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

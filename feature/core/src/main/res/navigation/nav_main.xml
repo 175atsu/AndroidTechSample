@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_main"
+  app:startDestination="@id/fragment_playground">
+
+  <fragment
+    android:id="@+id/fragment_playground"
+    android:name="com.example.androidtechsample.ui.PlaygroundFragment"
+    tools:layout="@layout/fragment_playground">
+    <action
+      android:id="@+id/to_fragment_biometric"
+      app:destination="@id/fragment_biometric" />
+    <action
+      android:id="@+id/to_fragment_motion"
+      app:destination="@id/fragment_motion" />
+    <action
+      android:id="@+id/to_fragment_groupie"
+      app:destination="@id/fragment_groupie" />
+    <action
+      android:id="@+id/to_fragment_span"
+      app:destination="@id/fragment_span" />
+    <action
+      android:id="@+id/to_fragment_notification"
+      app:destination="@id/fragment_notification" />
+    <action
+      android:id="@+id/to_fragment_list"
+      app:destination="@id/fragment_list" />
+    <action
+      android:id="@+id/to_fragment_camera"
+      app:destination="@id/fragment_camera" />
+    <action
+      android:id="@+id/to_fragment_compose"
+      app:destination="@id/fragment_compose" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_biometric"
+    android:name="com.example.biometric.BiometricFragment"
+    tools:layout="@layout/fragment_biometric" />
+
+  <fragment
+    android:id="@+id/fragment_motion"
+    android:name="com.example.androidtechsample.ui.motion.MotionFragment"
+    tools:layout="@layout/fragment_motion">
+    <action
+      android:id="@+id/to_fragment_motion_layout"
+      app:destination="@id/fragment_motion_top_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_side_swipe"
+      app:destination="@id/fragment_motion_side_swipe" />
+    <action
+      android:id="@+id/to_fragment_motion_custom"
+      app:destination="@id/fragment_motion_custom" />
+    <action
+      android:id="@+id/to_fragment_motion_key_position"
+      app:destination="@id/fragment_motion_key_position" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_motion_top_swipe"
+    android:name="com.example.androidtechsample.ui.motion.MotionTopSwipeFragment"
+    tools:layout="@layout/fragment_motion_top_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_side_swipe"
+    android:name="com.example.androidtechsample.ui.motion.MotionSideSwipeFragment"
+    tools:layout="@layout/fragment_motion_side_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_motion_custom"
+    android:name="com.example.androidtechsample.ui.motion.MotionCustomFragment"
+    tools:layout="@layout/fragment_motion_custom" />
+
+  <fragment
+    android:id="@+id/fragment_motion_key_position"
+    android:name="com.example.androidtechsample.ui.motion.MotionKeyPositionFragment"
+    tools:layout="@layout/fragment_motion_key_position" />
+
+  <fragment
+    android:id="@+id/fragment_groupie"
+    android:name="com.example.groupie.GroupieFragment"
+    tools:layout="@layout/fragment_groupie">
+    <action
+      android:id="@+id/to_fragment_groupie_basic"
+      app:destination="@id/fragment_groupie_basic" />
+    <action
+      android:id="@+id/to_fragment_groupie_carousel"
+      app:destination="@id/fragment_groupie_carousel" />
+    <action
+      android:id="@+id/to_fragment_groupie_swipe"
+      app:destination="@id/fragment_groupie_swipe" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_groupie_basic"
+    android:name="com.example.groupie.basic.GroupieBasicFragment"
+    tools:layout="@layout/fragment_groupie_basic" />
+
+  <fragment
+    android:id="@+id/fragment_groupie_carousel"
+    android:name="com.example.groupie.carousel.GroupieCarouselFragment"
+    tools:layout="@layout/fragment_groupie_carousel" />
+
+  <fragment
+    android:id="@+id/fragment_groupie_swipe"
+    android:name="com.example.groupie.swipe.GroupieSwipeFragment"
+    tools:layout="@layout/fragment_groupie_swipe" />
+
+  <fragment
+    android:id="@+id/fragment_span"
+    android:name="com.example.androidtechsample.ui.SpanFragment"
+    tools:layout="@layout/fragment_span" />
+
+  <fragment
+    android:id="@+id/fragment_notification"
+    android:name="com.example.androidtechsample.ui.notification.NotificationFragment"
+    tools:layout="@layout/fragment_notification" />
+
+  <fragment
+    android:id="@+id/fragment_list"
+    android:name="com.example.androidtechsample.ui.list.ListFragment"
+    tools:layout="@layout/fragment_list" />
+
+  <fragment
+    android:id="@+id/fragment_camera"
+    android:name="com.example.androidtechsample.ui.camera.CameraFragment"
+    tools:layout="@layout/fragment_camera">
+    <action
+      android:id="@+id/to_fragment_camera_preview"
+      app:destination="@id/fragment_camera_preview" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_camera_preview"
+    android:name="com.example.androidtechsample.ui.camera.CameraPreviewFragment"
+    tools:layout="@layout/fragment_camera_preview">
+    <argument
+      android:name="photoUri"
+      app:argType="string" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_compose"
+    android:name="com.example.androidtechsample.ui.compose.ComposeFragment" />
+</navigation>

@@ -5,7 +5,7 @@ import android.media.MediaActionSound
 import androidx.camera.core.ImageCapture
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.androidtechsample.util.displayMetrics
+import com.example.core.util.displayMetrics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
