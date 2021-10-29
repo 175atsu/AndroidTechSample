@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie.carousel
+package com.example.groupie.carousel
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.androidtechsample.R
-import com.example.androidtechsample.databinding.FragmentGroupieCarouselBinding
+import com.example.groupie.R
+import com.example.groupie.databinding.FragmentGroupieCarouselBinding
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 

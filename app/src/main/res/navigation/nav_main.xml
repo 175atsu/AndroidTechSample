@@ -80,7 +80,7 @@
 
   <fragment
     android:id="@+id/fragment_groupie"
-    android:name="com.example.androidtechsample.ui.groupie.GroupieFragment"
+    android:name="com.example.groupie.GroupieFragment"
     tools:layout="@layout/fragment_groupie">
     <action
       android:id="@+id/to_fragment_groupie_basic"
@@ -95,17 +95,17 @@
 
   <fragment
     android:id="@+id/fragment_groupie_basic"
-    android:name="com.example.androidtechsample.ui.groupie.basic.GroupieBasicFragment"
+    android:name="com.example.groupie.basic.GroupieBasicFragment"
     tools:layout="@layout/fragment_groupie_basic" />
 
   <fragment
     android:id="@+id/fragment_groupie_carousel"
-    android:name="com.example.androidtechsample.ui.groupie.carousel.GroupieCarouselFragment"
+    android:name="com.example.groupie.carousel.GroupieCarouselFragment"
     tools:layout="@layout/fragment_groupie_carousel" />
 
   <fragment
     android:id="@+id/fragment_groupie_swipe"
-    android:name="com.example.androidtechsample.ui.groupie.swipe.GroupieSwipeFragment"
+    android:name="com.example.groupie.swipe.GroupieSwipeFragment"
     tools:layout="@layout/fragment_groupie_swipe" />
 
   <fragment

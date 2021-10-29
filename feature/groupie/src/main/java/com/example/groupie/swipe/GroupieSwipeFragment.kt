@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie.swipe
+package com.example.groupie.swipe
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidtechsample.R
-import com.example.androidtechsample.databinding.FragmentGroupieSwipeBinding
+import com.example.groupie.R
+import com.example.groupie.databinding.FragmentGroupieSwipeBinding
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.TouchCallback
 import dagger.hilt.android.AndroidEntryPoint

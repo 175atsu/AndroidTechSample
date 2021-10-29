@@ -1,6 +1,5 @@
-package com.example.androidtechsample.ui.groupie
+package com.example.groupie
 
-import com.example.androidtechsample.R
 import com.example.androidtechsample.data.GroupiePlaygroundModel
 import com.example.androidtechsample.databinding.ModelGroupieItemBinding
 import com.xwray.groupie.databinding.BindableItem

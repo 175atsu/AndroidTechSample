@@ -1,8 +1,8 @@
-package com.example.androidtechsample.ui.groupie.swipe
+package com.example.groupie.swipe
 
 import androidx.recyclerview.widget.ItemTouchHelper
-import com.example.androidtechsample.R
-import com.example.androidtechsample.databinding.ModelGroupieSwipeItemBinding
+import com.example.groupie.R
+import com.example.groupie.databinding.ModelGroupieSwipeItemBinding
 import com.xwray.groupie.databinding.BindableItem
 
 class GroupieSwipeItem(

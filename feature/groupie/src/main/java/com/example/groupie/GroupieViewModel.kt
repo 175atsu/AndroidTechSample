@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie
+package com.example.groupie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

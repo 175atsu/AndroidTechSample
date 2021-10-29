@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie.basic
+package com.example.groupie.basic
 
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.ModelGroupieBasicBodyItemBinding

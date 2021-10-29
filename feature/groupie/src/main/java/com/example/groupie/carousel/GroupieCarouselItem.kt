@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.groupie.carousel
+package com.example.groupie.carousel
 
 import android.view.View
 import com.example.androidtechsample.R
