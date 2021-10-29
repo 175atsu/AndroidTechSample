@@ -1,8 +1,8 @@
 package com.example.groupie.basic
 
-import com.example.androidtechsample.R
-import com.example.androidtechsample.databinding.ModelGroupieBasicBodyItemBinding
-import com.example.androidtechsample.databinding.ModelGroupieBasicItemBinding
+import com.example.groupie.R
+import com.example.groupie.databinding.ModelGroupieBasicBodyItemBinding
+import com.example.groupie.databinding.ModelGroupieBasicItemBinding
 import com.xwray.groupie.databinding.BindableItem
 
 class HeaderItem(private val itemLabel: String) :

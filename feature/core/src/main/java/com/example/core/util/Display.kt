@@ -1,4 +1,4 @@
-package com.example.androidtechsample.util
+package com.example.core.util
 
 import android.content.Context
 import android.graphics.Point

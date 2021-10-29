@@ -18,6 +18,7 @@ android {
 
 dependencies {
   implementation(project(":feature:resources"))
+  implementation(project(":feature:core"))
 
   implementation(Dep.AndroidX.constraintLayout)
   implementation(Dep.AndroidX.biometric)

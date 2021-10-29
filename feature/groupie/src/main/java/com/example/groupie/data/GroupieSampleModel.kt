@@ -1,6 +1,6 @@
-package com.example.androidtechsample.data
+package com.example.groupie.data
 
-import com.example.androidtechsample.R
+import com.example.groupie.R
 import javax.inject.Inject
 
 class GroupieSampleModel @Inject constructor() {

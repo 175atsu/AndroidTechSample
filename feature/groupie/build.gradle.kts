@@ -17,6 +17,7 @@ android {
 
 dependencies {
   implementation(project(":feature:resources"))
+  implementation(project(":feature:core"))
 
   implementation(com.example.buildsrc.Dep.AndroidX.appCompat)
   implementation(com.example.buildsrc.Dep.AndroidX.constraintLayout)

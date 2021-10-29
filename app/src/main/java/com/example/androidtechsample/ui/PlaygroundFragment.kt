@@ -9,8 +9,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.example.androidtechsample.R
 import com.example.androidtechsample.databinding.FragmentPlaygroundBinding
-import com.example.androidtechsample.util.navigator
-import com.example.androidtechsample.util.shortToast
+import com.example.core.util.navigator
+import com.example.core.util.shortToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

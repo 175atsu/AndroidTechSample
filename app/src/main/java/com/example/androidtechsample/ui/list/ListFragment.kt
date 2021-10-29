@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.example.androidtechsample.R
 import com.example.androidtechsample.data.followUserMock
 import com.example.androidtechsample.databinding.FragmentListBinding
-import com.example.androidtechsample.util.displayWidth
+import com.example.core.util.displayWidth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

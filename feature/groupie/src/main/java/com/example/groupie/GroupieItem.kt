@@ -1,7 +1,7 @@
 package com.example.groupie
 
-import com.example.androidtechsample.data.GroupiePlaygroundModel
-import com.example.androidtechsample.databinding.ModelGroupieItemBinding
+import com.example.groupie.data.GroupiePlaygroundModel
+import com.example.groupie.databinding.ModelGroupieItemBinding
 import com.xwray.groupie.databinding.BindableItem
 
 class GroupieItem(

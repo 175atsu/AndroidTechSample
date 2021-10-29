@@ -1,4 +1,4 @@
-package com.example.androidtechsample.util
+package com.example.core.util
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController

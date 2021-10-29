@@ -1,4 +1,4 @@
-package com.example.androidtechsample.util
+package com.example.core.util
 
 fun String.rangeOfIndex(string: String): IntRange {
   val startIndex = indexOf(string)

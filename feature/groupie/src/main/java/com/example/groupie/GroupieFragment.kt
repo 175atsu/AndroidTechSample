@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.androidtechsample.util.navigator
+import com.example.core.util.navigator
 import com.example.groupie.databinding.FragmentGroupieBinding
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,8 +1,8 @@
 package com.example.groupie.carousel
 
 import android.view.View
-import com.example.androidtechsample.R
-import com.example.androidtechsample.databinding.ModelGroupieCarouselItemBinding
+import com.example.groupie.R
+import com.example.groupie.databinding.ModelGroupieCarouselItemBinding
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.OnItemClickListener

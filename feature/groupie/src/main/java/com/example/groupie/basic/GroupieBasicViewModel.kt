@@ -3,7 +3,7 @@ package com.example.groupie.basic
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.androidtechsample.data.GroupieSampleModel
+import com.example.groupie.data.GroupieSampleModel
 import com.xwray.groupie.Group
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
