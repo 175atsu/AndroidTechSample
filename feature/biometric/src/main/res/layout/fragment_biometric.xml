@@ -19,6 +19,7 @@
 
     <Button
       android:id="@+id/button_hand"
+      style="@style/ButtonRectangleFill"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/biometric_fingerprint_authentication"

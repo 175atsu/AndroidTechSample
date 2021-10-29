@@ -37,7 +37,7 @@
 
   <fragment
     android:id="@+id/fragment_biometric"
-    android:name="com.example.androidtechsample.ui.BiometricFragment"
+    android:name="com.example.biometric.BiometricFragment"
     tools:layout="@layout/fragment_biometric" />
 
   <fragment
