@@ -1,0 +1,25 @@
+name: Weekly ktlint
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: ktlintFormat
+        continue-on-error: true
+        run: ./gradlew ktlintFormat
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          commit-message: Auto-modify files by weekly ktlint
+          title: Changes from weekly ktlint
+          body: This is an auto-generated PR with changes from weekly ktlint
+          branch: weekly-ktlint
