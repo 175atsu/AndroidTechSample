@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui
+package com.example.biometric
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,7 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.androidtechsample.databinding.FragmentBiometricBinding
+import com.example.biometric.databinding.FragmentBiometricBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.Executor
 
