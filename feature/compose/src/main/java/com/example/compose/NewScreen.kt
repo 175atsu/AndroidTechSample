@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.compose
+package com.example.compose
 
 import androidx.compose.runtime.Composable
 

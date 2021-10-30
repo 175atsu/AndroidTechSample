@@ -1,11 +1,8 @@
-package com.example.androidtechsample.component
+package com.example.compose
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.androidtechsample.resource.textStyleBlackHead1
-import com.example.androidtechsample.resource.textStyleBlackHead2
-import com.example.androidtechsample.resource.textStyleWhiteBody1
 
 @Composable
 fun TextBlackHead1(text: String, modifier: Modifier = Modifier) {

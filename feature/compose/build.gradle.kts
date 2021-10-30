@@ -1,3 +1,6 @@
+import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
+
 plugins {
   id("com.android.library")
   id("kotlin-android")
@@ -10,9 +13,25 @@ android {
   defaultConfig {
     minSdk = 23
   }
+  buildFeatures {
+    dataBinding = true
+    compose = true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion = Versions.Androidx.compose
+  }
 }
 
 dependencies {
-  implementation(com.example.buildsrc.Dep.DI.hilt)
-  kapt(com.example.buildsrc.Dep.DI.hiltKapt)
+  implementation(project(":feature:core"))
+  implementation(project(":feature:resources"))
+
+  implementation(Dep.DI.hilt)
+  kapt(Dep.DI.hiltKapt)
+
+  implementation(Dep.AndroidX.Compose.ui)
+  implementation(Dep.AndroidX.Compose.navigation)
+  implementation(Dep.AndroidX.Compose.material)
+  implementation(Dep.AndroidX.Compose.uiTooling)
+  implementation(Dep.AndroidX.Compose.runtime)
 }
