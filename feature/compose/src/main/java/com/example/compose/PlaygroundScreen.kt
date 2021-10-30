@@ -21,7 +21,7 @@ fun PlaygroundScreen(navController: NavController) {
       modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
       TextBlackHead1(
-        text = stringResource(id = R.string.compose_playground),
+        text = stringResource(id = R.string.compose_label),
         modifier = Modifier.padding(vertical = 8.dp)
       )
       Spacer(Modifier.height(16.dp))
