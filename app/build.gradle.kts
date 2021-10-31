@@ -31,10 +31,6 @@ android {
   }
   buildFeatures {
     dataBinding = true
-    compose = true
-  }
-  composeOptions {
-    kotlinCompilerExtensionVersion = Versions.Androidx.compose
   }
 }
 
@@ -43,6 +39,7 @@ dependencies {
   implementation(project(":feature:biometric"))
   implementation(project(":feature:groupie"))
   implementation(project(":feature:core"))
+  implementation(project(":feature:compose"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)
@@ -57,10 +54,6 @@ dependencies {
   implementation(Dep.AndroidX.CameraX.lifecycle)
   implementation(Dep.AndroidX.CameraX.view)
   implementation(Dep.AndroidX.CameraX.extensions)
-  implementation(Dep.AndroidX.Compose.ui)
-  implementation(Dep.AndroidX.Compose.navigation)
-  implementation(Dep.AndroidX.Compose.material)
-  implementation(Dep.AndroidX.Compose.uiTooling)
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.KotlinX.Coroutine.core)
   implementation(Dep.KotlinX.Coroutine.android)

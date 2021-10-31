@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.compose
+package com.example.compose.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.androidtechsample.ui.compose.NavRouter.NEW_ROUTE
-import com.example.androidtechsample.ui.compose.NavRouter.PLAYGROUND_ROUTE
+import com.example.compose.NavRouter.NEW_ROUTE
+import com.example.compose.NavRouter.PLAYGROUND_ROUTE
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

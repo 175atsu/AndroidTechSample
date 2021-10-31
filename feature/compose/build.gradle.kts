@@ -1,6 +1,11 @@
 import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
+
 plugins {
   id("com.android.library")
+  id("kotlin-android")
+  id("kotlin-kapt")
+  id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -9,16 +14,20 @@ android {
     minSdk = 23
   }
   buildFeatures {
+    dataBinding = true
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = com.example.buildsrc.Versions.Androidx.compose
+    kotlinCompilerExtensionVersion = Versions.Androidx.compose
   }
 }
 
 dependencies {
-  implementation(Dep.AndroidX.appCompat)
-  implementation(Dep.material)
+  implementation(project(":feature:core"))
+  implementation(project(":feature:resources"))
+
+  implementation(Dep.DI.hilt)
+  kapt(Dep.DI.hiltKapt)
 
   implementation(Dep.AndroidX.Compose.ui)
   implementation(Dep.AndroidX.Compose.navigation)

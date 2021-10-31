@@ -1,4 +1,4 @@
-package com.example.androidtechsample.ui.compose
+package com.example.compose
 
 object NavRouter {
   const val PLAYGROUND_ROUTE = "playground"
