@@ -143,5 +143,5 @@
 
   <fragment
     android:id="@+id/fragment_compose"
-    android:name="com.example.compose.ComposeFragment" />
+    android:name="com.example.compose.ui.ComposeFragment" />
 </navigation>

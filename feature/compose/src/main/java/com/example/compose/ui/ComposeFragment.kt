@@ -1,4 +1,4 @@
-package com.example.compose
+package com.example.compose.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
