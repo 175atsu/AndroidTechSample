@@ -58,13 +58,11 @@ dependencies {
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.KotlinX.Coroutine.core)
   implementation(Dep.KotlinX.Coroutine.android)
-  implementation(Dep.AndroidX.Compose.runtimeLiveData)
   implementation(Dep.AndroidX.Hilt.lifecycle)
   kapt(Dep.AndroidX.Hilt.compiler)
   implementation(Dep.material)
   implementation(Dep.compat)
   implementation(Dep.DI.hilt)
-  implementation(Dep.coil)
   kapt(Dep.DI.hiltKapt)
 
   implementation(Dep.Glide.core)
