@@ -25,6 +25,7 @@ android {
 dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
+  implementation(project(":feature:followfeed"))
 
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)

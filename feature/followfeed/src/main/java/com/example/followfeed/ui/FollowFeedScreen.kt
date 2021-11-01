@@ -1,4 +1,4 @@
-package com.example.compose.ui.ameba
+package com.example.followfeed.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -26,11 +26,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
-import com.example.compose.SpacerHeight
-import com.example.compose.SpacerWidth
-import com.example.compose.textStyleBlackBody2
-import com.example.compose.textStyleBlackBody3
-import com.example.compose.textStyleBlackHead5
+import com.example.core.SpacerHeight
+import com.example.core.SpacerWidth
+import com.example.followfeed.data.FollowFeedBlogData
+import com.example.resouces.textStyleBlackBody2
+import com.example.resouces.textStyleBlackBody3
+import com.example.resouces.textStyleBlackHead5
 
 @Composable
 fun FollowFeedScreen(

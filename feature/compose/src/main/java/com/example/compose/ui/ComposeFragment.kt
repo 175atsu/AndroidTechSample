@@ -13,7 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.compose.NavRouter.AMEBA_FOLLOW_FEED_ROUTE
 import com.example.compose.NavRouter.PLAYGROUND_ROUTE
-import com.example.compose.ui.ameba.FollowFeedScreen
+import com.example.followfeed.ui.FollowFeedScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

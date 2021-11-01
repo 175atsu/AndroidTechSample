@@ -16,9 +16,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.compose.NavRouter
 import com.example.compose.R
-import com.example.compose.textStyleBlackHead1
-import com.example.compose.textStyleBlackHead2
-import com.example.compose.textStyleWhiteBody1
+import com.example.resouces.textStyleBlackHead1
+import com.example.resouces.textStyleBlackHead2
+import com.example.resouces.textStyleWhiteBody1
 
 @Composable
 fun PlaygroundScreen(navController: NavController) {

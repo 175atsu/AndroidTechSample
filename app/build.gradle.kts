@@ -40,6 +40,7 @@ dependencies {
   implementation(project(":feature:groupie"))
   implementation(project(":feature:core"))
   implementation(project(":feature:compose"))
+  implementation(project(":feature:followfeed"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)

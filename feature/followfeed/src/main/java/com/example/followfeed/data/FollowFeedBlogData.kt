@@ -1,4 +1,4 @@
-package com.example.compose.ui.ameba
+package com.example.followfeed.data
 
 data class FollowFeedBlogData(
   val blogTitle: String,
