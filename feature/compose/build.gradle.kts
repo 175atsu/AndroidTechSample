@@ -25,13 +25,16 @@ android {
 dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
+  implementation(project(":feature:ameba:followfeed"))
 
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
+  implementation(Dep.coil)
 
   implementation(Dep.AndroidX.Compose.ui)
   implementation(Dep.AndroidX.Compose.navigation)
   implementation(Dep.AndroidX.Compose.material)
   implementation(Dep.AndroidX.Compose.uiTooling)
   implementation(Dep.AndroidX.Compose.runtime)
+  implementation(Dep.AndroidX.Compose.runtimeLiveData)
 }

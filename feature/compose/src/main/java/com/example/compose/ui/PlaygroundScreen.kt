@@ -16,9 +16,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.compose.NavRouter
 import com.example.compose.R
-import com.example.compose.textStyleBlackHead1
-import com.example.compose.textStyleBlackHead2
-import com.example.compose.textStyleWhiteBody1
+import com.example.resouces.textStyleBlackHead1
+import com.example.resouces.textStyleBlackHead2
+import com.example.resouces.textStyleWhiteBody1
 
 @Composable
 fun PlaygroundScreen(navController: NavController) {
@@ -33,12 +33,12 @@ fun PlaygroundScreen(navController: NavController) {
       )
       Spacer(Modifier.height(16.dp))
       Text(
-        text = stringResource(id = R.string.compose_test),
+        text = stringResource(id = R.string.compose_ameba),
         style = textStyleBlackHead2()
       )
       ToPageButton(
-        toPage = { navController.navigate(NavRouter.NEW_ROUTE) },
-        textResource = R.string.compose_new_page
+        toPage = { navController.navigate(NavRouter.AMEBA_FOLLOW_FEED_ROUTE) },
+        textResource = R.string.compose_ameba_follow_feed
       )
     }
   }

@@ -40,6 +40,7 @@ dependencies {
   implementation(project(":feature:groupie"))
   implementation(project(":feature:core"))
   implementation(project(":feature:compose"))
+  implementation(project(":feature:ameba:followfeed"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)
@@ -57,6 +58,8 @@ dependencies {
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.KotlinX.Coroutine.core)
   implementation(Dep.KotlinX.Coroutine.android)
+  implementation(Dep.AndroidX.Hilt.lifecycle)
+  kapt(Dep.AndroidX.Hilt.compiler)
   implementation(Dep.material)
   implementation(Dep.compat)
   implementation(Dep.DI.hilt)
