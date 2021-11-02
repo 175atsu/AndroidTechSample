@@ -15,7 +15,7 @@ import com.example.compose.NavRouter.AMEBA_FOLLOW_FEED_ROUTE
 import com.example.compose.NavRouter.PLAYGROUND_ROUTE
 import com.example.compose.NavRouter.TWITTER_FOLLOW_FEED_ROUTE
 import com.example.followfeed.ui.FollowFeedScreen
-import com.example.home.HomeScreen
+import com.example.home.ui.HomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
