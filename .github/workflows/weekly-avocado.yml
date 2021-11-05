@@ -1,0 +1,33 @@
+name: Weekly avocado
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 毎週月曜朝10時に実行
+    - cron: '0 10 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup avocado
+        run: npm install -g avocado
+
+      - name: Run avocado
+        run: find ./ -name "*.xml" | xargs grep "</vector>" -rl | xargs avocado
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Auto-modify files by weekly avocado
+          title: 【avocado🥑】Changes from weekly avocado
+          body: |
+            This is an auto-generated PR with changes from weeekly-avocado
+          labels: review ready
+          branch: feature/avocado_update
+          delete-branch: true
