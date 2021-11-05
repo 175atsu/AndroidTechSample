@@ -2,6 +2,7 @@ package com.example.home.ui
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -39,7 +40,7 @@ fun HomeScreen() {
     modifier = Modifier.fillMaxSize()
   ) {
     items(mockTweet + mockTweet + mockTweet) {
-      TweetItem(it)
+      TweetItem(it, ::itemClick)
       Divider(
         color = Color.LightGray,
         thickness = 0.5.dp
@@ -49,10 +50,15 @@ fun HomeScreen() {
 }
 
 @Composable
-fun TweetItem(tweetItem: TweetData, modifier: Modifier = Modifier) {
+fun TweetItem(
+  tweetItem: TweetData,
+  onClick: () -> Unit,
+  modifier: Modifier = Modifier
+) {
   Row(
     modifier = modifier
       .fillMaxWidth()
+      .clickable(onClick = onClick)
       .padding(horizontal = 16.dp, vertical = 8.dp)
   ) {
     Image(
@@ -146,6 +152,8 @@ fun IconText(@DrawableRes resource: Int, count: Int, modifier: Modifier = Modifi
     )
   }
 }
+
+fun itemClick() {}
 
 @Preview
 @Composable
