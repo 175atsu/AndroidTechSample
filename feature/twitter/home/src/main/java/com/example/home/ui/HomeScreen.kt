@@ -17,30 +17,36 @@ import androidx.compose.material.Divider
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberImagePainter
 import com.example.core.SpacerHeight
 import com.example.core.SpacerWidth
 import com.example.home.R
 import com.example.home.data.TweetData
-import com.example.home.data.mockTweet
 import com.example.resouces.textStyleBlackBody2
 import com.example.resouces.textStyleBlackHead6
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+  viewModel: HomeViewModel = viewModel()
+) {
+  val tweetListState by viewModel.tweetList.observeAsState(emptyList())
+  viewModel.fetchItem()
+
   LazyColumn(
     modifier = Modifier.fillMaxSize()
   ) {
-    items(mockTweet + mockTweet + mockTweet) {
-      TweetItem(it, ::itemClick)
+    items(tweetListState + tweetListState + tweetListState) {
+      TweetItem(it, viewModel::itemClick)
       Divider(
         color = Color.LightGray,
         thickness = 0.5.dp
@@ -151,12 +157,4 @@ fun IconText(@DrawableRes resource: Int, count: Int, modifier: Modifier = Modifi
       maxLines = 1
     )
   }
-}
-
-fun itemClick() {}
-
-@Preview
-@Composable
-fun Preview() {
-  HomeScreen()
 }
