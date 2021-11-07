@@ -61,7 +61,6 @@
   <string name="compose_ameba">Ameba</string>
   <string name="compose_ameba_follow_feed">FollowFeed</string>
   <string name="compose_twitter">Twitter</string>
-  <string name="compose_twitter_home">Home</string>
 
   <!-- Twitter -->
   <string name="twitter_home">Home</string>
