@@ -14,7 +14,6 @@ android {
     minSdk = 23
   }
   buildFeatures {
-    dataBinding = true
     compose = true
   }
   composeOptions {
@@ -25,8 +24,6 @@ android {
 dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
-  implementation(project(":feature:ameba:followfeed"))
-  implementation(project(":feature:twitter:twitter-core"))
   implementation(project(":feature:twitter:home"))
 
   implementation(Dep.DI.hilt)

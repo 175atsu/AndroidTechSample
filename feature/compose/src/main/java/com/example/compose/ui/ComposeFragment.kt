@@ -13,9 +13,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.compose.NavRouter.AMEBA_FOLLOW_FEED_ROUTE
 import com.example.compose.NavRouter.PLAYGROUND_ROUTE
-import com.example.compose.NavRouter.TWITTER_FOLLOW_FEED_ROUTE
+import com.example.compose.NavRouter.TWITTER_ROUTE
 import com.example.followfeed.ui.FollowFeedScreen
-import com.example.home.ui.HomeScreen
+import com.example.twitter.core.TwitterScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -40,6 +40,6 @@ fun CreateNav(startDestination: String = PLAYGROUND_ROUTE) {
   NavHost(navController = navController, startDestination = startDestination) {
     composable(PLAYGROUND_ROUTE) { PlaygroundScreen(navController) }
     composable(AMEBA_FOLLOW_FEED_ROUTE) { FollowFeedScreen() }
-    composable(TWITTER_FOLLOW_FEED_ROUTE) { HomeScreen() }
+    composable(TWITTER_ROUTE) { TwitterScreen() }
   }
 }

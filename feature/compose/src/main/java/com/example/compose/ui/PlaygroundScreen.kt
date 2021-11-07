@@ -45,8 +45,8 @@ fun PlaygroundScreen(navController: NavController) {
         style = textStyleBlackHead2()
       )
       ToPageButton(
-        toPage = { navController.navigate(NavRouter.TWITTER_FOLLOW_FEED_ROUTE) },
-        textResource = R.string.compose_twitter_home
+        toPage = { navController.navigate(NavRouter.TWITTER_ROUTE) },
+        textResource = R.string.compose_twitter
       )
     }
   }
