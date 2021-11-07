@@ -1,7 +1,7 @@
 package com.example.twitter.core
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -9,7 +9,9 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -32,15 +34,20 @@ fun TwitterScreen() {
   val navController = rememberNavController()
   Scaffold(
     bottomBar = {
-      BottomNavigation {
+      BottomNavigation(
+        backgroundColor = Color.White,
+        contentColor = Color.Black
+      ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
         items.forEach { item ->
           BottomNavigationItem(
             icon = {
+              val iconRes = if (currentRoute == item.root) item.selectIcon else item.unSelectIcon
               Icon(
-                painter = painterResource(item.icon),
-                contentDescription = item.root
+                painter = painterResource(iconRes),
+                contentDescription = item.root,
+                modifier = Modifier.size(28.dp)
               )
             },
             selected = currentRoute == item.root,
@@ -58,16 +65,15 @@ fun TwitterScreen() {
       }
     }
   ) { innerPadding ->
-    Box(modifier = Modifier.padding(innerPadding)) {
-      NavHost(
-        navController,
-        startDestination = TwitterBottomNavItem.Home.root,
-      ) {
-        composable(HOME_ROUTE) { HomeScreen() }
-        composable(SEARCH_ROUTE) { HomeScreen() }
-        composable(NOTIFICATION_ROUTE) { HomeScreen() }
-        composable(DM_ROUTE) { HomeScreen() }
-      }
+    NavHost(
+      navController,
+      startDestination = TwitterBottomNavItem.Home.root,
+      modifier = Modifier.padding(innerPadding)
+    ) {
+      composable(HOME_ROUTE) { HomeScreen() }
+      composable(SEARCH_ROUTE) { HomeScreen() }
+      composable(NOTIFICATION_ROUTE) { HomeScreen() }
+      composable(DM_ROUTE) { HomeScreen() }
     }
   }
 }
