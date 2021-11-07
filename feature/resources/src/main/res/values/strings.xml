@@ -63,4 +63,10 @@
   <string name="compose_twitter">Twitter</string>
   <string name="compose_twitter_home">Home</string>
 
+  <!-- Twitter -->
+  <string name="twitter_home">Home</string>
+  <string name="twitter_search">Search</string>
+  <string name="twitter_notification">Notification</string>
+  <string name="twitter_dm">DM</string>
+
 </resources>

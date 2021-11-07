@@ -17,13 +17,14 @@ android {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = com.example.buildsrc.Versions.Androidx.compose
+    kotlinCompilerExtensionVersion = Versions.Androidx.compose
   }
 }
 
 dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
+  implementation(project(":feature:twitter:home"))
 
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)
