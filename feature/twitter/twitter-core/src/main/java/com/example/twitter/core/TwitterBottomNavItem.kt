@@ -18,7 +18,7 @@ sealed class TwitterBottomNavItem(
     TwitterBottomNavItem(
       HOME_ROUTE,
       R.drawable.ic_home_fill_black_24dp,
-        R.drawable.ic_home_black_24dp
+      R.drawable.ic_home_black_24dp
     )
 
   object Search :
