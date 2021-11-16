@@ -3,6 +3,7 @@
 
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
+  <string name="playground_label_material">Material</string>
   <string name="playground_label_layout">Layout</string>
   <string name="playground_label_list">List</string>
   <string name="playground_label_other">Other</string>
@@ -16,6 +17,7 @@
   <string name="playground_hello_view">HelloCompose</string>
   <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>
+  <string name="playground_material_view">MaterialView</string>
 
   <!-- BiometricFragment -->
   <string name="biometric_label">@string/playground_biometric</string>
