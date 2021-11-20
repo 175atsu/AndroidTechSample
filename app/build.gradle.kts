@@ -43,6 +43,7 @@ dependencies {
   implementation(project(":feature:ameba:followfeed"))
   implementation(project(":feature:twitter:twitter-core"))
   implementation(project(":feature:twitter:home"))
+  implementation(project(":feature:material"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)

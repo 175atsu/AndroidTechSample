@@ -58,6 +58,9 @@
   <!-- CameraFragment -->
   <string name="camera_folder_name">AndroidTechSample</string>
 
+  <!-- MaterialFragment -->
+  <string name="material_label">@string/playground_material_view</string>
+
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
   <string name="compose_ameba">Ameba</string>
