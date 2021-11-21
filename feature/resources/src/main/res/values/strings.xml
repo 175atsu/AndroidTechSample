@@ -60,6 +60,7 @@
 
   <!-- MaterialFragment -->
   <string name="material_label">@string/playground_material_view</string>
+  <string name="material_label_button">ボタン</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

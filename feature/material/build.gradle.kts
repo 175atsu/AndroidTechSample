@@ -20,6 +20,8 @@ dependencies {
   implementation(project(":feature:resources"))
   implementation(project(":feature:core"))
 
+  implementation(Dep.material)
+
   implementation(Dep.AndroidX.constraintLayout)
   implementation(Dep.DI.hilt)
   kapt(Dep.DI.hiltKapt)

@@ -4,17 +4,37 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp">
 
     <TextView
+      android:id="@+id/text_label"
       style="@style/Text.PrimaryColor.Head1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:text="@string/material_label"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/text_label_button"
+      style="@style/Text.PrimaryColor.Head3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="4dp"
+      android:text="@string/material_label_button"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_label" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/to_material_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="4dp"
+      android:text="@string/material_label_button"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_label_button" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,6 +1,8 @@
 package com.example.material
 
+import android.content.Context
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +18,9 @@ class MaterialFragment : Fragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentMaterialBinding.inflate(inflater)
+    val contextThemeWrapper: Context = ContextThemeWrapper(activity, R.style.Material3Theme)
+    val localInflater = inflater.cloneInContext(contextThemeWrapper)
+    binding = FragmentMaterialBinding.inflate(localInflater)
     return binding.root
   }
 }
