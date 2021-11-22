@@ -85,6 +85,18 @@
   <string name="material_card_button_rejection">Rejection</string>
 
   <string name="material_label_chip">Chip</string>
+  <string name="material_chip_assist">Assist Chip</string>Elevated
+  <string name="material_chip_assist_elevated">Assist Elevated Chip</string>
+  <string name="material_chip_filter">Filter Chip</string>
+  <string name="material_chip_filter_elevated">Filter Elevated Chip</string>
+  <string name="material_chip_filter1">Filter1</string>
+  <string name="material_chip_filter2">Filter2</string>
+  <string name="material_chip_filter3">Filter3</string>
+  <string name="material_chip_filter4">Filter4</string>
+  <string name="material_chip_input">Input Chip</string>
+  <string name="material_chip_input_elevated">Input Elevated Chip</string>
+  <string name="material_chip_suggestion">Suggestion Chip</string>
+  <string name="material_chip_suggestion_elevated">Suggestion Elevated Chip</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

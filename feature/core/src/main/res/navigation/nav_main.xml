@@ -140,6 +140,9 @@
     <action
       android:id="@+id/to_fragment_material_card"
       app:destination="@id/fragment_material_card" />
+    <action
+      android:id="@+id/to_fragment_material_chip"
+      app:destination="@id/fragment_material_chip" />
   </fragment>
 
   <fragment
@@ -149,4 +152,8 @@
   <fragment
     android:id="@+id/fragment_material_card"
     android:name="com.example.material.card.MaterialCardFragment" />
+
+  <fragment
+    android:id="@+id/fragment_material_chip"
+    android:name="com.example.material.chip.MaterialChipFragment" />
 </navigation>
