@@ -23,6 +23,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="4dp"
+        android:text="@string/playground_label_material" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_view"
+        style="@style/ButtonRectangleFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:text="@string/playground_material_view" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
         android:text="@string/playground_label_layout" />
 
       <com.google.android.material.button.MaterialButton

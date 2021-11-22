@@ -3,6 +3,7 @@
 
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
+  <string name="playground_label_material">Material</string>
   <string name="playground_label_layout">Layout</string>
   <string name="playground_label_list">List</string>
   <string name="playground_label_other">Other</string>
@@ -16,6 +17,7 @@
   <string name="playground_hello_view">HelloCompose</string>
   <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>
+  <string name="playground_material_view">MaterialView</string>
 
   <!-- BiometricFragment -->
   <string name="biometric_label">@string/playground_biometric</string>
@@ -55,6 +57,34 @@
 
   <!-- CameraFragment -->
   <string name="camera_folder_name">AndroidTechSample</string>
+
+  <!-- MaterialFragment -->
+  <string name="material_label">@string/playground_material_view</string>
+  <string name="material_label_button">Button</string>
+  <string name="material_label_button_common">CommonButton</string>
+  <string name="material_label_button_fab">FAB</string>
+  <string name="material_button_filled">FilledButton</string>
+  <string name="material_button_filled_icon">FilledIconButton</string>
+  <string name="material_button_elevated">ElevatedButton</string>
+  <string name="material_button_elevated_icon">ElevatedIconButton</string>
+  <string name="material_button_tonal">TonalButton</string>
+  <string name="material_button_tonal_icon">TonalIconButton</string>
+  <string name="material_button_outline">OutlineButton</string>
+  <string name="material_button_outline_icon">OutlineIconButton</string>
+  <string name="material_button_text">TextButton</string>
+  <string name="material_button_text_icon">TextIconButton</string>
+  <string name="material_fab">FloatingActionButton</string>
+  <string name="material_fab_icon">FloatingActionIconButton</string>
+  <string name="material_label_card">Card</string>
+  <string name="material_card_outline">OutlineCard</string>
+  <string name="material_card_filled">FilledCard</string>
+  <string name="material_card_elevated">ElevatedCard</string>
+  <string name="material_card_title">Title</string>
+  <string name="material_card_description">description</string>
+  <string name="material_card_button_agreement">Agreement</string>
+  <string name="material_card_button_rejection">Rejection</string>
+
+  <string name="material_label_chip">Chip</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

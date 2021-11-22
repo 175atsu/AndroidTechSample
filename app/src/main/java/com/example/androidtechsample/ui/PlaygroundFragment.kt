@@ -68,6 +68,9 @@ class PlaygroundFragment : Fragment() {
       toComposeView.setOnClickListener {
         navigator(R.id.to_fragment_compose)
       }
+      toMaterialView.setOnClickListener {
+        navigator(R.id.to_fragment_material)
+      }
     }
   }
 }

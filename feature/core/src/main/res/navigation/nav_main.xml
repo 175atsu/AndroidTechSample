@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/nav_main"
   app:startDestination="@id/fragment_playground">
 
   <fragment
     android:id="@+id/fragment_playground"
-    android:name="com.example.androidtechsample.ui.PlaygroundFragment"
-    tools:layout="@layout/fragment_playground">
+    android:name="com.example.androidtechsample.ui.PlaygroundFragment">
     <action
       android:id="@+id/to_fragment_biometric"
       app:destination="@id/fragment_biometric" />
@@ -33,17 +31,18 @@
     <action
       android:id="@+id/to_fragment_compose"
       app:destination="@id/fragment_compose" />
+    <action
+      android:id="@+id/to_fragment_material"
+      app:destination="@id/fragment_material" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_biometric"
-    android:name="com.example.biometric.BiometricFragment"
-    tools:layout="@layout/fragment_biometric" />
+    android:name="com.example.biometric.BiometricFragment" />
 
   <fragment
     android:id="@+id/fragment_motion"
-    android:name="com.example.androidtechsample.ui.motion.MotionFragment"
-    tools:layout="@layout/fragment_motion">
+    android:name="com.example.androidtechsample.ui.motion.MotionFragment">
     <action
       android:id="@+id/to_fragment_motion_layout"
       app:destination="@id/fragment_motion_top_swipe" />
@@ -60,28 +59,23 @@
 
   <fragment
     android:id="@+id/fragment_motion_top_swipe"
-    android:name="com.example.androidtechsample.ui.motion.MotionTopSwipeFragment"
-    tools:layout="@layout/fragment_motion_top_swipe" />
+    android:name="com.example.androidtechsample.ui.motion.MotionTopSwipeFragment" />
 
   <fragment
     android:id="@+id/fragment_motion_side_swipe"
-    android:name="com.example.androidtechsample.ui.motion.MotionSideSwipeFragment"
-    tools:layout="@layout/fragment_motion_side_swipe" />
+    android:name="com.example.androidtechsample.ui.motion.MotionSideSwipeFragment" />
 
   <fragment
     android:id="@+id/fragment_motion_custom"
-    android:name="com.example.androidtechsample.ui.motion.MotionCustomFragment"
-    tools:layout="@layout/fragment_motion_custom" />
+    android:name="com.example.androidtechsample.ui.motion.MotionCustomFragment" />
 
   <fragment
     android:id="@+id/fragment_motion_key_position"
-    android:name="com.example.androidtechsample.ui.motion.MotionKeyPositionFragment"
-    tools:layout="@layout/fragment_motion_key_position" />
+    android:name="com.example.androidtechsample.ui.motion.MotionKeyPositionFragment" />
 
   <fragment
     android:id="@+id/fragment_groupie"
-    android:name="com.example.groupie.GroupieFragment"
-    tools:layout="@layout/fragment_groupie">
+    android:name="com.example.groupie.GroupieFragment">
     <action
       android:id="@+id/to_fragment_groupie_basic"
       app:destination="@id/fragment_groupie_basic" />
@@ -95,38 +89,31 @@
 
   <fragment
     android:id="@+id/fragment_groupie_basic"
-    android:name="com.example.groupie.basic.GroupieBasicFragment"
-    tools:layout="@layout/fragment_groupie_basic" />
+    android:name="com.example.groupie.basic.GroupieBasicFragment" />
 
   <fragment
     android:id="@+id/fragment_groupie_carousel"
-    android:name="com.example.groupie.carousel.GroupieCarouselFragment"
-    tools:layout="@layout/fragment_groupie_carousel" />
+    android:name="com.example.groupie.carousel.GroupieCarouselFragment" />
 
   <fragment
     android:id="@+id/fragment_groupie_swipe"
-    android:name="com.example.groupie.swipe.GroupieSwipeFragment"
-    tools:layout="@layout/fragment_groupie_swipe" />
+    android:name="com.example.groupie.swipe.GroupieSwipeFragment" />
 
   <fragment
     android:id="@+id/fragment_span"
-    android:name="com.example.androidtechsample.ui.SpanFragment"
-    tools:layout="@layout/fragment_span" />
+    android:name="com.example.androidtechsample.ui.SpanFragment" />
 
   <fragment
     android:id="@+id/fragment_notification"
-    android:name="com.example.androidtechsample.ui.notification.NotificationFragment"
-    tools:layout="@layout/fragment_notification" />
+    android:name="com.example.androidtechsample.ui.notification.NotificationFragment" />
 
   <fragment
     android:id="@+id/fragment_list"
-    android:name="com.example.androidtechsample.ui.list.ListFragment"
-    tools:layout="@layout/fragment_list" />
+    android:name="com.example.androidtechsample.ui.list.ListFragment" />
 
   <fragment
     android:id="@+id/fragment_camera"
-    android:name="com.example.androidtechsample.ui.camera.CameraFragment"
-    tools:layout="@layout/fragment_camera">
+    android:name="com.example.androidtechsample.ui.camera.CameraFragment">
     <action
       android:id="@+id/to_fragment_camera_preview"
       app:destination="@id/fragment_camera_preview" />
@@ -134,8 +121,7 @@
 
   <fragment
     android:id="@+id/fragment_camera_preview"
-    android:name="com.example.androidtechsample.ui.camera.CameraPreviewFragment"
-    tools:layout="@layout/fragment_camera_preview">
+    android:name="com.example.androidtechsample.ui.camera.CameraPreviewFragment">
     <argument
       android:name="photoUri"
       app:argType="string" />
@@ -144,4 +130,23 @@
   <fragment
     android:id="@+id/fragment_compose"
     android:name="com.example.compose.ui.ComposeFragment" />
+  
+  <fragment
+    android:id="@+id/fragment_material"
+    android:name="com.example.material.MaterialFragment" >
+    <action
+      android:id="@+id/to_fragment_material_button"
+      app:destination="@id/fragment_material_button" />
+    <action
+      android:id="@+id/to_fragment_material_card"
+      app:destination="@id/fragment_material_card" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragment_material_button"
+    android:name="com.example.material.button.MaterialButtonFragment" />
+
+  <fragment
+    android:id="@+id/fragment_material_card"
+    android:name="com.example.material.card.MaterialCardFragment" />
 </navigation>

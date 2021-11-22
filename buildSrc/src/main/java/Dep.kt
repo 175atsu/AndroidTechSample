@@ -109,7 +109,7 @@ object Dep {
     const val plugin = "com.jakewharton.timber:timber:4.7.1"
   }
 
-  const val material = "com.google.android.material:material:1.3.0"
+  const val material = "com.google.android.material:material:1.5.0-beta01"
   const val compat = "com.android.support:support-compat:28.0.0"
 
   object DI {
