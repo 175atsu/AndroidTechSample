@@ -60,7 +60,21 @@
 
   <!-- MaterialFragment -->
   <string name="material_label">@string/playground_material_view</string>
-  <string name="material_label_button">ボタン</string>
+  <string name="material_label_button">MaterialButton</string>
+  <string name="material_label_button_common">CommonButton</string>
+  <string name="material_label_button_fab">FAB</string>
+  <string name="material_button_filled">FilledButton</string>
+  <string name="material_button_filled_icon">FilledIconButton</string>
+  <string name="material_button_elevated">ElevatedButton</string>
+  <string name="material_button_elevated_icon">ElevatedIconButton</string>
+  <string name="material_button_tonal">TonalButton</string>
+  <string name="material_button_tonal_icon">TonalIconButton</string>
+  <string name="material_button_outline">OutlineButton</string>
+  <string name="material_button_outline_icon">OutlineIconButton</string>
+  <string name="material_button_text">TextButton</string>
+  <string name="material_button_text_icon">TextIconButton</string>
+  <string name="material_fab">FloatingActionButton</string>
+  <string name="material_fab_icon">FloatingActionIconButton</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

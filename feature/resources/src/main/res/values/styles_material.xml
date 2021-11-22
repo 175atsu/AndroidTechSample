@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!-- RectangleFill Button -->
-  <style name="ButtonRectangleFill" parent="Widget.MaterialComponents.Button">
+
+  <style name="ButtonBase" parent="Widget.MaterialComponents.Button">
     <item name="android:insetBottom">0dp</item>
     <item name="android:insetTop">0dp</item>
+  </style>
+
+  <!-- RectangleFill Button -->
+  <style name="ButtonRectangleFill" parent="ButtonBase">
     <item name="android:textStyle">bold</item>
     <item name="cornerRadius">8dp</item>
+  </style>
+
+  <!-- Fill Button -->
+  <style name="ButtonFill" parent="ButtonBase">
+
+  </style>
+
+  <!-- Elevation Button -->
+  <style name="ButtonElevation" parent="Widget.Material3.Button.ElevatedButton">
+    <item name="elevation">8dp</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Button</item>
+
   </style>
 </resources>

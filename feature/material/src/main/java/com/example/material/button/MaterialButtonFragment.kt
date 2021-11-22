@@ -1,4 +1,4 @@
-package com.example.material
+package com.example.material.button
 
 import android.content.Context
 import android.os.Bundle
@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.core.util.navigator
-import com.example.material.databinding.FragmentMaterialBinding
+import com.example.material.R
+import com.example.material.databinding.FragmentMaterialButtonBinding
 
-class MaterialFragment : Fragment() {
+class MaterialButtonFragment : Fragment() {
 
-  private lateinit var binding: FragmentMaterialBinding
+  private lateinit var binding: FragmentMaterialButtonBinding
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -21,15 +21,7 @@ class MaterialFragment : Fragment() {
   ): View {
     val contextThemeWrapper: Context = ContextThemeWrapper(activity, R.style.Material3Theme)
     val localInflater = inflater.cloneInContext(contextThemeWrapper)
-    binding = FragmentMaterialBinding.inflate(localInflater)
+    binding = FragmentMaterialButtonBinding.inflate(localInflater)
     return binding.root
-  }
-
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-
-    binding.toMaterialButton.setOnClickListener {
-      navigator(R.id.to_fragment_material_button)
-    }
   }
 }
