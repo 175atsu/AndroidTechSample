@@ -31,5 +31,11 @@ class MaterialFragment : Fragment() {
     binding.toMaterialButton.setOnClickListener {
       navigator(R.id.to_fragment_material_button)
     }
+    binding.toMaterialCard.setOnClickListener {
+      navigator(R.id.to_fragment_material_card)
+    }
+    binding.toMaterialChip.setOnClickListener {
+      navigator(R.id.to_fragment_material_card)
+    }
   }
 }

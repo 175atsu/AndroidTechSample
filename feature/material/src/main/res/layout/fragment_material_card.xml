@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/text_label"
+        style="@style/Text.PrimaryColor.Head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/material_label_card" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_card_outline" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:id="@+id/image_thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/material_design_cover" />
+
+          <TextView
+            android:id="@+id/text_title"
+            style="@style/Text.PrimaryColor.Head5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/material_card_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_thumbnail" />
+
+          <TextView
+            android:id="@+id/text_description"
+            style="@style/Text.PrimaryColor.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/material_card_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/material_card_button_agreement"
+            app:layout_constraintEnd_toStartOf="@id/button_sub"
+            app:layout_constraintTop_toBottomOf="@id/text_description" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_sub"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/material_card_button_rejection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_main" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_card_filled" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_filled"
+        style="?attr/materialCardViewFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:id="@+id/filled_image_thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/material_design_cover" />
+
+          <TextView
+            android:id="@+id/filled_text_title"
+            style="@style/Text.PrimaryColor.Head5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/material_card_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filled_image_thumbnail" />
+
+          <TextView
+            android:id="@+id/filled_text_description"
+            style="@style/Text.PrimaryColor.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/material_card_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filled_text_title" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/filled_button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/material_card_button_agreement"
+            app:layout_constraintEnd_toStartOf="@id/filled_button_sub"
+            app:layout_constraintTop_toBottomOf="@id/filled_text_description" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/filled_button_sub"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/material_card_button_rejection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filled_button_main" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_card_elevated" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/elevated_card"
+        style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:id="@+id/elevated_image_thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/material_design_cover" />
+
+          <TextView
+            android:id="@+id/elevated_text_title"
+            style="@style/Text.PrimaryColor.Head5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/material_card_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/elevated_image_thumbnail" />
+
+          <TextView
+            android:id="@+id/elevated_text_description"
+            style="@style/Text.PrimaryColor.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/material_card_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/elevated_text_title" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/elevated_button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/material_card_button_agreement"
+            app:layout_constraintEnd_toStartOf="@id/elevated_button_sub"
+            app:layout_constraintTop_toBottomOf="@id/elevated_text_description" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/elevated_button_sub"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/material_card_button_rejection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/elevated_button_main" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+  </ScrollView>
+</layout>

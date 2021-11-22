@@ -60,7 +60,7 @@
 
   <!-- MaterialFragment -->
   <string name="material_label">@string/playground_material_view</string>
-  <string name="material_label_button">MaterialButton</string>
+  <string name="material_label_button">Button</string>
   <string name="material_label_button_common">CommonButton</string>
   <string name="material_label_button_fab">FAB</string>
   <string name="material_button_filled">FilledButton</string>
@@ -75,6 +75,16 @@
   <string name="material_button_text_icon">TextIconButton</string>
   <string name="material_fab">FloatingActionButton</string>
   <string name="material_fab_icon">FloatingActionIconButton</string>
+  <string name="material_label_card">Card</string>
+  <string name="material_card_outline">OutlineCard</string>
+  <string name="material_card_filled">FilledCard</string>
+  <string name="material_card_elevated">ElevatedCard</string>
+  <string name="material_card_title">Title</string>
+  <string name="material_card_description">description</string>
+  <string name="material_card_button_agreement">Agreement</string>
+  <string name="material_card_button_rejection">Rejection</string>
+
+  <string name="material_label_chip">Chip</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

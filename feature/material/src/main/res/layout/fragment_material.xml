@@ -1,40 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
+  <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
-      android:id="@+id/text_label"
-      style="@style/Text.PrimaryColor.Head1"
-      android:layout_width="wrap_content"
+    <LinearLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="@string/material_label"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      android:orientation="vertical">
 
-    <TextView
-      android:id="@+id/text_label_button"
-      style="@style/Text.PrimaryColor.Head3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginVertical="4dp"
-      android:text="@string/material_label_button"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_label" />
+      <TextView
+        android:id="@+id/text_label"
+        style="@style/Text.PrimaryColor.Head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/material_label" />
 
-    <com.google.android.material.button.MaterialButton
-      android:id="@+id/to_material_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginVertical="4dp"
-      android:text="@string/material_label_button"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/text_label_button" />
+      <TextView
+        android:id="@+id/text_label_button"
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_button" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_button" />
+
+      <TextView
+        android:id="@+id/text_label_card"
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_card" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_card" />
+
+      <TextView
+        android:id="@+id/text_label_chip"
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_chip" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_chip" />
+
+    </LinearLayout>
+  </ScrollView>
 </layout>

@@ -137,9 +137,16 @@
     <action
       android:id="@+id/to_fragment_material_button"
       app:destination="@id/fragment_material_button" />
+    <action
+      android:id="@+id/to_fragment_material_card"
+      app:destination="@id/fragment_material_card" />
   </fragment>
 
   <fragment
     android:id="@+id/fragment_material_button"
     android:name="com.example.material.button.MaterialButtonFragment" />
+
+  <fragment
+    android:id="@+id/fragment_material_card"
+    android:name="com.example.material.card.MaterialCardFragment" />
 </navigation>
