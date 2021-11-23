@@ -40,5 +40,8 @@ class MaterialFragment : Fragment() {
     binding.toMaterialDialog.setOnClickListener {
       navigator(R.id.to_fragment_material_dialog)
     }
+    binding.toMaterialNavigation.setOnClickListener {
+      navigator(R.id.to_fragment_material_navigation)
+    }
   }
 }

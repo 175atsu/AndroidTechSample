@@ -146,6 +146,9 @@
     <action
       android:id="@+id/to_fragment_material_dialog"
       app:destination="@id/fragment_material_dialog" />
+    <action
+      android:id="@+id/to_fragment_material_navigation"
+      app:destination="@id/fragment_material_navigation" />
   </fragment>
 
   <fragment
@@ -163,4 +166,8 @@
   <fragment
     android:id="@+id/fragment_material_dialog"
     android:name="com.example.material.dialog.MaterialDialogFragment" />
+
+  <fragment
+    android:id="@+id/fragment_material_navigation"
+    android:name="com.example.material.navigation.MaterialNavigationFragment" />
 </navigation>

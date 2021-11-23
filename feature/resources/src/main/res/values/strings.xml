@@ -114,6 +114,18 @@
   <string name="material_dialog_accept">@string/common_accept</string>
   <string name="material_dialog_full_screen">Full Screen Dialog</string>
 
+  <string name="material_label_navigation">Navigation</string>
+  <string name="material_label_navigation_bar">NavigationBar</string>
+  <string name="material_label_navigation_bar_auto">auto</string>
+  <string name="material_label_navigation_bar_labeled">labeled</string>
+  <string name="material_label_navigation_bar_unlabeled">unlabeled</string>
+  <string name="material_label_navigation_bar_selected">selected</string>
+  <string name="material_label_navigation_bar_page1">Page1</string>
+  <string name="material_label_navigation_bar_page2">Page2</string>
+  <string name="material_label_navigation_bar_page3">Page3</string>
+  <string name="material_label_navigation_bar_page4">Page4</string>
+
+
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
   <string name="compose_ameba">Ameba</string>
