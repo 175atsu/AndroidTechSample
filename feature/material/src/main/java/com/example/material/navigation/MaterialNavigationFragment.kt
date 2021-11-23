@@ -24,4 +24,24 @@ class MaterialNavigationFragment : Fragment() {
     binding = FragmentMaterialNavigationBinding.inflate(localInflater)
     return binding.root
   }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    binding.navigationBarAuto.setOnItemSelectedListener { item ->
+      binding.navigationBarAuto.removeBadge(item.itemId)
+      true
+    }
+
+    binding.buttonAddBadge.setOnClickListener {
+      val badge1 = binding.navigationBarAuto.getOrCreateBadge(R.id.page_1)
+      val badge2 = binding.navigationBarAuto.getOrCreateBadge(R.id.page_2)
+      val badge3 = binding.navigationBarAuto.getOrCreateBadge(R.id.page_3)
+      val badge4 = binding.navigationBarAuto.getOrCreateBadge(R.id.page_4)
+      badge1.isVisible = true
+      badge2.number = 99
+      badge3.number = 999
+      badge4.number = 9999
+    }
+  }
 }

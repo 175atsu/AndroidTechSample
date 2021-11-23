@@ -7,6 +7,9 @@
   <string name="common_cancel">Cancel</string>
   <string name="common_decline">Decline</string>
   <string name="common_accept">Accept</string>
+  <string name="common_home">Home</string>
+  <string name="common_search">Search</string>
+  <string name="common_notification">Notification</string>
 
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
@@ -120,11 +123,11 @@
   <string name="material_label_navigation_bar_labeled">labeled</string>
   <string name="material_label_navigation_bar_unlabeled">unlabeled</string>
   <string name="material_label_navigation_bar_selected">selected</string>
-  <string name="material_label_navigation_bar_page1">Page1</string>
-  <string name="material_label_navigation_bar_page2">Page2</string>
-  <string name="material_label_navigation_bar_page3">Page3</string>
-  <string name="material_label_navigation_bar_page4">Page4</string>
-
+  <string name="material_navigation_bar_page1">Page1</string>
+  <string name="material_navigation_bar_page2">Page2</string>
+  <string name="material_navigation_bar_page3">Page3</string>
+  <string name="material_navigation_bar_page4">Page4</string>
+  <string name="material_navigation_bar_add_badge">Add Badge</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
