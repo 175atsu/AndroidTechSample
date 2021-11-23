@@ -37,5 +37,8 @@ class MaterialFragment : Fragment() {
     binding.toMaterialChip.setOnClickListener {
       navigator(R.id.to_fragment_material_chip)
     }
+    binding.toMaterialDialog.setOnClickListener {
+      navigator(R.id.to_fragment_material_dialog)
+    }
   }
 }

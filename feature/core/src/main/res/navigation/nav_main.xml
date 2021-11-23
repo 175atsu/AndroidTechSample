@@ -130,10 +130,10 @@
   <fragment
     android:id="@+id/fragment_compose"
     android:name="com.example.compose.ui.ComposeFragment" />
-  
+
   <fragment
     android:id="@+id/fragment_material"
-    android:name="com.example.material.MaterialFragment" >
+    android:name="com.example.material.MaterialFragment">
     <action
       android:id="@+id/to_fragment_material_button"
       app:destination="@id/fragment_material_button" />
@@ -143,6 +143,9 @@
     <action
       android:id="@+id/to_fragment_material_chip"
       app:destination="@id/fragment_material_chip" />
+    <action
+      android:id="@+id/to_fragment_material_dialog"
+      app:destination="@id/fragment_material_dialog" />
   </fragment>
 
   <fragment
@@ -156,4 +159,8 @@
   <fragment
     android:id="@+id/fragment_material_chip"
     android:name="com.example.material.chip.MaterialChipFragment" />
+
+  <fragment
+    android:id="@+id/fragment_material_dialog"
+    android:name="com.example.material.dialog.MaterialDialogFragment" />
 </navigation>

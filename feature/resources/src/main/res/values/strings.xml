@@ -1,6 +1,13 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
 
+  <!-- Common -->
+  <string name="common_title">Title</string>
+  <string name="common_description">Description</string>
+  <string name="common_cancel">Cancel</string>
+  <string name="common_decline">Decline</string>
+  <string name="common_accept">Accept</string>
+
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
   <string name="playground_label_material">Material</string>
@@ -79,8 +86,8 @@
   <string name="material_card_outline">OutlineCard</string>
   <string name="material_card_filled">FilledCard</string>
   <string name="material_card_elevated">ElevatedCard</string>
-  <string name="material_card_title">Title</string>
-  <string name="material_card_description">description</string>
+  <string name="material_card_title">@string/common_title</string>
+  <string name="material_card_description">@string/common_description</string>
   <string name="material_card_button_agreement">Agreement</string>
   <string name="material_card_button_rejection">Rejection</string>
 
@@ -97,6 +104,15 @@
   <string name="material_chip_input_elevated">Input Elevated Chip</string>
   <string name="material_chip_suggestion">Suggestion Chip</string>
   <string name="material_chip_suggestion_elevated">Suggestion Elevated Chip</string>
+
+  <string name="material_label_dialog">Dialog</string>
+  <string name="material_dialog_basic">Basic Dialog</string>
+  <string name="material_dialog_title">@string/common_title</string>
+  <string name="material_dialog_description">@string/common_description</string>
+  <string name="material_dialog_cancel">@string/common_cancel</string>
+  <string name="material_dialog_decline">@string/common_decline</string>
+  <string name="material_dialog_accept">@string/common_accept</string>
+  <string name="material_dialog_full_screen">Full Screen Dialog</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
