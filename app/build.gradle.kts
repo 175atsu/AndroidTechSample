@@ -1,5 +1,4 @@
 import com.example.buildsrc.Dep
-import com.example.buildsrc.Versions
 
 plugins {
   id("com.android.application")
@@ -65,8 +64,8 @@ dependencies {
   kapt(Dep.AndroidX.Hilt.compiler)
   implementation(Dep.material)
   implementation(Dep.compat)
-  implementation(Dep.DI.hilt)
-  kapt(Dep.DI.hiltKapt)
+  implementation(Dep.Dagger.hilt)
+  kapt(Dep.Dagger.hiltKapt)
 
   implementation(Dep.Glide.core)
   kapt(Dep.Glide.compiler)

@@ -22,6 +22,6 @@ dependencies {
 
   implementation(Dep.AndroidX.constraintLayout)
   implementation(Dep.AndroidX.biometric)
-  implementation(Dep.DI.hilt)
-  kapt(Dep.DI.hiltKapt)
+  implementation(Dep.Dagger.hilt)
+  kapt(Dep.Dagger.hiltKapt)
 }

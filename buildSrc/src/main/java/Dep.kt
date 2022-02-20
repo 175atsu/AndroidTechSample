@@ -1,36 +1,29 @@
 package com.example.buildsrc
 
 object Versions {
-  const val kotlin = "1.5.30"
+  const val kotlin = "1.6.10"
   const val gradle = "7.0.2"
-  const val navigation = "2.4.0-alpha10"
+  const val navigation = "2.4.1"
   const val hilt = "2.37"
   const val groupie = "2.9.0"
 
   object Androidx {
-    const val compose = "1.0.3"
+    const val compose = "1.1.0"
   }
 }
 
 object Dep {
 
+  const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
+
   object Kotlin {
     const val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-    const val jdk = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
-    const val reflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
-    const val allOpen = "org.jetbrains.kotlin:kotlin-allopen:${Versions.kotlin}"
-  }
-
-  object Jetpack {
-    const val startup = "androidx.startup:startup-runtime:1.0.0"
-    const val browser = "androidx.browser:browser:1.3.0"
-    const val dataStore = "androidx.datastore:datastore-preferences:1.0.0-alpha06"
   }
 
   object AndroidX {
-    const val appCompat = "androidx.appcompat:appcompat:1.3.0"
-    const val core = "androidx.core:core-ktx:1.5.0-beta01"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+    const val appCompat = "androidx.appcompat:appcompat:1.4.1"
+    const val core = "androidx.core:core-ktx:1.7.0"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
     const val work = "androidx.work:work-runtime-ktx:2.5.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
 
@@ -55,22 +48,10 @@ object Dep {
       const val ui = "androidx.compose.ui:ui:${Versions.Androidx.compose}"
       const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.Androidx.compose}"
       const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
-      const val foundation = "androidx.compose.foundation:foundation:${Versions.Androidx.compose}"
-      const val foundationLayout =
-        "androidx.compose.foundation:foundation-layout:${Versions.Androidx.compose}"
       const val material = "androidx.compose.material:material:${Versions.Androidx.compose}"
-      const val materialIconsCore =
-        "androidx.compose.material:material-icons-core:${Versions.Androidx.compose}"
-      const val materialIconExtended =
-        "androidx.compose.material:material-icons-extended:${Versions.Androidx.compose}"
-      const val animation = "androidx.compose.animation:animation:${Versions.Androidx.compose}"
-      const val layout =
-        "androidx.compose.foundation:foundation-layout:${Versions.Androidx.compose}"
       const val runtime = "androidx.compose.runtime:runtime:${Versions.Androidx.compose}"
       const val runtimeLiveData =
         "androidx.compose.runtime:runtime-livedata:${Versions.Androidx.compose}"
-      const val uiUtil = "androidx.compose.ui:ui-util:${Versions.Androidx.compose}"
-      const val uiTest = "androidx.compose.ui:ui-test-junit4:${Versions.Androidx.compose}"
     }
 
     object Hilt {
@@ -86,7 +67,7 @@ object Dep {
 
   object KotlinX {
     object Coroutine {
-      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
       const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
     }
   }
@@ -103,18 +84,20 @@ object Dep {
 
   object Ktlint {
     const val plugin = "com.pinterest:ktlint:0.40.0"
+    const val gradle = "org.jlleitschuh.gradle:ktlint-gradle:10.0.0"
   }
 
   object Timber {
-    const val plugin = "com.jakewharton.timber:timber:4.7.1"
+    const val plugin = "com.jakewharton.timber:timber:5.0.1"
   }
 
   const val material = "com.google.android.material:material:1.5.0-beta01"
   const val compat = "com.android.support:support-compat:28.0.0"
 
-  object DI {
+  object Dagger {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltKapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val plugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
   }
 
   const val coil = "io.coil-kt:coil-compose:1.4.0"

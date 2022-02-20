@@ -22,8 +22,8 @@ dependencies {
   implementation(com.example.buildsrc.Dep.AndroidX.appCompat)
   implementation(com.example.buildsrc.Dep.AndroidX.constraintLayout)
   implementation(com.example.buildsrc.Dep.AndroidX.Navigation.fragmentKtx)
-  implementation(com.example.buildsrc.Dep.DI.hilt)
-  kapt(com.example.buildsrc.Dep.DI.hiltKapt)
+  implementation(com.example.buildsrc.Dep.Dagger.hilt)
+  kapt(com.example.buildsrc.Dep.Dagger.hiltKapt)
 
   implementation(com.example.buildsrc.Dep.Groupie.groupie)
   implementation(com.example.buildsrc.Dep.Groupie.databinding)
