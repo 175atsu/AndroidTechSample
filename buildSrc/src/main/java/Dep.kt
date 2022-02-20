@@ -3,7 +3,7 @@ package com.example.buildsrc
 object Versions {
   const val kotlin = "1.6.10"
   const val gradle = "7.0.2"
-  const val navigation = "2.4.0-alpha10"
+  const val navigation = "2.4.1"
   const val hilt = "2.37"
   const val groupie = "2.9.0"
 
@@ -21,9 +21,9 @@ object Dep {
   }
 
   object AndroidX {
-    const val appCompat = "androidx.appcompat:appcompat:1.3.0"
-    const val core = "androidx.core:core-ktx:1.5.0-beta01"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+    const val appCompat = "androidx.appcompat:appcompat:1.4.1"
+    const val core = "androidx.core:core-ktx:1.7.0"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
     const val work = "androidx.work:work-runtime-ktx:2.5.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
 
@@ -88,7 +88,7 @@ object Dep {
   }
 
   object Timber {
-    const val plugin = "com.jakewharton.timber:timber:4.7.1"
+    const val plugin = "com.jakewharton.timber:timber:5.0.1"
   }
 
   const val material = "com.google.android.material:material:1.5.0-beta01"

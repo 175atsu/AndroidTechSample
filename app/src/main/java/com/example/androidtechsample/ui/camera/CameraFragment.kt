@@ -149,7 +149,7 @@ class CameraFragment : Fragment() {
 
     cameraController.takePicture(
       outputFile,
-      ContextCompat.getMainExecutor(context),
+      ContextCompat.getMainExecutor(requireContext()),
       object : ImageCapture.OnImageSavedCallback {
         override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
           Timber.d("成功")
