@@ -86,7 +86,7 @@ object Dep {
 
   object KotlinX {
     object Coroutine {
-      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
       const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
     }
   }
