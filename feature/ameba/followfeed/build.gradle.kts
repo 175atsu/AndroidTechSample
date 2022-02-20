@@ -26,8 +26,8 @@ dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
 
-  implementation(Dep.DI.hilt)
-  kapt(Dep.DI.hiltKapt)
+  implementation(Dep.Dagger.hilt)
+  kapt(Dep.Dagger.hiltKapt)
   implementation(Dep.coil)
 
   implementation(Dep.AndroidX.Compose.ui)

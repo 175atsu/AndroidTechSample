@@ -29,8 +29,8 @@ dependencies {
   implementation(project(":feature:twitter:twitter-core"))
   implementation(project(":feature:twitter:home"))
 
-  implementation(Dep.DI.hilt)
-  kapt(Dep.DI.hiltKapt)
+  implementation(Dep.Dagger.hilt)
+  kapt(Dep.Dagger.hiltKapt)
   implementation(Dep.coil)
 
   implementation(Dep.AndroidX.Compose.ui)
