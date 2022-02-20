@@ -1,14 +1,14 @@
 package com.example.buildsrc
 
 object Versions {
-  const val kotlin = "1.5.30"
+  const val kotlin = "1.6.10"
   const val gradle = "7.0.2"
   const val navigation = "2.4.0-alpha10"
   const val hilt = "2.37"
   const val groupie = "2.9.0"
 
   object Androidx {
-    const val compose = "1.0.3"
+    const val compose = "1.1.0"
   }
 }
 
