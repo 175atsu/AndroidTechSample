@@ -1,6 +1,16 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
 
+  <!-- Common -->
+  <string name="common_title">Title</string>
+  <string name="common_description">Description</string>
+  <string name="common_cancel">Cancel</string>
+  <string name="common_decline">Decline</string>
+  <string name="common_accept">Accept</string>
+  <string name="common_home">Home</string>
+  <string name="common_search">Search</string>
+  <string name="common_notification">Notification</string>
+
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
   <string name="playground_label_material">Material</string>
@@ -79,12 +89,45 @@
   <string name="material_card_outline">OutlineCard</string>
   <string name="material_card_filled">FilledCard</string>
   <string name="material_card_elevated">ElevatedCard</string>
-  <string name="material_card_title">Title</string>
-  <string name="material_card_description">description</string>
+  <string name="material_card_title">@string/common_title</string>
+  <string name="material_card_description">@string/common_description</string>
   <string name="material_card_button_agreement">Agreement</string>
   <string name="material_card_button_rejection">Rejection</string>
 
   <string name="material_label_chip">Chip</string>
+  <string name="material_chip_assist">Assist Chip</string>Elevated
+  <string name="material_chip_assist_elevated">Assist Elevated Chip</string>
+  <string name="material_chip_filter">Filter Chip</string>
+  <string name="material_chip_filter_elevated">Filter Elevated Chip</string>
+  <string name="material_chip_filter1">Filter1</string>
+  <string name="material_chip_filter2">Filter2</string>
+  <string name="material_chip_filter3">Filter3</string>
+  <string name="material_chip_filter4">Filter4</string>
+  <string name="material_chip_input">Input Chip</string>
+  <string name="material_chip_input_elevated">Input Elevated Chip</string>
+  <string name="material_chip_suggestion">Suggestion Chip</string>
+  <string name="material_chip_suggestion_elevated">Suggestion Elevated Chip</string>
+
+  <string name="material_label_dialog">Dialog</string>
+  <string name="material_dialog_basic">Basic Dialog</string>
+  <string name="material_dialog_title">@string/common_title</string>
+  <string name="material_dialog_description">@string/common_description</string>
+  <string name="material_dialog_cancel">@string/common_cancel</string>
+  <string name="material_dialog_decline">@string/common_decline</string>
+  <string name="material_dialog_accept">@string/common_accept</string>
+  <string name="material_dialog_full_screen">Full Screen Dialog</string>
+
+  <string name="material_label_navigation">Navigation</string>
+  <string name="material_label_navigation_bar">NavigationBar</string>
+  <string name="material_label_navigation_bar_auto">auto</string>
+  <string name="material_label_navigation_bar_labeled">labeled</string>
+  <string name="material_label_navigation_bar_unlabeled">unlabeled</string>
+  <string name="material_label_navigation_bar_selected">selected</string>
+  <string name="material_navigation_bar_page1">Page1</string>
+  <string name="material_navigation_bar_page2">Page2</string>
+  <string name="material_navigation_bar_page3">Page3</string>
+  <string name="material_navigation_bar_page4">Page4</string>
+  <string name="material_navigation_bar_add_badge">Add Badge</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>

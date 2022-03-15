@@ -70,6 +70,40 @@
         android:layout_marginStart="16dp"
         android:text="@string/material_label_chip" />
 
+      <TextView
+        android:id="@+id/text_label_dialog"
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_dialog" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_dialog" />
+
+      <TextView
+        android:id="@+id/text_label_navigation"
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_material_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation" />
+
     </LinearLayout>
   </ScrollView>
 </layout>

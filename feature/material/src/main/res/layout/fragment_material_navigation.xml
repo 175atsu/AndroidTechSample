@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/text_label"
+        style="@style/Text.PrimaryColor.Head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/material_label_navigation" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation_bar" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation_bar_auto" />
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="auto"
+        app:menu="@menu/bottom_navigation_menu" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation_bar_labeled" />
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar_labeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation_bar_unlabeled" />
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_unlabeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+      <TextView
+        style="@style/Text.PrimaryColor.Head5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/material_label_navigation_bar_selected" />
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_menu" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="8dp"
+        android:text="@string/material_navigation_bar_add_badge" />
+
+    </LinearLayout>
+  </ScrollView>
+</layout>
