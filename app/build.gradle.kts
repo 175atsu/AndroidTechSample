@@ -43,6 +43,7 @@ dependencies {
   implementation(project(":feature:twitter:twitter-core"))
   implementation(project(":feature:twitter:home"))
   implementation(project(":feature:material"))
+  implementation(project(":feature:chart"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)

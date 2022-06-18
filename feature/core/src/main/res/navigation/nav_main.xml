@@ -34,6 +34,9 @@
     <action
       android:id="@+id/to_fragment_material"
       app:destination="@id/fragment_material" />
+    <action
+      android:id="@+id/to_fragment_chart"
+      app:destination="@id/fragment_chart" />
   </fragment>
 
   <fragment
@@ -149,4 +152,9 @@
   <fragment
     android:id="@+id/fragment_material_card"
     android:name="com.example.material.card.MaterialCardFragment" />
+
+  <fragment
+    android:id="@+id/fragment_chart"
+    android:name="com.example.chart.ChartFragment" />
+
 </navigation>
