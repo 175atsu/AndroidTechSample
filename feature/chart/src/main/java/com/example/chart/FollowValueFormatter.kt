@@ -2,8 +2,8 @@ package com.example.chart
 
 import com.github.mikephil.charting.formatter.ValueFormatter
 
-class IntegerValueFormatter : ValueFormatter() {
+class FollowValueFormatter : ValueFormatter() {
   override fun getFormattedValue(value: Float): String {
-    return value.toInt().toString() + "月"
+    return (value.toInt() / 1000.0).toString() + "千"
   }
 }

@@ -1,6 +1,7 @@
 package com.example.chart
 
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -97,17 +98,24 @@ class ChartFragment : Fragment() {
         isEnabled = true
         textColor = Color.BLACK
         textSize = 12f
+        typeface = Typeface.DEFAULT_BOLD
         position = XAxisPosition.BOTTOM
-        valueFormatter = IntegerValueFormatter()
+        valueFormatter = MonthValueFormatter()
+        labelCount = 4
+
       }
       // y軸の設定
       axisRight.isEnabled = false
-      axisLeft.textSize = 12f
-
+      axisLeft.apply {
+        textSize = 12f
+        typeface = Typeface.DEFAULT_BOLD
+        valueFormatter = FollowValueFormatter()
+      }
       // description
       description.isEnabled = false
-
     }
+    // アニメーション
+    binding.lineChart.animateXY(1000, 1000);
 
     // lineChart更新
     binding.lineChart.invalidate()
@@ -115,5 +123,4 @@ class ChartFragment : Fragment() {
 
   private fun createMonth(month: Int): Int =
     LocalDate.of(2020, month, 1).monthValue
-
 }
