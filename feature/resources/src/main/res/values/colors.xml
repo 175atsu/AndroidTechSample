@@ -45,4 +45,7 @@
     <item>@color/deep_orange_200</item>
   </array>
 
+  <!-- Ameba -->
+  <color name="ameba">#298737</color>
+
 </resources>

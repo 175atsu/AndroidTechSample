@@ -99,4 +99,6 @@
   <string name="twitter_notification">Notification</string>
   <string name="twitter_dm">DM</string>
 
+  <!-- ChartFragment -->
+  <string name="chart_label">Chart</string>
 </resources>
