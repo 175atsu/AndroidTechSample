@@ -14,6 +14,7 @@
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
   <string name="playground_camera_view">CameraView</string>
+  <string name="playground_chart_view">ChartView</string>
   <string name="playground_hello_view">HelloCompose</string>
   <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>
@@ -98,4 +99,9 @@
   <string name="twitter_notification">Notification</string>
   <string name="twitter_dm">DM</string>
 
+  <!-- ChartFragment -->
+  <string name="chart_label">Chart</string>
+  <string name="line_chart_label">LineChart</string>
+  <string name="bar_chart_label">BarChart</string>
+  <string name="combined_chart_label">CombinedChart</string>
 </resources>

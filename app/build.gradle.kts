@@ -14,7 +14,7 @@ android {
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
-    minSdk = 23
+    minSdk = 26
     targetSdk = 31
     versionCode = 1
     versionName = "1.0"
@@ -43,6 +43,7 @@ dependencies {
   implementation(project(":feature:twitter:twitter-core"))
   implementation(project(":feature:twitter:home"))
   implementation(project(":feature:material"))
+  implementation(project(":feature:chart"))
 
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.AndroidX.core)

@@ -101,6 +101,7 @@ object Dep {
   }
 
   const val coil = "io.coil-kt:coil-compose:1.4.0"
+  const val chart = "com.github.PhilJay:MPAndroidChart:v3.1.0"
 
   object Test {
     const val junit4 = "junit:junit:4.13.2"

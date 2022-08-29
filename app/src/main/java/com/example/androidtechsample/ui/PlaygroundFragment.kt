@@ -44,33 +44,16 @@ class PlaygroundFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     with(binding) {
-      buttonPlaygroundToDesignMock.setOnClickListener {
-        navigator(R.id.to_fragment_biometric)
-      }
-      toMotionLayout.setOnClickListener {
-        navigator(R.id.to_fragment_motion)
-      }
-      toGroupieView.setOnClickListener {
-        navigator(R.id.to_fragment_groupie)
-      }
-      toSpanView.setOnClickListener {
-        navigator(R.id.to_fragment_span)
-      }
-      toNotificationView.setOnClickListener {
-        navigator(R.id.to_fragment_notification)
-      }
-      toListView.setOnClickListener {
-        navigator(R.id.to_fragment_list)
-      }
-      toCameraView.setOnClickListener {
-        cameraPermissionRequestLauncher.launch(REQUIRED_PERMISSIONS)
-      }
-      toComposeView.setOnClickListener {
-        navigator(R.id.to_fragment_compose)
-      }
-      toMaterialView.setOnClickListener {
-        navigator(R.id.to_fragment_material)
-      }
+      buttonPlaygroundToDesignMock.setOnClickListener { navigator(R.id.to_fragment_biometric) }
+      toMotionLayout.setOnClickListener { navigator(R.id.to_fragment_motion) }
+      toGroupieView.setOnClickListener { navigator(R.id.to_fragment_groupie) }
+      toSpanView.setOnClickListener { navigator(R.id.to_fragment_span) }
+      toNotificationView.setOnClickListener { navigator(R.id.to_fragment_notification) }
+      toListView.setOnClickListener { navigator(R.id.to_fragment_list) }
+      toCameraView.setOnClickListener { cameraPermissionRequestLauncher.launch(REQUIRED_PERMISSIONS) }
+      toComposeView.setOnClickListener { navigator(R.id.to_fragment_compose) }
+      toMaterialView.setOnClickListener { navigator(R.id.to_fragment_material) }
+      toChartView.setOnClickListener { navigator(R.id.to_fragment_chart) }
     }
   }
 }

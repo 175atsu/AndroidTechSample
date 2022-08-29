@@ -45,4 +45,8 @@
     <item>@color/deep_orange_200</item>
   </array>
 
+  <!-- Spindle -->
+  <color name="spindle_accent_primary">#298737</color>
+  <color name="spindle_accent_secondary">#82BE28</color>
+
 </resources>
