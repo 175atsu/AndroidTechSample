@@ -46,6 +46,7 @@
   </array>
 
   <!-- Ameba -->
-  <color name="ameba">#298737</color>
+  <color name="ameba_accent_primary">#298737</color>
+  <color name="ameba_accent_secondary">#82BE28</color>
 
 </resources>

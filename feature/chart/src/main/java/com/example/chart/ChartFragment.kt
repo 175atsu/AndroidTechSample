@@ -2,6 +2,7 @@ package com.example.chart
 
 import android.graphics.Color
 import android.graphics.Typeface
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,11 +11,17 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.chart.databinding.FragmentChartBinding
 import com.github.mikephil.charting.components.XAxis.XAxisPosition
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.CombinedData
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import java.time.LocalDate
+import java.util.*
 
 class ChartFragment : Fragment() {
 
@@ -33,6 +40,7 @@ class ChartFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     createLineChart()
+    createCombinedChart()
   }
 
   private fun createLineChart() {
@@ -60,7 +68,7 @@ class ChartFragment : Fragment() {
     val lineDataSet = LineDataSet(entryList, "square")
     // DataSetにフォーマット指定(3章で詳説)
     // 線の色
-    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba)
+    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
     // 線の太さ
     lineDataSet.lineWidth = 3f
     // 背景色を出すかの true false
@@ -76,7 +84,8 @@ class ChartFragment : Fragment() {
     // 座標中心の大きさ(circleRadiusより小さい値)
     lineDataSet.circleHoleRadius = 4f
     // 座標中心の色
-    lineDataSet.circleHoleColor = ContextCompat.getColor(requireContext(), R.color.ameba)
+    lineDataSet.circleHoleColor =
+      ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
     // データの値を記す。0fで記載なし。
     lineDataSet.valueTextSize = 0f
     lineDataSet.label = ""
@@ -115,12 +124,132 @@ class ChartFragment : Fragment() {
       description.isEnabled = false
     }
     // アニメーション
-    binding.lineChart.animateXY(1000, 1000);
+    binding.lineChart.animateXY(1000, 1000)
 
     // lineChart更新
     binding.lineChart.invalidate()
   }
 
-  private fun createMonth(month: Int): Int =
-    LocalDate.of(2020, month, 1).monthValue
+  private fun createMonth(month: Int): Int = LocalDate.of(2020, month, 1).monthValue
+
+  private fun createCombinedChart() {
+
+    //表示用サンプルデータの作成//
+    val weekData = listOf(
+      150,
+      90,
+      200,
+      150,
+      100,
+      250,
+      150
+    )
+
+    val averageData = List(9) { 150 }
+
+    //①Entryにデータ格納
+    val entryList = mutableListOf<BarEntry>()
+    weekData.mapIndexed { index, it ->
+      entryList.add(BarEntry((index + 1).toFloat(), it.toFloat()))
+    }
+    val averageList = mutableListOf<Entry>()
+    averageData.mapIndexed { index, it ->
+      averageList.add(Entry(index.toFloat(), it.toFloat()))
+    }
+
+    // ②DataSetにデータ格納
+    val barDataSet = BarDataSet(entryList, "square")
+    val lineDataSet = LineDataSet(averageList, "square")
+
+    /**
+     * 棒グラフの設定
+     */
+    // 線の色
+    barDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
+    barDataSet.label = ""
+    // 値の表示有無
+    barDataSet.setDrawValues(false)
+
+    /**
+     * 線グラフの設定
+     */
+    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_secondary)
+    lineDataSet.lineWidth = 2f
+    lineDataSet.setDrawCircles(false)
+    lineDataSet.label = ""
+    lineDataSet.setDrawValues(false)
+    // 点線の指定
+    lineDataSet.enableDashedLine(20f, 30f, 0f)
+
+
+    //④BarDataにBarDataSet格納
+    val barData = BarData(barDataSet)
+    val averageLineData = LineData(lineDataSet)
+
+    val combinedData = CombinedData()
+    combinedData.setData(barData)
+    combinedData.setData(averageLineData)
+
+    // 棒の幅の調整
+    barData.barWidth = 0.5f
+
+    //⑤BarChartのフォーマット指定
+    binding.combinedChart.apply {
+      // Zoomの制御
+      setScaleEnabled(false)
+      // 棒グラフの左下のマーカーの制御
+      legend.isEnabled = false
+      // 右下のdescription labelの制御
+      description.isEnabled = false
+
+      // x軸設定
+      xAxis.apply {
+        isEnabled = true
+        textColor = Color.BLACK
+        position = XAxisPosition.BOTTOM
+        valueFormatter = object : ValueFormatter() {
+
+          override fun getFormattedValue(value: Float): String {
+            // value == 0の時折線グラフのindex0に当たるのでreturnする
+            if (value.toInt() == 0) return ""
+            if (weekData.size >= value) {
+              val simpleDateFormat = SimpleDateFormat("M/d", Locale.getDefault())
+              val entriesTimestampMills: MutableList<Long> = mutableListOf(
+                1614524400000,  // 2021/03/01 00:00:00
+                1614610800000,  // 2021/03/02 00:00:00
+                1614697200000,  // 2021/03/03 00:00:00
+                1614783600000,  // 2021/03/04 00:00:00
+                1614870000000,  // 2021/03/05 00:00:00
+                1614956400000,  // 2021/03/06 00:00:00
+                1615042800000   // 2021/03/07 00:00:00
+              )
+              // value には 0, 1, 2... という index が入ってくるので
+              // index からタイムスタンプを取得する
+              val timestampMills = entriesTimestampMills[value.toInt() - 1]
+              val date = Date(timestampMills)
+              return simpleDateFormat.format(date)
+            } else {
+              return ""
+            }
+          }
+        }
+        axisMinimum = 0f
+
+      }
+      // y軸設定
+      axisRight.isEnabled = false
+      axisLeft.apply {
+        textColor = ContextCompat.getColor(requireContext(), R.color.black)
+      }
+
+      data = combinedData
+      // 選択ハイライトの制御
+      data.isHighlightEnabled = false
+    }
+
+    // アニメーション
+    binding.combinedChart.animateXY(1000, 1000)
+
+    binding.combinedChart.invalidate()
+  }
 }

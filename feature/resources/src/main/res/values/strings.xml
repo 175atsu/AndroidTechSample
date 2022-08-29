@@ -101,4 +101,7 @@
 
   <!-- ChartFragment -->
   <string name="chart_label">Chart</string>
+  <string name="line_chart_label">LineChart</string>
+  <string name="bar_chart_label">BarChart</string>
+  <string name="combined_chart_label">CombinedChart</string>
 </resources>
