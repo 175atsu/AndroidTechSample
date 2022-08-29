@@ -68,13 +68,13 @@ class ChartFragment : Fragment() {
     val lineDataSet = LineDataSet(entryList, "square")
     // DataSetにフォーマット指定(3章で詳説)
     // 線の色
-    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
+    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.spindle_accent_primary)
     // 線の太さ
     lineDataSet.lineWidth = 3f
     // 背景色を出すかの true false
     lineDataSet.setDrawFilled(true)
     // 背景色指定
-    lineDataSet.fillDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.feed_red)
+    lineDataSet.fillDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.grad_line_chart)
     // 座標の大きさ
     lineDataSet.circleRadius = 5f
     // 座標の色
@@ -85,7 +85,7 @@ class ChartFragment : Fragment() {
     lineDataSet.circleHoleRadius = 4f
     // 座標中心の色
     lineDataSet.circleHoleColor =
-      ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
+      ContextCompat.getColor(requireContext(), R.color.spindle_accent_primary)
     // データの値を記す。0fで記載なし。
     lineDataSet.valueTextSize = 0f
     lineDataSet.label = ""
@@ -165,7 +165,7 @@ class ChartFragment : Fragment() {
      * 棒グラフの設定
      */
     // 線の色
-    barDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_primary)
+    barDataSet.color = ContextCompat.getColor(requireContext(), R.color.spindle_accent_primary)
     barDataSet.label = ""
     // 値の表示有無
     barDataSet.setDrawValues(false)
@@ -173,7 +173,7 @@ class ChartFragment : Fragment() {
     /**
      * 線グラフの設定
      */
-    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.ameba_accent_secondary)
+    lineDataSet.color = ContextCompat.getColor(requireContext(), R.color.spindle_accent_secondary)
     lineDataSet.lineWidth = 2f
     lineDataSet.setDrawCircles(false)
     lineDataSet.label = ""
