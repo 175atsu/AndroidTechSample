@@ -1,4 +1,5 @@
 import com.example.buildsrc.Dep
+import com.example.buildsrc.Versions
 
 plugins {
   id("com.android.application")
@@ -9,13 +10,13 @@ plugins {
 }
 
 android {
-  compileSdk = 31
-  buildToolsVersion = "30.0.3"
+  compileSdk = Versions.Sdk.compile
+//  buildToolsVersion = "30.0.3"
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
-    minSdk = 23
-    targetSdk = 31
+    minSdk = Versions.Sdk.min
+    targetSdk = Versions.Sdk.target
     versionCode = 1
     versionName = "1.0"
 
