@@ -7,6 +7,12 @@ object Versions {
   const val hilt = "2.37"
   const val groupie = "2.9.0"
 
+  object Sdk {
+    const val min = 26
+    const val target = 33
+    const val compile = 33
+  }
+
   object Androidx {
     const val compose = "1.1.0"
   }

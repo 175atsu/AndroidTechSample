@@ -1,3 +1,5 @@
+import com.example.buildsrc.Versions
+
 plugins {
   id("com.android.library")
   id("kotlin-android")
@@ -6,9 +8,10 @@ plugins {
 }
 
 android {
-  compileSdk = 31
+  compileSdk = Versions.Sdk.compile
   defaultConfig {
-    minSdk = 23
+    minSdk = Versions.Sdk.min
+    targetSdk = Versions.Sdk.target
   }
   buildFeatures {
     dataBinding = true
