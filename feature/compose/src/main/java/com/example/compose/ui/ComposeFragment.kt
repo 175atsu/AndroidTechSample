@@ -11,10 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.compose.NavRouter.AMEBA_FOLLOW_FEED_ROUTE
 import com.example.compose.NavRouter.PLAYGROUND_ROUTE
 import com.example.compose.NavRouter.TWITTER_ROUTE
-import com.example.followfeed.ui.FollowFeedScreen
 import com.example.twitter.core.TwitterScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,7 +37,6 @@ fun CreateNav(startDestination: String = PLAYGROUND_ROUTE) {
   val navController = rememberNavController()
   NavHost(navController = navController, startDestination = startDestination) {
     composable(PLAYGROUND_ROUTE) { PlaygroundScreen(navController) }
-    composable(AMEBA_FOLLOW_FEED_ROUTE) { FollowFeedScreen() }
     composable(TWITTER_ROUTE) { TwitterScreen() }
   }
 }
