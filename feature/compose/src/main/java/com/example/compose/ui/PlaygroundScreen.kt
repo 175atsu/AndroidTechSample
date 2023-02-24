@@ -32,15 +32,6 @@ fun PlaygroundScreen(navController: NavController) {
       )
       SpacerHeight(16.dp)
       Text(
-        text = stringResource(id = R.string.compose_ameba),
-        style = textStyleBlackHead2()
-      )
-      ToPageButton(
-        toPage = { navController.navigate(NavRouter.AMEBA_FOLLOW_FEED_ROUTE) },
-        textResource = R.string.compose_ameba_follow_feed
-      )
-      SpacerHeight(16.dp)
-      Text(
         text = stringResource(id = R.string.compose_twitter),
         style = textStyleBlackHead2()
       )
