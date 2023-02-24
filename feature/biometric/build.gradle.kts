@@ -7,9 +7,10 @@ plugins {
 }
 
 android {
-  compileSdk = 31
+  compileSdk = com.example.buildsrc.Versions.Sdk.compile
   defaultConfig {
-    minSdk = 23
+    minSdk = com.example.buildsrc.Versions.Sdk.min
+    targetSdk = com.example.buildsrc.Versions.Sdk.target
   }
   buildFeatures {
     dataBinding = true
