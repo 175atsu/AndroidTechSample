@@ -1,7 +1,7 @@
 package com.example.buildsrc
 
 object Versions {
-  const val kotlin = "1.6.10"
+  const val kotlin = "1.8.10"
   const val gradle = "7.0.2"
   const val navigation = "2.4.1"
   const val hilt = "2.37"
@@ -14,7 +14,7 @@ object Versions {
   }
 
   object Androidx {
-    const val compose = "1.1.0"
+    const val compose = "1.4.3"
   }
 }
 
@@ -51,13 +51,12 @@ object Dep {
     }
 
     object Compose {
-      const val ui = "androidx.compose.ui:ui:${Versions.Androidx.compose}"
-      const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.Androidx.compose}"
-      const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
-      const val material = "androidx.compose.material:material:${Versions.Androidx.compose}"
-      const val runtime = "androidx.compose.runtime:runtime:${Versions.Androidx.compose}"
-      const val runtimeLiveData =
-        "androidx.compose.runtime:runtime-livedata:${Versions.Androidx.compose}"
+      const val ui = "androidx.compose.ui:ui:1.3.3"
+      const val uiTooling = "androidx.compose.ui:ui-tooling:1.3.3"
+      const val navigation = "androidx.navigation:navigation-compose:2.5.3"
+      const val material = "androidx.compose.material:material:1.3.1"
+      const val runtime = "androidx.compose.runtime:runtime:1.3.3"
+      const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:1.3.3"
     }
 
     object Hilt {
