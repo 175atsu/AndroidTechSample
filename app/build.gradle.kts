@@ -11,7 +11,7 @@ plugins {
 
 android {
   compileSdk = Versions.Sdk.compile
-//  buildToolsVersion = "30.0.3"
+  buildToolsVersion = "30.0.3"
 
   defaultConfig {
     applicationId = "com.example.androidtechsample"
@@ -49,6 +49,7 @@ dependencies {
   implementation(Dep.AndroidX.constraintLayout)
   implementation(Dep.AndroidX.work)
   implementation(Dep.AndroidX.biometric)
+  implementation(Dep.AndroidX.browser)
   implementation(Dep.AndroidX.Navigation.fragmentKtx)
   implementation(Dep.AndroidX.Navigation.ui)
   implementation(Dep.AndroidX.Navigation.runtime)

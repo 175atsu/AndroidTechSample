@@ -30,8 +30,9 @@ object Dep {
     const val appCompat = "androidx.appcompat:appcompat:1.4.1"
     const val core = "androidx.core:core-ktx:1.7.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
-    const val work = "androidx.work:work-runtime-ktx:2.5.0"
+    const val work = "androidx.work:work-runtime-ktx:2.7.0"
     const val biometric = "androidx.biometric:biometric:1.1.0"
+    const val browser = "androidx.browser:browser:1.5.0"
 
     object Navigation {
       const val ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"

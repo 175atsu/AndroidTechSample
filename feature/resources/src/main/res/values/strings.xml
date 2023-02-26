@@ -1,6 +1,8 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
 
+  <string name="open">開く</string>
+
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
   <string name="playground_label_material">Material</string>
