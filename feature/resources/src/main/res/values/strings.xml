@@ -1,6 +1,8 @@
 <resources>
   <string name="app_name">AndroidTechSample</string>
 
+  <string name="open">開く</string>
+
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
   <string name="playground_label_material">Material</string>
@@ -14,6 +16,7 @@
   <string name="playground_span_view">SpanView</string>
   <string name="playground_notification_view">NotificationView</string>
   <string name="playground_camera_view">CameraView</string>
+  <string name="playground_chrome_custom_tab_view">ChromeCustomTabView</string>
   <string name="playground_hello_view">HelloCompose</string>
   <string name="playground_permission_camera">カメラの許可をしてください</string>
   <string name="playground_list_view">ListView</string>

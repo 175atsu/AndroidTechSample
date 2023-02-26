@@ -25,7 +25,7 @@ class PlaygroundFragment : Fragment() {
 
   private val cameraPermissionRequestLauncher =
     registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { result ->
-      if (result.all { it.value == true }) {
+      if (result.all { it.value }) {
         navigator(R.id.to_fragment_camera)
       } else {
         shortToast(requireContext(), R.string.playground_permission_camera)
@@ -70,6 +70,9 @@ class PlaygroundFragment : Fragment() {
       }
       toMaterialView.setOnClickListener {
         navigator(R.id.to_fragment_material)
+      }
+      toChromeCustomTab.setOnClickListener {
+        navigator(R.id.to_fragment_chrome_custom_tab)
       }
     }
   }
