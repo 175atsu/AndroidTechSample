@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.androidtechsample.databinding.FragmentAppbarBinding
 
-class AppbarFragment: Fragment() {
+class AppbarFragment : Fragment() {
 
   private lateinit var binding: FragmentAppbarBinding
 
@@ -18,5 +19,16 @@ class AppbarFragment: Fragment() {
   ): View {
     binding = FragmentAppbarBinding.inflate(inflater)
     return binding.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    binding.toolbar1.setNavigationOnClickListener {
+      findNavController().popBackStack()
+    }
+
+    binding.back.setOnClickListener {}
+    binding.toolbar3.setNavigationOnClickListener {}
   }
 }
