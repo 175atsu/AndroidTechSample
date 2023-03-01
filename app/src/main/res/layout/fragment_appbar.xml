@@ -7,12 +7,12 @@
     android:layout_height="match_parent">
 
     <TextView
-      android:id="@+id/label1"
+      android:id="@+id/label_appcompat"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
-      android:text="appcompat"
+      android:text="@string/appcompat"
       android:textColor="@color/black"
       android:textSize="20sp"
       android:textStyle="bold"
@@ -20,45 +20,46 @@
       app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.appbar.AppBarLayout
-      android:id="@+id/appBarLayout1"
+      android:id="@+id/appBarLayout"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/label1">
+      app:layout_constraintTop_toBottomOf="@id/label_appcompat">
 
       <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar1"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentInsetStart="0dp"
         app:navigationIcon="@drawable/ic_add_black_24dp"
-        app:title="モンスター" />
+        app:title="@string/appbar_toolbar"
+        app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-      android:id="@+id/label2"
+      android:id="@+id/label_appcompat_custom"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
-      android:text="appcompat-custom"
+      android:text="@string/appbar_appcompat_custom"
       android:textColor="@color/black"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/appBarLayout1" />
+      app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
     <com.google.android.material.appbar.AppBarLayout
-      android:id="@+id/appBarLayout2"
+      android:id="@+id/appBarLayout_custom"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/label2">
+      app:layout_constraintTop_toBottomOf="@id/label_appcompat_custom">
 
       <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
+        android:id="@+id/toolbar_custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentInsetStart="0dp">
@@ -70,12 +71,14 @@
           android:layout_marginStart="6dp"
           android:contentDescription="@null"
           android:padding="10dp"
-          android:src="@drawable/ic_add_black_24dp" />
+          android:src="@drawable/ic_add_black_24dp"
+          app:tint="@color/white" />
 
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="モンスター"
+          android:text="@string/appbar_toolbar"
+          android:textColor="@color/white"
           android:textSize="16sp"
           android:textStyle="bold" />
 
@@ -83,35 +86,35 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-      android:id="@+id/label3"
+      android:id="@+id/label_material"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
-      android:text="material"
+      android:text="@string/material"
       android:textColor="@color/black"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/appBarLayout2" />
+      app:layout_constraintTop_toBottomOf="@id/appBarLayout_custom" />
 
     <com.google.android.material.appbar.AppBarLayout
-      android:id="@+id/appBarLayout3"
+      android:id="@+id/appBarLayout_material"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/label3">
+      app:layout_constraintTop_toBottomOf="@id/label_material">
 
       <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/material_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:navigationIcon="@drawable/ic_add_black_24dp"
-        app:title="モンスター"
+        app:navigationIconTint="@color/white"
+        app:title="@string/appbar_material_toolbar"
         app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

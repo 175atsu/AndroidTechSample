@@ -24,11 +24,10 @@ class AppbarFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.toolbar1.setNavigationOnClickListener {
+    binding.toolbar.setNavigationOnClickListener {
       findNavController().popBackStack()
     }
-
     binding.back.setOnClickListener {}
-    binding.toolbar3.setNavigationOnClickListener {}
+    binding.materialToolbar.setNavigationOnClickListener {}
   }
 }

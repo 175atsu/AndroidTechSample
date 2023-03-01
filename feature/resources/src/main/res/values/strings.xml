@@ -2,6 +2,8 @@
   <string name="app_name">AndroidTechSample</string>
 
   <string name="open">開く</string>
+  <string name="appcompat">appcompat</string>
+  <string name="material">material</string>
 
   <!-- PlaygroundFragment -->
   <string name="playground_label">Playground</string>
@@ -89,6 +91,12 @@
   <string name="material_card_button_rejection">Rejection</string>
 
   <string name="material_label_chip">Chip</string>
+
+  <!-- AppbarFragment -->
+  <string name="appbar_label">Appbar</string>
+  <string name="appbar_toolbar">Toolbar</string>
+  <string name="appbar_material_toolbar">MaterialToolbar</string>
+  <string name="appbar_appcompat_custom">appcompat-custom</string>
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
