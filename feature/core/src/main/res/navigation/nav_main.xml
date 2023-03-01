@@ -37,6 +37,9 @@
     <action
       android:id="@+id/to_fragment_chrome_custom_tab"
       app:destination="@id/fragment_chrome_custom_tab" />
+    <action
+      android:id="@+id/to_fragment_appbar"
+      app:destination="@id/fragment_appbar" />
   </fragment>
 
   <fragment
@@ -156,4 +159,8 @@
   <fragment
     android:id="@+id/fragment_chrome_custom_tab"
     android:name="com.example.androidtechsample.ui.chrome.ChromeCustomTabFragment" />
+
+  <fragment
+    android:id="@+id/fragment_appbar"
+    android:name="com.example.androidtechsample.ui.appbar.AppbarFragment" />
 </navigation>

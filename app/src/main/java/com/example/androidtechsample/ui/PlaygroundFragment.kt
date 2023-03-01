@@ -74,6 +74,9 @@ class PlaygroundFragment : Fragment() {
       toChromeCustomTab.setOnClickListener {
         navigator(R.id.to_fragment_chrome_custom_tab)
       }
+      toAppbar.setOnClickListener {
+        navigator(R.id.to_fragment_appbar)
+      }
     }
   }
 }
