@@ -1,16 +1,22 @@
 package com.example.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScrollableTabRow
@@ -24,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -50,9 +57,11 @@ fun PagerScreen() {
         .padding(paddingValues = it),
       color = CustomTheme.colors.surfacePrimary
     ) {
-      Column {
-        TabRowPager()
-        InfinityPager()
+      LazyColumn {
+        item {
+          TabRowPager()
+          InfinityPager()
+        }
       }
     }
   }
@@ -111,5 +120,20 @@ fun InfinityPager() {
       model = "https://miro.medium.com/v2/resize:fit:1024/0*JFvF1C2N5mnmWd9u.png",
       contentDescription = null
     )
+  }
+  Spacer(modifier = Modifier.height(16.dp))
+  Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+    repeat(5) { iteration ->
+      val position = pagerState.currentPage % 5
+      val color = if (position == iteration) CustomTheme.colors.objectAccentPrimary
+      else CustomTheme.colors.objectHighEmphasis
+      Box(
+        modifier = Modifier
+          .padding(horizontal = 3.dp)
+          .clip(CircleShape)
+          .background(color)
+          .size(6.dp)
+      )
+    }
   }
 }
