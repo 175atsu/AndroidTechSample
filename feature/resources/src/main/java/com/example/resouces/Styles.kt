@@ -1,7 +1,6 @@
 package com.example.resouces
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -9,7 +8,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun textStyleBlack() = TextStyle(
-  color = colorResource(id = R.color.text_high_emphasis)
+  color = CustomTheme.colors.textHighEmphasis
 )
 
 @Composable
@@ -59,7 +58,7 @@ fun textStyleBlackBody3() = textStyleBlack().copy(
 
 @Composable
 fun textStyleWhite() = TextStyle(
-  color = colorResource(id = R.color.text_high_emphasis_inverse)
+  color = CustomTheme.colors.textHighEmphasisInverse
 )
 
 @Composable
