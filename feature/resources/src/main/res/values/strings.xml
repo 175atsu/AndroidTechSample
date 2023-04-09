@@ -101,6 +101,7 @@
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
   <string name="compose_twitter">Twitter</string>
+  <string name="compose_pager">Pager</string>
 
   <!-- Twitter -->
   <string name="twitter_home">Home</string>
