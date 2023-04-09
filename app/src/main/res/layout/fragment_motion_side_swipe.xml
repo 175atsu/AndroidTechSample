@@ -10,14 +10,11 @@
     <View
       android:id="@+id/view_simple"
       android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:background="@color/black" />
+      android:layout_height="64dp" />
 
     <View
       android:id="@+id/view_color"
       android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:background="@color/black" />
+      android:layout_height="64dp" />
   </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>
-

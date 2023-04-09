@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+  <!-- Primary -->
+  <color name="primary_100">#FF0a2a5a</color>
+  <color name="primary_90">#FF0a2a5a</color>
+  <color name="primary_80">#FF0a2a5a</color>
+  <color name="primary_70">#FF0a2a5a</color>
+  <color name="primary_60">#FF0a2a5a</color>
+  <color name="primary_50">#FF0a2a5a</color>
+  <color name="primary_40">#FF0a2a5a</color>
+  <color name="primary_30">#FF0a2a5a</color>
+  <color name="primary_20">#FF0a2a5a</color>
+  <color name="primary_10">#FF0a2a5a</color>
+  <color name="primary_5">#FF0a2a5a</color>
+
+  <!-- White -->
+  <color name="white_100">#FFFFFFFF</color>
+  <color name="white_90_alpha">#E6FFFFFF</color>
+  <color name="white_80_alpha">#CCFFFFFF</color>
+  <color name="white_70_alpha">#B3FFFFFF</color>
+  <color name="white_60_alpha">#99FFFFFF</color>
+  <color name="white_50_alpha">#80FFFFFF</color>
+  <color name="white_40_alpha">#6EFFFFFF</color>
+  <color name="white_30_alpha">#4DFFFFFF</color>
+  <color name="white_20_alpha">#29FFFFFF</color>
+  <color name="white_10_alpha">#1AFFFFFF</color>
+  <color name="white_5_alpha">#0DFFFFFF</color>
+  <!-- Black -->
+  <color name="black_100">#FF000000</color>
+  <color name="black_90_alpha">#E6000000</color>
+  <color name="black_80_alpha">#CC000000</color>
+  <color name="black_70_alpha">#B3000000</color>
+  <color name="black_60_alpha">#99000000</color>
+  <color name="black_50_alpha">#80000000</color>
+  <color name="black_40_alpha">#66000000</color>
+  <color name="black_30_alpha">#4D000000</color>
+  <color name="black_20_alpha">#33000000</color>
+  <color name="black_10_alpha">#1A000000</color>
+  <color name="black_5_alpha">#0D000000</color>
+
   <color name="purple_500">#FF6200EE</color>
   <color name="purple_700">#FF3700B3</color>
   <color name="teal_700">#FF018786</color>
-  <color name="black">#FF000000</color>
-  <color name="white">#FFFFFFFF</color>
 
   <color name="red_200">#ef9a9a</color>
   <color name="pink_200">#F48FB1</color>
@@ -27,7 +64,7 @@
   <color name="list_follow_select">#def1ff</color>
 
   <array name="rainbow_200">
-    <item>@color/black</item>
+    <item>@color/black_100</item>
     <item>@color/pink_200</item>
     <item>@color/purple_200</item>
     <item>@color/deep_purple_200</item>
@@ -44,5 +81,17 @@
     <item>@color/orange_200</item>
     <item>@color/deep_orange_200</item>
   </array>
+
+
+  <!-- surface color -->
+  <color name="surface_primary">@color/white_100</color>
+  <color name="surface_accent_primary">@color/primary_100</color>
+
+  <!-- text color -->
+  <color name="text_high_emphasis">@color/black_100</color>
+  <color name="text_high_emphasis_inverse">@color/white_100</color>
+
+  <!-- object color -->
+  <color name="object_high_emphasis">@color/black_100</color>
 
 </resources>

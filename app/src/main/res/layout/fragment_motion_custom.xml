@@ -10,9 +10,7 @@
     <View
       android:id="@+id/button"
       android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:background="@color/black" />
+      android:layout_height="64dp" />
 
   </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>
-

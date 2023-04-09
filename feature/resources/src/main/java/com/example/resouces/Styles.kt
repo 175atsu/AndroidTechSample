@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun textStyleBlack() = TextStyle(
-  color = colorResource(id = R.color.black)
+  color = colorResource(id = R.color.text_high_emphasis)
 )
 
 @Composable
@@ -59,7 +59,7 @@ fun textStyleBlackBody3() = textStyleBlack().copy(
 
 @Composable
 fun textStyleWhite() = TextStyle(
-  color = colorResource(id = R.color.white)
+  color = colorResource(id = R.color.text_high_emphasis_inverse)
 )
 
 @Composable

@@ -4,7 +4,8 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/surface_primary">
 
     <TextView
       android:id="@+id/label_appcompat"
@@ -13,7 +14,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:text="@string/appcompat"
-      android:textColor="@color/black"
+      android:textColor="@color/text_high_emphasis"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +35,7 @@
         app:contentInsetStart="0dp"
         app:navigationIcon="@drawable/ic_add_black_24dp"
         app:title="@string/appbar_toolbar"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/text_high_emphasis" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
@@ -44,7 +45,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:text="@string/appbar_appcompat_custom"
-      android:textColor="@color/black"
+      android:textColor="@color/text_high_emphasis"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
@@ -72,13 +73,13 @@
           android:contentDescription="@null"
           android:padding="10dp"
           android:src="@drawable/ic_add_black_24dp"
-          app:tint="@color/white" />
+          app:tint="@color/object_high_emphasis" />
 
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/appbar_toolbar"
-          android:textColor="@color/white"
+          android:textColor="@color/text_high_emphasis"
           android:textSize="16sp"
           android:textStyle="bold" />
 
@@ -92,7 +93,7 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:text="@string/material"
-      android:textColor="@color/black"
+      android:textColor="@color/text_high_emphasis"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
@@ -111,9 +112,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:navigationIcon="@drawable/ic_add_black_24dp"
-        app:navigationIconTint="@color/white"
+        app:navigationIconTint="@color/object_high_emphasis"
         app:title="@string/appbar_material_toolbar"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/text_high_emphasis" />
 
     </com.google.android.material.appbar.AppBarLayout>
   </androidx.constraintlayout.widget.ConstraintLayout>
