@@ -56,6 +56,7 @@ object Dep {
       const val uiTooling = "androidx.compose.ui:ui-tooling:1.4.1"
       const val navigation = "androidx.navigation:navigation-compose:2.5.3"
       const val material = "androidx.compose.material:material:1.4.1"
+      const val material3 = "androidx.compose.material3:material3:1.0.1"
       const val runtime = "androidx.compose.runtime:runtime:1.4.1"
       const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:1.4.1"
     }
@@ -106,7 +107,7 @@ object Dep {
     const val plugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
   }
 
-  const val coil = "io.coil-kt:coil-compose:1.4.0"
+  const val coil = "io.coil-kt:coil-compose:2.3.0"
 
   object Test {
     const val junit4 = "junit:junit:4.13.2"
