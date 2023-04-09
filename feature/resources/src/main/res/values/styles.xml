@@ -3,7 +3,7 @@
   <style name="Text" />
 
   <style name="Text.PrimaryColor">
-    <item name="android:textColor">@color/black</item>
+    <item name="android:textColor">@color/text_high_emphasis</item>
   </style>
 
   <!-- Header -->
