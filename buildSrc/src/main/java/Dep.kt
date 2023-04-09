@@ -52,12 +52,12 @@ object Dep {
     }
 
     object Compose {
-      const val ui = "androidx.compose.ui:ui:1.3.3"
-      const val uiTooling = "androidx.compose.ui:ui-tooling:1.3.3"
+      const val ui = "androidx.compose.ui:ui:1.4.1"
+      const val uiTooling = "androidx.compose.ui:ui-tooling:1.4.1"
       const val navigation = "androidx.navigation:navigation-compose:2.5.3"
-      const val material = "androidx.compose.material:material:1.3.1"
-      const val runtime = "androidx.compose.runtime:runtime:1.3.3"
-      const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:1.3.3"
+      const val material = "androidx.compose.material:material:1.4.1"
+      const val runtime = "androidx.compose.runtime:runtime:1.4.1"
+      const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:1.4.1"
     }
 
     object Hilt {
