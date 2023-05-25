@@ -3,6 +3,10 @@ package com.example.resouces
 import androidx.compose.ui.graphics.Color
 
 object PrimitiveColor {
+
+  // primary
+  val primary100: Color = Color(0xff0a2a5a)
+
   // white
   val white100: Color = Color(0xffffffff)
   val white90Alpha: Color = Color(0xe6ffffff)

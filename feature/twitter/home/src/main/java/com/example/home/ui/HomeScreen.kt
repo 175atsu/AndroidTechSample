@@ -2,6 +2,7 @@ package com.example.home.ui
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -32,6 +33,7 @@ import com.example.core.SpacerHeight
 import com.example.core.SpacerWidth
 import com.example.home.R
 import com.example.home.data.TweetData
+import com.example.resouces.CustomTheme
 import com.example.resouces.textStyleBlackBody2
 import com.example.resouces.textStyleBlackHead6
 
@@ -43,7 +45,9 @@ fun HomeScreen(
   viewModel.fetchItem()
 
   LazyColumn(
-    modifier = Modifier.fillMaxSize()
+    modifier = Modifier
+      .fillMaxSize()
+      .background(color = CustomTheme.colors.surfacePrimary)
   ) {
     items(tweetListState + tweetListState + tweetListState) {
       TweetItem(it, viewModel::itemClick)
@@ -149,7 +153,8 @@ fun IconText(@DrawableRes resource: Int, count: Int, modifier: Modifier = Modifi
       painter = painterResource(id = resource),
       contentDescription = null,
       modifier = modifier
-        .size(20.dp)
+        .size(20.dp),
+      tint = CustomTheme.colors.objectHighEmphasis
     )
     Text(
       text = count.toString(),

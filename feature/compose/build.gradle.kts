@@ -36,6 +36,7 @@ dependencies {
   implementation(Dep.AndroidX.Compose.ui)
   implementation(Dep.AndroidX.Compose.navigation)
   implementation(Dep.AndroidX.Compose.material)
+  implementation(Dep.AndroidX.Compose.material3)
   implementation(Dep.AndroidX.Compose.uiTooling)
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.AndroidX.Compose.runtimeLiveData)

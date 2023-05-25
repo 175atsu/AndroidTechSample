@@ -23,28 +23,35 @@ import com.example.resouces.textStyleWhiteBody1
 
 @Composable
 fun PlaygroundScreen(navController: NavController) {
-  CustomTheme {
-    Column(
-      modifier = Modifier
-        .fillMaxSize()
-        .background(color = CustomTheme.colors.surfacePrimary)
-        .padding(horizontal = 16.dp, vertical = 8.dp)
-    ) {
-      Text(
-        text = stringResource(id = R.string.compose_label),
-        style = textStyleBlackHead1(),
-        modifier = Modifier.padding(vertical = 8.dp)
-      )
-      SpacerHeight(16.dp)
-      Text(
-        text = stringResource(id = R.string.compose_twitter),
-        style = textStyleBlackHead2()
-      )
-      ToPageButton(
-        toPage = { navController.navigate(NavRouter.TWITTER_ROUTE) },
-        textResource = R.string.compose_twitter
-      )
-    }
+  Column(
+    modifier = Modifier
+      .fillMaxSize()
+      .background(color = CustomTheme.colors.surfacePrimary)
+      .padding(horizontal = 16.dp, vertical = 8.dp)
+  ) {
+    Text(
+      text = stringResource(id = R.string.compose_label),
+      style = textStyleBlackHead1(),
+      modifier = Modifier.padding(vertical = 8.dp)
+    )
+    SpacerHeight(16.dp)
+    Text(
+      text = stringResource(id = R.string.compose_twitter),
+      style = textStyleBlackHead2()
+    )
+    ToPageButton(
+      toPage = { navController.navigate(NavRouter.TwitterScreen) },
+      textResource = R.string.compose_twitter
+    )
+    SpacerHeight(16.dp)
+    Text(
+      text = stringResource(id = R.string.compose_pager),
+      style = textStyleBlackHead2()
+    )
+    ToPageButton(
+      toPage = { navController.navigate(NavRouter.PagerScreen) },
+      textResource = R.string.compose_pager
+    )
   }
 }
 
