@@ -52,6 +52,15 @@ fun PlaygroundScreen(navController: NavController) {
       toPage = { navController.navigate(NavRouter.PagerScreen) },
       textResource = R.string.compose_pager
     )
+    SpacerHeight(16.dp)
+    Text(
+      text = stringResource(id = R.string.compose_animation),
+      style = textStyleBlackHead2()
+    )
+    ToPageButton(
+      toPage = { navController.navigate(NavRouter.AnimationScreen) },
+      textResource = R.string.compose_animation
+    )
   }
 }
 
