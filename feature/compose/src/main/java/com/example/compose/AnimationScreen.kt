@@ -6,6 +6,7 @@ import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -36,7 +37,6 @@ import com.example.resouces.CustomTheme
 import com.example.resouces.CustomTypography
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 @Composable
 fun AnimationScreen() {
@@ -47,24 +47,20 @@ fun AnimationScreen() {
         .padding(16.dp)
     ) {
       item {
-        ExpandHorizontally()
+        SimpleAnimatedVisibilityContent()
         Spacer(modifier = Modifier.height(16.dp))
-        RateGraphModule()
+        RateGraphContent()
       }
     }
   }
 }
 
 @Composable
-private fun ExpandHorizontally() {
+private fun SimpleAnimatedVisibilityContent() {
   var visible by remember { mutableStateOf(false) }
   val scope = rememberCoroutineScope()
 
-  Text(
-    text = "ExpandHorizontally",
-    color = CustomTheme.colors.textHighEmphasis,
-    style = CustomTypography.body1
-  )
+  ContentText(text = "ExpandHorizontally")
   Spacer(modifier = Modifier.height(8.dp))
   PlayButton(status = visible) {
     scope.launch {
@@ -94,36 +90,57 @@ private fun ExpandHorizontally() {
 }
 
 @Composable
-private fun RateGraphModule() {
-  Text(
-    text = "RateGraphModule",
-    color = CustomTheme.colors.textHighEmphasis,
-    style = CustomTypography.body1
-  )
+private fun RateGraphContent() {
+  val list = listOf(0.95f, 0.9f, 0.8f, 0.7f, 0.6f, 0.5f, 0.4f, 0.3f, 0.2f, 0.1f, 0.05f)
+  var launcher by remember { mutableStateOf(false) }
+  val scope = rememberCoroutineScope()
 
-  val list = List(50) { Random.nextFloat() }.sortedDescending()
-  var visible by remember { mutableStateOf(false) }
+  ContentText(text = "RateGraphModule")
+  Spacer(modifier = Modifier.height(8.dp))
+  PlayButton(status = launcher) {
+    scope.launch {
+      launcher = true
+      delay((150 * list.size + 1000).toLong())
+      launcher = false
+    }
+  }
+  Spacer(modifier = Modifier.height(8.dp))
+  list.forEachIndexed { index, fl ->
+    var visible by remember { mutableStateOf(false) }
 
-  list.forEach {
-    AnimatedVisibility(
-      visible = visible,
-      enter = expandHorizontally(
-        animationSpec = tween(
-          durationMillis = 400,
-          delayMillis = 150
+    LaunchedEffect(key1 = launcher) {
+      visible = if (launcher) {
+        delay(150 * index.toLong())
+        true
+      } else {
+        false
+      }
+    }
+
+    Row {
+      AnimatedVisibility(
+        visible = visible,
+        enter = expandHorizontally(
+          animationSpec = tween(durationMillis = 400)
         )
-      )
-    ) {
+      ) {
+        Box(
+          modifier = Modifier
+            .fillMaxWidth(fl)
+            .height(40.dp)
+            .padding(vertical = 8.dp)
+            .background(color = CustomTheme.colors.objectHighEmphasis)
+        )
+      }
       Box(
         modifier = Modifier
-          .fillMaxWidth(it)
+          .fillMaxWidth(1 - fl)
           .height(40.dp)
           .padding(vertical = 8.dp)
-          .background(color = CustomTheme.colors.objectHighEmphasis)
+          .background(color = CustomTheme.colors.objectHighEmphasisInverse)
       )
     }
   }
-  LaunchedEffect(key1 = Unit) { visible = true }
 }
 
 @Composable
@@ -142,6 +159,14 @@ private fun PlayButton(status: Boolean, onClick: () -> Unit) {
     )
   }
 }
+
+@Composable
+private fun ContentText(text: String) = Text(
+  text = text,
+  color = CustomTheme.colors.textHighEmphasis,
+  style = CustomTypography.body1Bold
+)
+
 
 @Preview
 @Composable
