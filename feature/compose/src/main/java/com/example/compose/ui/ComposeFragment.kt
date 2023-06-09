@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.compose.AnimationScreen
 import com.example.compose.NavRouter
 import com.example.compose.PagerScreen
 import com.example.resouces.CustomTheme
@@ -39,5 +40,6 @@ fun CreateNav(startDestination: String = NavRouter.PlaygroundScreen) {
     composable(NavRouter.PlaygroundScreen) { PlaygroundScreen(navController) }
     composable(NavRouter.TwitterScreen) { TwitterScreen() }
     composable(NavRouter.PagerScreen) { PagerScreen() }
+    composable(NavRouter.AnimationScreen) { AnimationScreen() }
   }
 }
