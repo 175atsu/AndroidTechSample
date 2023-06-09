@@ -1,0 +1,26 @@
+name: Build PullRequest
+
+on:
+  pull_request:
+    paths-ignore:
+      - README.md
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # チェックアウト
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # JDKのセットアップ
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+        # コンパイル
+      - name: Run Compile
+        run: ./gradlew assembleDebug
