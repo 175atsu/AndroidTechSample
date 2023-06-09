@@ -91,7 +91,19 @@ private fun SimpleAnimatedVisibilityContent() {
 
 @Composable
 private fun RateGraphContent() {
-  val list = listOf(0.95f, 0.9f, 0.8f, 0.7f, 0.6f, 0.5f, 0.4f, 0.3f, 0.2f, 0.1f, 0.05f)
+  val list = listOf(
+    0.95f,
+    0.9f,
+    0.8f,
+    0.7f,
+    0.6f,
+    0.5f,
+    0.4f,
+    0.3f,
+    0.2f,
+    0.1f,
+    0.05f
+  )
   var launcher by remember { mutableStateOf(false) }
   val scope = rememberCoroutineScope()
 
