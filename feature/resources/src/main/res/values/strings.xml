@@ -1,5 +1,6 @@
 <resources>
-  <string name="app_name">AndroidTechSample</string>
+  <string name="app_name">AndroidApp</string>
+  <string name="compose_app_name">ComposeApp</string>
 
   <string name="open">開く</string>
   <string name="appcompat">appcompat</string>
