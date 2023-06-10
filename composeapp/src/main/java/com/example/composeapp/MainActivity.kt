@@ -25,7 +25,8 @@ fun CreateNav(startDestination: String = NavRouter.PlaygroundScreen) {
   val navController = rememberNavController()
   NavHost(navController = navController, startDestination = startDestination) {
     composable(NavRouter.PlaygroundScreen) { PlaygroundScreen(navController) }
-    composable(NavRouter.AnimationScreen) { AnimationScreen() }
-    composable(NavRouter.PagerScreen) { PagerScreen() }
+    composable(NavRouter.ComponentScreen) { ComponentScreen(navController) }
+    composable(NavRouter.AnimationScreen) { AnimationScreen(navController) }
+    composable(NavRouter.PagerScreen) { PagerScreen(navController) }
   }
 }

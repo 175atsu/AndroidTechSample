@@ -101,6 +101,7 @@
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
+  <string name="compose_component">Component</string>
   <string name="compose_pager">Pager</string>
   <string name="compose_animation">Animation</string>
 
