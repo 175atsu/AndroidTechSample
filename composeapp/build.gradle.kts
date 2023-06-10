@@ -46,6 +46,7 @@ android {
 
 dependencies {
   implementation(project(":feature:resources"))
+  implementation(project(":feature:composable"))
 
   implementation(Dep.AndroidX.core)
   implementation(Dep.AndroidX.appCompat)
@@ -58,6 +59,8 @@ dependencies {
   implementation(Dep.AndroidX.Compose.uiTooling)
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.AndroidX.Compose.runtimeLiveData)
+
+  implementation(Dep.coil)
 
   testImplementation("junit:junit:4.13.2")
   androidTestImplementation("androidx.test.ext:junit:1.1.5")

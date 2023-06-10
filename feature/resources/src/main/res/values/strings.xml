@@ -101,14 +101,7 @@
 
   <!-- ComposeFragment -->
   <string name="compose_label">Jetpack Compose</string>
-  <string name="compose_twitter">Twitter</string>
   <string name="compose_pager">Pager</string>
   <string name="compose_animation">Animation</string>
-
-  <!-- Twitter -->
-  <string name="twitter_home">Home</string>
-  <string name="twitter_search">Search</string>
-  <string name="twitter_notification">Notification</string>
-  <string name="twitter_dm">DM</string>
 
 </resources>

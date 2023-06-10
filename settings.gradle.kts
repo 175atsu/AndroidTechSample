@@ -1,11 +1,9 @@
 rootProject.name = "AndroidTechSample"
 include(":app")
-include(":feature:compose")
+include(":feature:composable")
 include(":feature:core")
 include(":feature:biometric")
 include(":feature:resources")
 include(":feature:groupie")
-include(":feature:twitter:home")
-include(":feature:twitter:twitter-core")
 include(":feature:material")
 include(":composeapp")

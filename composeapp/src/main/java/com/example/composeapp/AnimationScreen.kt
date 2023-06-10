@@ -1,4 +1,4 @@
-package com.example.compose
+package com.example.composeapp
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween

@@ -1,8 +1,7 @@
-package com.example.compose
+package com.example.composeapp
 
 object NavRouter {
   const val PlaygroundScreen = "PlaygroundScreen"
-  const val TwitterScreen = "TwitterScreen"
   const val PagerScreen = "PagerScreen"
   const val AnimationScreen = "AnimationScreen"
 }
