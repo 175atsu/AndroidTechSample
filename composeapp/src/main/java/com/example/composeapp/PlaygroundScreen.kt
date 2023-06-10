@@ -22,8 +22,8 @@ fun PlaygroundScreen(navController: NavController) {
   ) {
     LazyColumn(modifier = Modifier.padding(it)) {
       item {
-        MessiElevatedButton(text = stringResource(id = R.string.compose_buttons)) {
-          navController.navigate(NavRouter.ButtonsScreen)
+        MessiElevatedButton(text = stringResource(id = R.string.compose_component)) {
+          navController.navigate(NavRouter.ComponentScreen)
         }
         MessiElevatedButton(text = stringResource(id = R.string.compose_animation)) {
           navController.navigate(NavRouter.AnimationScreen)

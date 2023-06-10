@@ -25,7 +25,7 @@ import com.example.compose.component.MessiTopAppBar
 import com.example.resouces.CustomTheme
 
 @Composable
-fun ButtonsScreen(navController: NavController) {
+fun ComponentScreen(navController: NavController) {
 
   Scaffold(
     topBar = {
@@ -83,9 +83,9 @@ private fun SectionTitle(text: String) {
 
 @Preview
 @Composable
-fun ButtonsScreenPreview() {
+fun ComponentScreenPreview() {
   val navController = rememberNavController()
   CustomTheme {
-    ButtonsScreen(navController)
+    ComponentScreen(navController)
   }
 }
