@@ -26,8 +26,6 @@ android {
 dependencies {
   implementation(project(":feature:core"))
   implementation(project(":feature:resources"))
-  implementation(project(":feature:twitter:twitter-core"))
-  implementation(project(":feature:twitter:home"))
 
   implementation(Dep.Dagger.hilt)
   kapt(Dep.Dagger.hiltKapt)

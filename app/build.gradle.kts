@@ -40,8 +40,6 @@ dependencies {
   implementation(project(":feature:groupie"))
   implementation(project(":feature:core"))
   implementation(project(":feature:compose"))
-  implementation(project(":feature:twitter:twitter-core"))
-  implementation(project(":feature:twitter:home"))
   implementation(project(":feature:material"))
 
   implementation(Dep.AndroidX.appCompat)

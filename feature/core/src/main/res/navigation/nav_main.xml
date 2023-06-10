@@ -29,9 +29,6 @@
       android:id="@+id/to_fragment_camera"
       app:destination="@id/fragment_camera" />
     <action
-      android:id="@+id/to_fragment_compose"
-      app:destination="@id/fragment_compose" />
-    <action
       android:id="@+id/to_fragment_material"
       app:destination="@id/fragment_material" />
     <action
@@ -132,10 +129,6 @@
       android:name="photoUri"
       app:argType="string" />
   </fragment>
-
-  <fragment
-    android:id="@+id/fragment_compose"
-    android:name="com.example.compose.ui.ComposeFragment" />
   
   <fragment
     android:id="@+id/fragment_material"
