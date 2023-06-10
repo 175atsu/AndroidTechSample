@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContent {
-      Text(text = stringResource(id = R.string.app_name))
+      Text(text = stringResource(id = R.string.compose_app_name))
     }
   }
 }

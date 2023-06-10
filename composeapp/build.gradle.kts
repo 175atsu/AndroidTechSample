@@ -45,6 +45,7 @@ android {
 }
 
 dependencies {
+  implementation(project(":feature:resources"))
 
   implementation(Dep.AndroidX.core)
   implementation(Dep.AndroidX.appCompat)
