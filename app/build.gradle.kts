@@ -39,7 +39,7 @@ dependencies {
   implementation(project(":feature:biometric"))
   implementation(project(":feature:groupie"))
   implementation(project(":feature:core"))
-  implementation(project(":feature:compose"))
+  implementation(project(":feature:composable"))
   implementation(project(":feature:material"))
 
   implementation(Dep.AndroidX.appCompat)
