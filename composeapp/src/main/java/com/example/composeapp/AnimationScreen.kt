@@ -15,8 +15,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,26 +32,41 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
+import com.example.compose.component.MessiTopAppBar
 import com.example.resouces.CustomTheme
 import com.example.resouces.CustomTypography
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AnimationScreen() {
-  Surface(color = CustomTheme.colors.surfacePrimary) {
-    LazyColumn(
-      modifier = Modifier
-        .fillMaxSize()
-        .padding(16.dp)
-    ) {
-      item {
-        SimpleAnimatedVisibilityContent()
-        Spacer(modifier = Modifier.height(16.dp))
-        RateGraphContent()
+fun AnimationScreen(navController: NavController) {
+  Scaffold(
+    topBar = {
+      MessiTopAppBar(
+        text = stringResource(id = R.string.compose_animation),
+        navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
+        onClickNavigationIcon = navController::popBackStack
+      )
+    }
+  ) {
+    Surface(modifier = Modifier.padding(it), color = CustomTheme.colors.surfacePrimary) {
+      LazyColumn(
+        modifier = Modifier
+          .fillMaxSize()
+          .padding(16.dp)
+      ) {
+        item {
+          SimpleAnimatedVisibilityContent()
+          Spacer(modifier = Modifier.height(16.dp))
+          RateGraphContent()
+        }
       }
     }
   }
@@ -183,7 +200,8 @@ private fun ContentText(text: String) = Text(
 @Preview
 @Composable
 fun AnimationScreenPreview() {
+  val navController = rememberNavController()
   CustomTheme {
-    AnimationScreen()
+    AnimationScreen(navController)
   }
 }
