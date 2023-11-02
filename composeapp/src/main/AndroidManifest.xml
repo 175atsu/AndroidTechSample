@@ -21,7 +21,7 @@
       </intent-filter>
     </activity>
 
-    <receiver android:name=".SquareWidgetReceiver"
+    <receiver android:name=".widget.SquareWidgetReceiver"
       android:exported="false">
       <intent-filter>
         <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

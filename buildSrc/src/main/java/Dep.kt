@@ -9,7 +9,7 @@ object Versions {
 
   object Sdk {
     const val min = 26
-    const val target = 33
+    const val target = 34
     const val compile = 34
   }
 

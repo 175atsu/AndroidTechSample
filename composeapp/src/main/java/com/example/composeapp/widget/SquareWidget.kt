@@ -1,4 +1,4 @@
-package com.example.composeapp
+package com.example.composeapp.widget
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -16,7 +16,6 @@ import androidx.glance.GlanceModifier
 import androidx.glance.GlanceTheme
 import androidx.glance.Image
 import androidx.glance.ImageProvider
-import androidx.glance.LocalSize
 import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
@@ -30,11 +29,11 @@ import androidx.glance.layout.Column
 import androidx.glance.layout.ContentScale
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.padding
-import androidx.glance.layout.size
-import androidx.glance.layout.width
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
+import com.example.composeapp.R
+import com.example.composeapp.getRandomImage
 import kotlinx.coroutines.launch
 
 class SquareWidget : GlanceAppWidget() {
@@ -42,8 +41,6 @@ class SquareWidget : GlanceAppWidget() {
   override val sizeMode: SizeMode = SizeMode.Exact
 
   override suspend fun provideGlance(context: Context, id: GlanceId) = provideContent {
-
-    val size = LocalSize.current
     val url = getImageUrl()
     val scope = rememberCoroutineScope()
     var randomImage by remember(url) { mutableStateOf<Bitmap?>(null) }
@@ -53,24 +50,15 @@ class SquareWidget : GlanceAppWidget() {
       randomImage = context.getRandomImage(url)
     }
 
-    val imageSize = if (size.height > size.width) {
-      size.width
-    } else {
-      size.height
-    }
-
     GlanceTheme {
-      Box(
-        modifier = GlanceModifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-      ) {
+      SquareBox {
         randomImage?.let {
           Image(
             provider = ImageProvider(it),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = GlanceModifier
-              .size(imageSize)
+              .fillMaxSize()
               .cornerRadius(16.dp)
               .clickable {
                 scope.launch {
@@ -79,12 +67,12 @@ class SquareWidget : GlanceAppWidget() {
               }
           )
           Box(
-            modifier = GlanceModifier.size(imageSize),
+            modifier = GlanceModifier.fillMaxSize(),
             contentAlignment = Alignment.BottomCenter
           ) {
             Column(
               modifier = GlanceModifier
-                .width(imageSize)
+                .fillMaxSize()
                 .background(ImageProvider(R.drawable.bg_bottom_raound16))
                 .padding(horizontal = 20.dp, vertical = 16.dp)
             ) {

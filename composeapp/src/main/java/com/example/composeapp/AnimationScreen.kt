@@ -203,7 +203,6 @@ private fun ContentText(text: String) = Text(
   style = CustomTypography.body1Bold
 )
 
-
 @Preview
 @Composable
 fun AnimationScreenPreview() {
