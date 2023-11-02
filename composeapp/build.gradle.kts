@@ -60,6 +60,9 @@ dependencies {
   implementation(Dep.AndroidX.Compose.runtime)
   implementation(Dep.AndroidX.Compose.runtimeLiveData)
 
+  implementation(Dep.AndroidX.Grance.core)
+  implementation(Dep.AndroidX.Grance.appwidget)
+
   implementation(Dep.coil)
 
   testImplementation("junit:junit:4.13.2")
