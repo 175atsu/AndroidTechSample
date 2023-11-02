@@ -9,8 +9,8 @@ object Versions {
 
   object Sdk {
     const val min = 26
-    const val target = 33
-    const val compile = 33
+    const val target = 34
+    const val compile = 34
   }
 
   object Androidx {
@@ -64,6 +64,11 @@ object Dep {
     object Hilt {
       const val lifecycle = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01"
       const val compiler = "androidx.hilt:hilt-compiler:1.0.0-alpha01"
+    }
+
+    object Grance {
+      const val core = "androidx.glance:glance:1.0.0"
+      const val appwidget = "androidx.glance:glance-appwidget:1.0.0"
     }
 
     object Test {

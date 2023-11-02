@@ -1,9 +1,12 @@
 package com.example.composeapp
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.slideIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -34,6 +37,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -72,6 +76,7 @@ fun AnimationScreen(navController: NavController) {
   }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun SimpleAnimatedVisibilityContent() {
   var visible by remember { mutableStateOf(false) }
@@ -82,7 +87,7 @@ private fun SimpleAnimatedVisibilityContent() {
   PlayButton(status = visible) {
     scope.launch {
       visible = true
-      delay(1000)
+      delay(2000)
       visible = false
     }
   }
@@ -90,14 +95,16 @@ private fun SimpleAnimatedVisibilityContent() {
   Box(modifier = Modifier.size(128.dp)) {
     AnimatedVisibility(
       visible = visible,
-      enter = expandHorizontally(),
+      enter = slideIn {
+        IntOffset(100, 100)
+      } + scaleIn(),
       exit = fadeOut()
     ) {
       AsyncImage(
         modifier = Modifier
           .fillMaxSize()
           .clip(CircleShape),
-        model = "https://img-newsweekjapan.jp/akane/assets_c/2022/12/akane221227_cat-thumb-720xauto-581933.jpg",
+        model = "https://times-abema.ismcdn.jp/mwimgs/d/3/-/img_d38429c1b490bb96f69b58115322da7e115148.jpg",
         contentDescription = null,
         contentScale = ContentScale.Crop,
         placeholder = painterResource(R.drawable.ic_clear)
@@ -195,7 +202,6 @@ private fun ContentText(text: String) = Text(
   color = CustomTheme.colors.textHighEmphasis,
   style = CustomTypography.body1Bold
 )
-
 
 @Preview
 @Composable

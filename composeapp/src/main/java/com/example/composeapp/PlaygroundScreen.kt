@@ -36,7 +36,6 @@ fun PlaygroundScreen(navController: NavController) {
   }
 }
 
-
 @Preview
 @Composable
 fun PlaygroundScreenPreview() {
