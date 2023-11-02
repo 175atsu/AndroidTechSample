@@ -25,5 +25,12 @@ jobs:
       - name: Run Compile
         run: ./gradlew assembleDebug
 
-  check-maestro:
-    uses: ./.github/workflows/check-maestro.yaml
+        # Maestro
+      - name: Maestro Run
+        uses: mobile-dev-inc/action-maestro-cloud@v1.1.0
+        with:
+          api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
+          app-file: composeapp/build/outputs/apk/debug/composeapp-debug.apk
+#
+#  check-maestro:
+#    uses: ./.github/workflows/check-maestro.yaml
