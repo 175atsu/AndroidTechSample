@@ -1,5 +1,8 @@
 name: Check Maestro
 
+on:
+  workflow_call:
+
 jobs:
   maestro-cloud:
     runs-on: ubuntu-latest
