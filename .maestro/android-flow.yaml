@@ -1,0 +1,12 @@
+appId: com.example.composeapp
+---
+- launchApp
+- tapOn: "Component"
+- tapOn: "MessiElevatedButton"
+- tapOn: "MessiOutlinedButton"
+- tapOn:
+    point: "6%,29%"
+- tapOn:
+    point: "6%,34%"
+- tapOn:
+    point: "6%,40%"

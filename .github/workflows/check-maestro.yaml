@@ -1,0 +1,21 @@
+name: Check Maestro
+
+on:
+  workflow_call:
+
+jobs:
+  maestro-cloud:
+    runs-on: ubuntu-latest
+    outputs:
+      app: composeapp/build/outputs/apk/debug
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: 'temurin'
+      - run: ./gradlew assembleDebug
+      - uses: mobile-dev-inc/action-maestro-cloud@v1
+        with:
+          api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
+          app-file: composeapp/build/outputs/apk/debug/composeapp-debug.apk
