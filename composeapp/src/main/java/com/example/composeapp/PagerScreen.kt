@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -18,9 +17,8 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,34 +37,21 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.example.compose.component.MessiTopAppBar
-import com.example.resouces.CustomTheme
-import com.example.resouces.textStyleBlackBody1
+import com.messi.designsystem.CustomTheme
+import com.messi.designsystem.component.CustomScaffold
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PagerScreen(navController: NavController) {
-  Scaffold(
-    topBar = {
-      MessiTopAppBar(
-        text = stringResource(id = R.string.compose_pager),
-        navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
-        onClickNavigationIcon = navController::popBackStack
-      )
-    }
+  CustomScaffold(
+    label = stringResource(id = R.string.compose_pager),
+    navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
+    onClickNavigationIcon = navController::popBackStack
   ) {
-    Surface(
-      modifier = Modifier
-        .fillMaxSize()
-        .padding(paddingValues = it),
-      color = CustomTheme.colors.surfacePrimary
-    ) {
-      LazyColumn {
-        item {
-          TabRowPager()
-          InfinityPager()
-        }
+    LazyColumn {
+      item {
+        TabRowPager()
+        InfinityPager()
       }
     }
   }
@@ -82,8 +67,8 @@ fun TabRowPager() {
 
   ScrollableTabRow(
     selectedTabIndex = pagerState.currentPage,
-    containerColor = CustomTheme.colors.surfacePrimary,
-    contentColor = CustomTheme.colors.objectHighEmphasis,
+    containerColor = MaterialTheme.colorScheme.primary,
+    contentColor = MaterialTheme.colorScheme.onPrimary,
     edgePadding = 0.dp
   ) {
     tabs.forEachIndexed { index, s ->
@@ -100,7 +85,10 @@ fun TabRowPager() {
     pageCount = tabs.size
   ) { index ->
     Box(modifier = Modifier.height(240.dp), contentAlignment = Alignment.Center) {
-      Text(text = "$index", style = textStyleBlackBody1())
+      Text(
+        text = "$index",
+        color = MaterialTheme.colorScheme.onSurface
+      )
     }
   }
 }
@@ -130,8 +118,8 @@ fun InfinityPager() {
   Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
     repeat(5) { iteration ->
       val position = pagerState.currentPage % 5
-      val color = if (position == iteration) CustomTheme.colors.objectAccentPrimary
-      else CustomTheme.colors.objectHighEmphasis
+      val color = if (position == iteration) MaterialTheme.colorScheme.primary
+      else MaterialTheme.colorScheme.surfaceVariant
       Box(
         modifier = Modifier
           .padding(horizontal = 3.dp)

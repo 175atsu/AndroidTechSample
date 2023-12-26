@@ -45,6 +45,7 @@ android {
 }
 
 dependencies {
+  implementation(project(":core:designsystem"))
   implementation(project(":feature:resources"))
   implementation(project(":feature:composable"))
 
