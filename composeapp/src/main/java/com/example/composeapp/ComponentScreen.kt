@@ -1,9 +1,7 @@
 package com.example.composeapp
 
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -11,7 +9,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,22 +18,17 @@ import androidx.navigation.compose.rememberNavController
 import com.example.compose.component.MessiElevatedButton
 import com.example.compose.component.MessiOutlinedButton
 import com.example.compose.component.MessiRadioButton
-import com.example.compose.component.MessiTopAppBar
 import com.messi.designsystem.CustomTheme
+import com.messi.designsystem.component.CustomScaffold
 
 @Composable
 fun ComponentScreen(navController: NavController) {
-
-  Scaffold(
-    topBar = {
-      MessiTopAppBar(
-        text = "Buttons",
-        navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
-        onClickNavigationIcon = navController::popBackStack
-      )
-    },
+  CustomScaffold(
+    label = "Buttons",
+    navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
+    onClickNavigationIcon = navController::popBackStack
   ) {
-    LazyColumn(Modifier.padding(it)) {
+    LazyColumn {
       item {
         ButtonContent()
         RadioButtonContent()

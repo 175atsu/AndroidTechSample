@@ -1,4 +1,4 @@
-package com.example.compose.component
+package com.messi.designsystem.component
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MessiTopAppBar(
+fun CustomTopAppBar(
   text: String,
   contentDescription: String? = null,
   navigationIcon: Painter? = null,

@@ -22,8 +22,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -43,35 +41,28 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.example.compose.component.MessiTopAppBar
 import com.example.resouces.CustomTypography
 import com.messi.designsystem.CustomTheme
+import com.messi.designsystem.component.CustomScaffold
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AnimationScreen(navController: NavController) {
-  Scaffold(
-    topBar = {
-      MessiTopAppBar(
-        text = stringResource(id = R.string.compose_animation),
-        navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
-        onClickNavigationIcon = navController::popBackStack
-      )
-    }
+  CustomScaffold(
+    label = stringResource(id = R.string.compose_animation),
+    navigationIcon = painterResource(id = R.drawable.ic_arrow_back),
+    onClickNavigationIcon = navController::popBackStack
   ) {
-    Surface(modifier = Modifier.padding(it), color = MaterialTheme.colorScheme.background) {
-      LazyColumn(
-        modifier = Modifier
-          .fillMaxSize()
-          .padding(16.dp)
-      ) {
-        item {
-          SimpleAnimatedVisibilityContent()
-          Spacer(modifier = Modifier.height(16.dp))
-          RateGraphContent()
-        }
+    LazyColumn(
+      modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)
+    ) {
+      item {
+        SimpleAnimatedVisibilityContent()
+        Spacer(modifier = Modifier.height(16.dp))
+        RateGraphContent()
       }
     }
   }
