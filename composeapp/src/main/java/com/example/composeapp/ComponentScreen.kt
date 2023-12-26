@@ -22,7 +22,7 @@ import com.example.compose.component.MessiElevatedButton
 import com.example.compose.component.MessiOutlinedButton
 import com.example.compose.component.MessiRadioButton
 import com.example.compose.component.MessiTopAppBar
-import com.example.resouces.CustomTheme
+import com.messi.designsystem.CustomTheme
 
 @Composable
 fun ComponentScreen(navController: NavController) {

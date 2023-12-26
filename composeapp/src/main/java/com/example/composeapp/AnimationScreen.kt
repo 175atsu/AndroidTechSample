@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -43,8 +44,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.example.compose.component.MessiTopAppBar
-import com.example.resouces.CustomTheme
 import com.example.resouces.CustomTypography
+import com.messi.designsystem.CustomTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -60,7 +61,7 @@ fun AnimationScreen(navController: NavController) {
       )
     }
   ) {
-    Surface(modifier = Modifier.padding(it), color = CustomTheme.colors.surfacePrimary) {
+    Surface(modifier = Modifier.padding(it), color = MaterialTheme.colorScheme.background) {
       LazyColumn(
         modifier = Modifier
           .fillMaxSize()
@@ -165,7 +166,7 @@ private fun RateGraphContent() {
             .fillMaxWidth(fl)
             .height(40.dp)
             .padding(vertical = 8.dp)
-            .background(color = CustomTheme.colors.objectHighEmphasis)
+            .background(color = MaterialTheme.colorScheme.primary)
         )
       }
       Box(
@@ -173,7 +174,7 @@ private fun RateGraphContent() {
           .fillMaxWidth(1 - fl)
           .height(40.dp)
           .padding(vertical = 8.dp)
-          .background(color = CustomTheme.colors.objectHighEmphasisInverse)
+          .background(color = MaterialTheme.colorScheme.background)
       )
     }
   }
@@ -184,14 +185,14 @@ private fun PlayButton(status: Boolean, onClick: () -> Unit) {
   IconButton(
     modifier = Modifier
       .size(48.dp)
-      .background(color = CustomTheme.colors.objectAccentPrimary, shape = CircleShape),
+      .background(color = MaterialTheme.colorScheme.primary, shape = CircleShape),
     onClick = onClick,
   ) {
     val resourceId = if (status) R.drawable.ic_pause else R.drawable.ic_play_arrow
     Icon(
       painter = painterResource(id = resourceId),
       contentDescription = null,
-      tint = CustomTheme.colors.objectHighEmphasisInverse
+      tint = MaterialTheme.colorScheme.onPrimary
     )
   }
 }
@@ -199,13 +200,13 @@ private fun PlayButton(status: Boolean, onClick: () -> Unit) {
 @Composable
 private fun ContentText(text: String) = Text(
   text = text,
-  color = CustomTheme.colors.textHighEmphasis,
+  color = MaterialTheme.colorScheme.onSurface,
   style = CustomTypography.body1Bold
 )
 
 @Preview
 @Composable
-fun AnimationScreenPreview() {
+private fun AnimationScreenPreview() {
   val navController = rememberNavController()
   CustomTheme {
     AnimationScreen(navController)
