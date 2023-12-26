@@ -10,7 +10,7 @@ android {
   compileSdk = Versions.Sdk.compile
   defaultConfig {
     minSdk = Versions.Sdk.min
-targetSdk = Versions.Sdk.target
+    targetSdk = Versions.Sdk.target
   }
   buildFeatures {
     compose = true

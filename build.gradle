@@ -14,7 +14,6 @@ buildscript {
         classpath Dep.Ktlint.gradle
         classpath Dep.Dagger.plugin
         classpath Dep.AndroidX.Navigation.safeArgs
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0'
     }
 }
 
