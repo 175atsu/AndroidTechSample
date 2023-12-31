@@ -105,5 +105,6 @@
   <string name="compose_pager">Pager</string>
   <string name="compose_animation">Animation</string>
   <string name="compose_date_picker">DatePicker</string>
+  <string name="compose_digital_agency">DigitalAgencyScreen</string>
 
 </resources>

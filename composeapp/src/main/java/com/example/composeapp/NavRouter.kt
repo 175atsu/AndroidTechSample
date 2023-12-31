@@ -6,4 +6,5 @@ object NavRouter {
   const val PagerScreen = "PagerScreen"
   const val AnimationScreen = "AnimationScreen"
   const val DatePickerScreen = "DatePickerScreen"
+  const val DigitalAgencyScreen = "DigitalAgencyScreen"
 }

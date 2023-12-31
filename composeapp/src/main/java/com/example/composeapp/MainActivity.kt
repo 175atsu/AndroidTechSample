@@ -10,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composeapp.ui.datepicker.DatePickerScreen
 import com.example.composeapp.ui.AnimationScreen
 import com.example.composeapp.ui.ComponentScreen
+import com.example.composeapp.ui.DigitalAgencyScreen
 import com.example.composeapp.ui.PagerScreen
 import com.example.composeapp.ui.PlaygroundScreen
 import com.messi.designsystem.CustomTheme
@@ -34,5 +35,6 @@ fun CreateNav(startDestination: String = NavRouter.PlaygroundScreen) {
     composable(NavRouter.AnimationScreen) { AnimationScreen(navController) }
     composable(NavRouter.PagerScreen) { PagerScreen(navController) }
     composable(NavRouter.DatePickerScreen) { DatePickerScreen(navController) }
+    composable(NavRouter.DigitalAgencyScreen) { DigitalAgencyScreen(navController) }
   }
 }
