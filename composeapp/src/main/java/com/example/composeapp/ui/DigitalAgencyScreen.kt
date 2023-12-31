@@ -8,6 +8,6 @@ import com.messi.designsystem.digitalagency.DigitalAgencyTheme
 @Composable
 fun DigitalAgencyScreen(navController: NavController) {
   DigitalAgencyTheme {
-    Text(text = "りんご", color = DigitalAgencyTheme.colors.body)
+    Text(text = "りんご", color = DigitalAgencyTheme.colors.textBody)
   }
 }
