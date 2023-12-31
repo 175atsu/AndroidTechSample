@@ -1,4 +1,4 @@
-package com.example.composeapp
+package com.example.composeapp.ui
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
@@ -7,6 +7,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.compose.component.MessiElevatedButton
+import com.example.composeapp.NavRouter
+import com.example.composeapp.R
 import com.messi.designsystem.CustomTheme
 import com.messi.designsystem.component.CustomScaffold
 
@@ -23,6 +25,9 @@ fun PlaygroundScreen(navController: NavController) {
         }
         MessiElevatedButton(text = stringResource(id = R.string.compose_pager)) {
           navController.navigate(NavRouter.PagerScreen)
+        }
+        MessiElevatedButton(text = stringResource(id = R.string.compose_date_picker)) {
+          navController.navigate(NavRouter.DatePickerScreen)
         }
       }
     }

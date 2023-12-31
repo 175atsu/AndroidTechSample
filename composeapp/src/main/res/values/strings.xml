@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="time_format_year_month_day">yyyy年M月d日</string>
+</resources>

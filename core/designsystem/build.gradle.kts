@@ -23,7 +23,8 @@ android {
 }
 
 dependencies {
-
+  implementation(project(":feature:resources"))
+  
   implementation(Dep.AndroidX.appCompat)
   implementation(Dep.material)
 
