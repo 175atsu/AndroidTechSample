@@ -115,6 +115,7 @@ lint/tmp/
 .idea/deploymentTargetDropDown.xml
 .idea/runConfigurations.xml
 .idea/kotlinc.xml
+.idea/migrations.xml
 
 .idea/inspectionProfiles/
 

@@ -24,6 +24,9 @@ fun PlaygroundScreen(navController: NavController) {
         MessiElevatedButton(text = stringResource(id = R.string.compose_pager)) {
           navController.navigate(NavRouter.PagerScreen)
         }
+        MessiElevatedButton(text = stringResource(id = R.string.compose_date_picker)) {
+          navController.navigate(NavRouter.DatePickerScreen)
+        }
       }
     }
   }

@@ -28,5 +28,6 @@ fun CreateNav(startDestination: String = NavRouter.PlaygroundScreen) {
     composable(NavRouter.ComponentScreen) { ComponentScreen(navController) }
     composable(NavRouter.AnimationScreen) { AnimationScreen(navController) }
     composable(NavRouter.PagerScreen) { PagerScreen(navController) }
+    composable(NavRouter.DatePickerScreen) { DatePickerScreen(navController) }
   }
 }
