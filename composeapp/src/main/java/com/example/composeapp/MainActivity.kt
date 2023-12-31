@@ -7,6 +7,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.composeapp.ui.datepicker.DatePickerScreen
+import com.example.composeapp.ui.AnimationScreen
+import com.example.composeapp.ui.ComponentScreen
+import com.example.composeapp.ui.PagerScreen
+import com.example.composeapp.ui.PlaygroundScreen
 import com.messi.designsystem.CustomTheme
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.composeapp
+package com.example.composeapp.ui
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,6 +18,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.compose.component.MessiElevatedButton
 import com.example.compose.component.MessiOutlinedButton
 import com.example.compose.component.MessiRadioButton
+import com.example.composeapp.R
 import com.messi.designsystem.CustomTheme
 import com.messi.designsystem.component.CustomScaffold
 

@@ -1,4 +1,4 @@
-package com.example.composeapp
+package com.example.composeapp.ui.datepicker
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
@@ -20,6 +20,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.composeapp.R
 import com.example.composeapp.util.formatYearMonthDay
 import com.messi.designsystem.component.CustomScaffold
 import java.time.Instant

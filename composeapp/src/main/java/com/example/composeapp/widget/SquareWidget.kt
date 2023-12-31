@@ -33,7 +33,7 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 import com.example.composeapp.R
-import com.example.composeapp.getRandomImage
+import com.example.composeapp.util.getRandomImage
 import kotlinx.coroutines.launch
 
 class SquareWidget : GlanceAppWidget() {

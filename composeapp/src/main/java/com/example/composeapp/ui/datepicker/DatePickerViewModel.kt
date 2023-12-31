@@ -1,4 +1,4 @@
-package com.example.composeapp
+package com.example.composeapp.ui.datepicker
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
